@@ -1,0 +1,223 @@
+﻿@model IEnumerable<WebApplication2.Models.BUILDING>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<div class="card mb-3">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table style="width:472%" class="table table-bordered" cellspacing="0">
+                <thead >
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ID)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.NAME)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.EXPLONATIO)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.REGION)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ACTION)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ASSIGMENT)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PROTECTING)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TOTAL_AREA)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TECHNICAL_)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.USING_MODE)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PROPERTY_T)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PROPERTY)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.SERVICE_AR)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Region_ID)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Municipality_ID)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.USER_ADMIN_ID)
+                            <hr style="width:206px" />
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+            <div style="width:472%; height:400px;overflow:auto;">
+                <table class="table table-bordered" id="dataTable" cellspacing="0">
+                    <tbody>
+                        @using (Html.BeginForm("Index", "BUILDINGs", FormMethod.Post))
+                        {
+                            int i = 0;
+                            foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td style="display:none">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.OBJECTID" name="bld[@i].OBJECTID" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.ID" name="bld[@i].ID" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.NAME" name="bld[@i].NAME" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.EXPLONATIO" name="bld[@i].EXPLONATIO" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.REGION" name="bld[@i].REGION" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.ACTION" name="bld[@i].ACTION" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.ASSIGMENT" name="bld[@i].ASSIGMENT" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.PROTECTING" name="bld[@i].PROTECTING" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.TOTAL_AREA" name="bld[@i].TOTAL_AREA" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.TECHNICAL_" name="bld[@i].TECHNICAL_" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.USING_MODE" name="bld[@i].USING_MODE" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.PROPERTY_T" name="bld[@i].PROPERTY_T" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.PROPERTY" name="bld[@i].PROPERTY" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.SERVICE_AR" name="bld[@i].SERVICE_AR" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.Region_ID" name="bld[@i].Region_ID" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.Municipality_ID" name="bld[@i].Municipality_ID" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.USER_ADMIN_ID" name="bld[@i].USER_ADMIN_ID" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                i++;
+                            }
+                            <div class="text-right" style="background-color:white; padding:10px; width:100px; position:fixed; bottom:0px; right:0px; z-index:1;">
+                                <button class="btn btn-primary">Yadda Saxla</button>
+                            </div>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

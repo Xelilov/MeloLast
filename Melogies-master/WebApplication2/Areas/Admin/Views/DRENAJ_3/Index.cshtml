@@ -1,0 +1,289 @@
+﻿@model IEnumerable<WebApplication2.Models.DRENAJ_3>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="card mb-3">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table style="width:296%" class="table table-bordered" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.KIND)
+                            <hr style="width:206px" />
+                        </th>
+                        @*<th>
+                            @Html.DisplayNameFor(model => model.TYPE)
+                            <hr style="width:206px" />
+                        </th>*@
+                        @*<th>
+                            @Html.DisplayNameFor(model => model.WATERPROOF_WIDTH)
+                            <hr style="width:206px" />
+                        </th>*@
+                        <th>
+                            @Html.DisplayNameFor(model => model.SERVED_AREA)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PASSING_AREAS)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TECHNICAL_CONDITION)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DEVICE_SUM)
+                            <hr style="width:206px" />
+                        </th>
+                        @*<th>
+                            @Html.DisplayNameFor(model => model.WATER_CAPABILITY)
+                            <hr style="width:206px" />
+                        </th>*@
+                        <th>
+                            @Html.DisplayNameFor(model => model.PROPERTY_TYPE)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PROPERTY)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.FACTICAL_LENGTH)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.EXPLONATION_DATE)
+                            <hr style="width:206px" />
+                        </th>
+                        @*<th>
+                            @Html.DisplayNameFor(model => model.ACTIVITY)
+                            <hr style="width:206px" />
+                        </th>*@
+                        <th>
+                            @Html.DisplayNameFor(model => model.NAME)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ASSIGMENT)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.WATER_CONSUPTION)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DRENAJ_RECIEVER)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.GISLENGTH)
+                            <hr style="width:206px" />
+                        </th>
+                        @*<th>
+                            @Html.DisplayNameFor(model => model.NOTE)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Region_ID)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Municipality_ID)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.USER_ADMIN_ID)
+                            <hr style="width:206px" />
+                        </th>*@
+                    </tr>
+                </thead>
+            </table>
+            <div style="width:296%; height:400px;overflow:auto;">
+                <table class="table table-bordered" id="dataTable" cellspacing="0">
+                    <tbody>
+                        @using (Html.BeginForm("Index", "DRENAJ_3", FormMethod.Post))
+                        {
+                            int i = 0;
+                            foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td style="display:none">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.OBJECTID" name="drn[@i].OBJECTID" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.KIND" name="drn[@i].KIND" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="display:none">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.TYPE" name="drn[@i].TYPE" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="display:none">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.WATERPROOF_WIDTH" name="drn[@i].WATERPROOF_WIDTH" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.SERVED_AREA" name="drn[@i].SERVED_AREA" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.PASSING_AREAS" name="drn[@i].PASSING_AREAS" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.TECHNICAL_CONDITION" name="drn[@i].TECHNICAL_CONDITION" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.DEVICE_SUM" name="drn[@i].DEVICE_SUM" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="display:none">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.WATER_CAPABILITY" name="drn[@i].WATER_CAPABILITY" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.PROPERTY_TYPE" name="drn[@i].PROPERTY_TYPE" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.PROPERTY" name="drn[@i].PROPERTY" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.FACTICAL_LENGTH" name="drn[@i].FACTICAL_LENGTH" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.EXPLONATION_DATE" name="drn[@i].EXPLONATION_DATE" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="display:none">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.ACTIVITY" name="drn[@i].ACTIVITY" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.NAME" name="drn[@i].NAME" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.ASSIGMENT" name="drn[@i].ASSIGMENT" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.WATER_CONSUPTION" name="drn[@i].WATER_CONSUPTION" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.DRENAJ_RECIEVER" name="drn[@i].DRENAJ_RECIEVER" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.GISLENGTH" name="drn[@i].GISLENGTH" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="display:none">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.NOTE" name="drn[@i].NOTE" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="display:none">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.Region_ID" name="drn[@i].Region_ID" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="display:none">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.Municipality_ID" name="drn[@i].Municipality_ID" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="display:none">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.USER_ADMIN_ID" name="drn[@i].USER_ADMIN_ID" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                i++;
+                            }
+                            <div class="text-right" style="background-color:white; padding:10px; width:100px; position:fixed; bottom:0px; right:0px; z-index:1;">
+                                <button class="btn btn-primary">Yadda Saxla</button>
+                            </div>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+

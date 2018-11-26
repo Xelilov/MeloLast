@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Publish\1116</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.SqlServer.Types.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe.config">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Console.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.Process.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.DriveInfo.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Pipes.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.AccessControl.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Claims.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Algorithms.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Encoding.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Primitives.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.X509Certificates.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Principal.Windows.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Threading.Thread.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.ValueTuple.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.ReaderWriter.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XmlDocument.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.XDocument.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/SqlServerTypes/x64/msvcr120.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/SqlServerTypes/x64/SqlServerSpatial140.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/SqlServerTypes/x86/msvcr120.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/SqlServerTypes/x86/SqlServerSpatial140.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="bin/WebApplication2.dll">
+      <publishTime>11/16/2018 11:54:16</publishTime>
+    </File>
+    <File Include="bin/WebApplication2.pdb">
+      <publishTime>11/16/2018 11:54:16</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Models/MeligiosModel.edmx.diagram">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/css/main.css">
+      <publishTime>11/15/2018 15:08:21</publishTime>
+    </File>
+    <File Include="Public/assets/css/pi.css">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Black.eot">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Black.svg">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Black.ttf">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Black.woff">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Black.woff2">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-BlackItalic.eot">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-BlackItalic.svg">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-BlackItalic.ttf">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-BlackItalic.woff">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-BlackItalic.woff2">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Bold.eot">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Bold.svg">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Bold.ttf">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Bold.woff">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Bold.woff2">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-BoldItalic.eot">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-BoldItalic.svg">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-BoldItalic.ttf">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-BoldItalic.woff">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-BoldItalic.woff2">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Italic.eot">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Italic.svg">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Italic.ttf">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Italic.woff">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Italic.woff2">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Light.eot">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Light.svg">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Light.ttf">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Light.woff">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Light.woff2">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-LightItalic.eot">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-LightItalic.svg">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-LightItalic.ttf">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-LightItalic.woff">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-LightItalic.woff2">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Medium.eot">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Medium.svg">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Medium.ttf">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Medium.woff">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Medium.woff2">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-MediumItalic.eot">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-MediumItalic.svg">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-MediumItalic.ttf">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-MediumItalic.woff">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-MediumItalic.woff2">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Regular.eot">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Regular.svg">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Regular.ttf">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Regular.woff">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Regular.woff2">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Thin.eot">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Thin.svg">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Thin.ttf">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Thin.woff">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-Thin.woff2">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-ThinItalic.eot">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-ThinItalic.svg">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-ThinItalic.ttf">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-ThinItalic.woff">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/fonts/Roboto-ThinItalic.woff2">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/icons/demo.html">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/icons/fonts/icomoon.eot">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/icons/fonts/icomoon.svg">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/icons/fonts/icomoon.ttf">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/icons/fonts/icomoon.woff">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/icons/style.css">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/images/login-bg.png">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/js/jquery.min.js">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Public/assets/js/pi.js">
+      <publishTime>11/08/2018 10:15:36</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="SqlServerTypes/readme.htm">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="SqlServerTypes/x64/msvcr120.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="SqlServerTypes/x64/SqlServerSpatial140.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="SqlServerTypes/x86/msvcr120.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="SqlServerTypes/x86/SqlServerSpatial140.dll">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>11/16/2018 11:54:00</publishTime>
+    </File>
+    <File Include="Views/Home/Login.cshtml">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>11/06/2018 21:32:48</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/11/2018 15:25:36</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

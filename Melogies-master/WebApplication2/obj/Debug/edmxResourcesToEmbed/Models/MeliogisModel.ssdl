@@ -1,0 +1,3577 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MelogisModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="a38">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="LOCATED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="REPER_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="WELL_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="PRODUCTIVITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SIB" Type="nvarchar" MaxLength="50" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="IRRIGATED_AREA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEPTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NUMBER_" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="X" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="Y" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a39">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_PIPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="created_user" Type="nvarchar" MaxLength="255" />
+    <Property Name="created_date" Type="datetime2" Precision="7" />
+    <Property Name="last_edited_user" Type="nvarchar" MaxLength="255" />
+    <Property Name="last_edited_date" Type="datetime2" Precision="7" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a40">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="255" />
+    <Property Name="LOCATION" Type="nvarchar" MaxLength="50" />
+    <Property Name="WELL_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIB" Type="nvarchar" MaxLength="50" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="smallint" />
+    <Property Name="IRRIGATED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEPTH" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="NUMBER_" Type="nvarchar" MaxLength="50" />
+    <Property Name="PRODUCTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="SECURITY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a41">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="TYPE" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="HEIGHT" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="GENERAL_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a42">
+    <Key>
+      <PropertyRef Name="OBJECTID_12" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID_12" Type="int" Nullable="false" />
+    <Property Name="OBJECTID" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="OBJECTID_1" Type="int" />
+    <Property Name="RESID_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME_AZ" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME_ENG" Type="nvarchar" MaxLength="50" />
+    <Property Name="RESID_ID" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="REGION_ID" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="REGION_NAM" Type="nvarchar" MaxLength="50" />
+    <Property Name="TYPE_AZ" Type="nvarchar" MaxLength="50" />
+    <Property Name="SHAPE_LENG" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a43">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="GID" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="F__GID" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="TYPE_AZ" Type="nvarchar" MaxLength="50" />
+    <Property Name="TYPE_CODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME_AZ" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME_ENG" Type="nvarchar" MaxLength="50" />
+    <Property Name="TYPE_ENG" Type="nvarchar" MaxLength="50" />
+    <Property Name="REGION_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="RESID_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="a44">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="GID" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="F__GID" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NAME_AZ" Type="nvarchar" MaxLength="50" />
+    <Property Name="CODE_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME_ENG" Type="nvarchar" MaxLength="50" />
+    <Property Name="REGION_TYP" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="REGION_ID" Type="smallint" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="a45">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="PLACED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="PLACED_SOURCE" Type="nvarchar" MaxLength="50" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PUMP_KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="POWER" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PRODUCTIVITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PURPOSEFUL" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="BRAND_OFF_AGGREGATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PIPELINE" Type="nvarchar" MaxLength="50" />
+    <Property Name="AGREGAT_SUM" Type="nvarchar" MaxLength="50" />
+    <Property Name="PIPELINE_LENGHT" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PIPELINE_DIAMETER" Type="nvarchar" MaxLength="50" />
+    <Property Name="PIPELINE_MATERIAL" Type="nvarchar" MaxLength="50" />
+    <Property Name="ENGINE_BRAND" Type="nvarchar" MaxLength="50" />
+    <Property Name="ENGINE_INSTALL_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="LOCATED_RESID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ENGINE_KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a46">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="REGION_CODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="RAYON_CODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="MUNICIPALITY_CODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="MUNICIPALITY_ID" Type="nvarchar" MaxLength="20" />
+    <Property Name="DATASTATUS" Type="smallint" />
+    <Property Name="CHANGEDATE" Type="datetime2" Precision="7" />
+    <Property Name="USERID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="a47">
+    <Key>
+      <PropertyRef Name="OBJECTID_1" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID_1" Type="int" Nullable="false" />
+    <Property Name="OBJECTID" Type="int" />
+    <Property Name="NAME_AZ" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME_ENG" Type="nvarchar" MaxLength="50" />
+    <Property Name="REGION_ID" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PARENT_ID" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="TYPE_AZ" Type="nvarchar" MaxLength="50" />
+    <Property Name="SHAPE_LENG" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="a48">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="LENGHT" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a49">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVED_AREA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PASSING_AREAS" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CONSUPTION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DRENAJ_RECIEVER" Type="nvarchar" MaxLength="50" />
+    <Property Name="GISLENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a50">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMPLOYEE" Type="nvarchar" MaxLength="50" />
+    <Property Name="CHANNEL_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_CHANNEL" Type="smallint" />
+    <Property Name="LOCATED_NETWORK" Type="nvarchar" MaxLength="50" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NETWORK_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="int" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CAPABILITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a51">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="AD" Type="nvarchar" MaxLength="50" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a52">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVERD_REGION" Type="nvarchar" MaxLength="50" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SOURCE" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EMPLOYEE" Type="nvarchar" MaxLength="50" />
+    <Property Name="COVER_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIBS" Type="nvarchar" MaxLength="50" />
+    <Property Name="CHANNEL_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_CHANNEL" Type="smallint" />
+    <Property Name="RESID_IDS" Type="nvarchar" MaxLength="50" />
+    <Property Name="GIS_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="SERVED_AREAHA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a53">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="EXPLONATIO" Type="nvarchar" MaxLength="50" />
+    <Property Name="REGION" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTION" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROTECTING" Type="nvarchar" MaxLength="50" />
+    <Property Name="TOTAL_AREA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="TECHNICAL_" Type="nvarchar" MaxLength="50" />
+    <Property Name="USING_MODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY_T" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVICE_AR" Type="nvarchar" MaxLength="200" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a54">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVED_AREA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PASSING_AREAS" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CONSUPTION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DRENAJ_RECIEVER" Type="nvarchar" MaxLength="50" />
+    <Property Name="GISLENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a55">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVED_AREA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PASSING_AREAS" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CONSUPTION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DRENAJ_RECIEVER" Type="nvarchar" MaxLength="50" />
+    <Property Name="GISLENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a56">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVED_AREA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PASSING_AREAS" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CONSUPTION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DRENAJ_RECIEVER" Type="nvarchar" MaxLength="50" />
+    <Property Name="GISLENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a57">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVED_AREA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PASSING_AREAS" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CONSUPTION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DRENAJ_RECIEVER" Type="nvarchar" MaxLength="50" />
+    <Property Name="GISLENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a58">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVED_AREA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PASSING_AREAS" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CONSUPTION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DRENAJ_RECIEVER" Type="nvarchar" MaxLength="50" />
+    <Property Name="GISLENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a59">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVED_AREA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PASSING_AREAS" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CONSUPTION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DRENAJ_RECIEVER" Type="nvarchar" MaxLength="50" />
+    <Property Name="GISLENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a60">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVERD_REGION" Type="nvarchar" MaxLength="50" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SOURCE" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EMPLOYEE" Type="nvarchar" MaxLength="50" />
+    <Property Name="COVER_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIBS" Type="nvarchar" MaxLength="50" />
+    <Property Name="CHANNEL_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_CHANNEL" Type="smallint" />
+    <Property Name="RESID_IDS" Type="nvarchar" MaxLength="50" />
+    <Property Name="GIS_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="SERVED_AREAHA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a61">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVERD_REGION" Type="nvarchar" MaxLength="50" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SOURCE" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EMPLOYEE" Type="nvarchar" MaxLength="50" />
+    <Property Name="COVER_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIBS" Type="nvarchar" MaxLength="50" />
+    <Property Name="CHANNEL_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_CHANNEL" Type="smallint" />
+    <Property Name="RESID_IDS" Type="nvarchar" MaxLength="50" />
+    <Property Name="GIS_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="SERVED_AREAHA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a62">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVERD_REGION" Type="nvarchar" MaxLength="50" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SOURCE" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EMPLOYEE" Type="nvarchar" MaxLength="50" />
+    <Property Name="COVER_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIBS" Type="nvarchar" MaxLength="50" />
+    <Property Name="CHANNEL_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_CHANNEL" Type="smallint" />
+    <Property Name="RESID_IDS" Type="nvarchar" MaxLength="50" />
+    <Property Name="GIS_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="SERVED_AREAHA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a63">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVERD_REGION" Type="nvarchar" MaxLength="50" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SOURCE" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EMPLOYEE" Type="nvarchar" MaxLength="50" />
+    <Property Name="COVER_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIBS" Type="nvarchar" MaxLength="50" />
+    <Property Name="CHANNEL_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_CHANNEL" Type="smallint" />
+    <Property Name="RESID_IDS" Type="nvarchar" MaxLength="50" />
+    <Property Name="GIS_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="SERVED_AREAHA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a64">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVERD_REGION" Type="nvarchar" MaxLength="50" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SOURCE" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EMPLOYEE" Type="nvarchar" MaxLength="50" />
+    <Property Name="COVER_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIBS" Type="nvarchar" MaxLength="50" />
+    <Property Name="CHANNEL_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_CHANNEL" Type="smallint" />
+    <Property Name="RESID_IDS" Type="nvarchar" MaxLength="50" />
+    <Property Name="GIS_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="SERVED_AREAHA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a65">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVERD_REGION" Type="nvarchar" MaxLength="50" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SOURCE" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EMPLOYEE" Type="nvarchar" MaxLength="50" />
+    <Property Name="COVER_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIBS" Type="nvarchar" MaxLength="50" />
+    <Property Name="CHANNEL_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_CHANNEL" Type="smallint" />
+    <Property Name="RESID_IDS" Type="nvarchar" MaxLength="50" />
+    <Property Name="GIS_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="SERVED_AREAHA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="a66">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="USERNAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="PASSWORD" Type="nvarchar" MaxLength="50" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="a67">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="PASSWORD" Type="nvarchar" MaxLength="50" />
+    <Property Name="REGION_ID" Type="int" />
+    <Property Name="REGION_TYPE_ID" Type="int" />
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="a68">
+    <Key>
+      <PropertyRef Name="ObjectID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="250" />
+    <Property Name="ObjectID" Type="int" Nullable="false" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="a69">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="NAME" Type="nvarchar" MaxLength="250" />
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="a70">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="USERNAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="PAASWORD" Type="nvarchar" MaxLength="50" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Melogis.dbo.ADMIN' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ADMIN">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="USERNAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="PAASWORD" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ARTEZIAN_WELL">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="LOCATED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="REPER_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="WELL_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="PRODUCTIVITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SIB" Type="nvarchar" MaxLength="50" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="IRRIGATED_AREA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEPTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NUMBER_" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="X" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="Y" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="BUILDINGS">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="EXPLONATIO" Type="nvarchar" MaxLength="50" />
+    <Property Name="REGION" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTION" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROTECTING" Type="nvarchar" MaxLength="50" />
+    <Property Name="TOTAL_AREA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="TECHNICAL_" Type="nvarchar" MaxLength="50" />
+    <Property Name="USING_MODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY_T" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVICE_AR" Type="nvarchar" MaxLength="200" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="CHANNELS">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVERD_REGION" Type="nvarchar" MaxLength="50" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SOURCE" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EMPLOYEE" Type="nvarchar" MaxLength="50" />
+    <Property Name="COVER_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIBS" Type="nvarchar" MaxLength="50" />
+    <Property Name="CHANNEL_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_CHANNEL" Type="smallint" />
+    <Property Name="RESID_IDS" Type="nvarchar" MaxLength="50" />
+    <Property Name="GIS_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="SERVED_AREAHA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="CHANNELS_1">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVERD_REGION" Type="nvarchar" MaxLength="50" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SOURCE" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EMPLOYEE" Type="nvarchar" MaxLength="50" />
+    <Property Name="COVER_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIBS" Type="nvarchar" MaxLength="50" />
+    <Property Name="CHANNEL_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_CHANNEL" Type="smallint" />
+    <Property Name="RESID_IDS" Type="nvarchar" MaxLength="50" />
+    <Property Name="GIS_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="SERVED_AREAHA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="CHANNELS_2">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVERD_REGION" Type="nvarchar" MaxLength="50" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SOURCE" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EMPLOYEE" Type="nvarchar" MaxLength="50" />
+    <Property Name="COVER_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIBS" Type="nvarchar" MaxLength="50" />
+    <Property Name="CHANNEL_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_CHANNEL" Type="smallint" />
+    <Property Name="RESID_IDS" Type="nvarchar" MaxLength="50" />
+    <Property Name="GIS_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="SERVED_AREAHA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="CHANNELS_3">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVERD_REGION" Type="nvarchar" MaxLength="50" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SOURCE" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EMPLOYEE" Type="nvarchar" MaxLength="50" />
+    <Property Name="COVER_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIBS" Type="nvarchar" MaxLength="50" />
+    <Property Name="CHANNEL_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_CHANNEL" Type="smallint" />
+    <Property Name="RESID_IDS" Type="nvarchar" MaxLength="50" />
+    <Property Name="GIS_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="SERVED_AREAHA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="CHANNELS_D">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVERD_REGION" Type="nvarchar" MaxLength="50" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SOURCE" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EMPLOYEE" Type="nvarchar" MaxLength="50" />
+    <Property Name="COVER_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIBS" Type="nvarchar" MaxLength="50" />
+    <Property Name="CHANNEL_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_CHANNEL" Type="smallint" />
+    <Property Name="RESID_IDS" Type="nvarchar" MaxLength="50" />
+    <Property Name="GIS_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="SERVED_AREAHA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="CHANNELS_H">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVERD_REGION" Type="nvarchar" MaxLength="50" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SOURCE" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EMPLOYEE" Type="nvarchar" MaxLength="50" />
+    <Property Name="COVER_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIBS" Type="nvarchar" MaxLength="50" />
+    <Property Name="CHANNEL_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_CHANNEL" Type="smallint" />
+    <Property Name="RESID_IDS" Type="nvarchar" MaxLength="50" />
+    <Property Name="GIS_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="SERVED_AREAHA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="CHANNELS_M">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVERD_REGION" Type="nvarchar" MaxLength="50" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SOURCE" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EMPLOYEE" Type="nvarchar" MaxLength="50" />
+    <Property Name="COVER_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIBS" Type="nvarchar" MaxLength="50" />
+    <Property Name="CHANNEL_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_CHANNEL" Type="smallint" />
+    <Property Name="RESID_IDS" Type="nvarchar" MaxLength="50" />
+    <Property Name="GIS_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="SERVED_AREAHA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="D38">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D39">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D40">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D41">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D42">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D43">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D44">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D45">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D46">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D47">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D48">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D49">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D50">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D51">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D52">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D53">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D54">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D55">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D56">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D57">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D58">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D59">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D60">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D61">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D62">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D63">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D64">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D65">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D66">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D67">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D68">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D69">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D70">
+    <Key>
+      <PropertyRef Name="SDE_STATE_ID" />
+      <PropertyRef Name="SDE_DELETES_ROW_ID" />
+      <PropertyRef Name="DELETED_AT" />
+    </Key>
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+    <Property Name="SDE_DELETES_ROW_ID" Type="int" Nullable="false" />
+    <Property Name="DELETED_AT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DEPARTMENTS">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="AD" Type="nvarchar" MaxLength="50" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="DEVICE">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMPLOYEE" Type="nvarchar" MaxLength="50" />
+    <Property Name="CHANNEL_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_CHANNEL" Type="smallint" />
+    <Property Name="LOCATED_NETWORK" Type="nvarchar" MaxLength="50" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NETWORK_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="int" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CAPABILITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="DRENAJ">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVED_AREA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PASSING_AREAS" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CONSUPTION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DRENAJ_RECIEVER" Type="nvarchar" MaxLength="50" />
+    <Property Name="GISLENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="DRENAJ_1">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVED_AREA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PASSING_AREAS" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CONSUPTION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DRENAJ_RECIEVER" Type="nvarchar" MaxLength="50" />
+    <Property Name="GISLENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="DRENAJ_2">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVED_AREA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PASSING_AREAS" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CONSUPTION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DRENAJ_RECIEVER" Type="nvarchar" MaxLength="50" />
+    <Property Name="GISLENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="DRENAJ_3">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVED_AREA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PASSING_AREAS" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CONSUPTION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DRENAJ_RECIEVER" Type="nvarchar" MaxLength="50" />
+    <Property Name="GISLENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="DRENAJ_D">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVED_AREA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PASSING_AREAS" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CONSUPTION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DRENAJ_RECIEVER" Type="nvarchar" MaxLength="50" />
+    <Property Name="GISLENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="DRENAJ_H">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVED_AREA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PASSING_AREAS" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CONSUPTION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DRENAJ_RECIEVER" Type="nvarchar" MaxLength="50" />
+    <Property Name="GISLENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="DRENAJ_M">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATERPROOF_WIDTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SERVED_AREA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PASSING_AREAS" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="WATER_CAPABILITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACTICAL_LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_CONSUPTION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DRENAJ_RECIEVER" Type="nvarchar" MaxLength="50" />
+    <Property Name="GISLENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="EXPLOITATION_ROAD">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="LENGHT" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="GDB_ITEMRELATIONSHIPS">
+    <Key>
+      <PropertyRef Name="ObjectID" />
+    </Key>
+    <Property Name="ObjectID" Type="int" Nullable="false" />
+    <Property Name="UUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Type" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OriginID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DestID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Properties" Type="int" />
+    <Property Name="Attributes" Type="xml" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Melogis.dbo.GDB_ITEMRELATIONSHIPTYPES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="GDB_ITEMRELATIONSHIPTYPES">
+    <Key>
+      <PropertyRef Name="ObjectID" />
+      <PropertyRef Name="UUID" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="OrigItemTypeID" />
+      <PropertyRef Name="DestItemTypeID" />
+    </Key>
+    <Property Name="ObjectID" Type="int" Nullable="false" />
+    <Property Name="UUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="226" Nullable="false" />
+    <Property Name="ForwardLabel" Type="nvarchar" MaxLength="226" />
+    <Property Name="BackwardLabel" Type="nvarchar" MaxLength="226" />
+    <Property Name="OrigItemTypeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DestItemTypeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IsContainment" Type="smallint" />
+  </EntityType>
+  <EntityType Name="GDB_ITEMS">
+    <Key>
+      <PropertyRef Name="ObjectID" />
+    </Key>
+    <Property Name="ObjectID" Type="int" Nullable="false" />
+    <Property Name="UUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Type" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="226" />
+    <Property Name="PhysicalName" Type="nvarchar" MaxLength="226" />
+    <Property Name="Path" Type="nvarchar" MaxLength="512" />
+    <Property Name="Url" Type="nvarchar" MaxLength="255" />
+    <Property Name="Properties" Type="int" />
+    <Property Name="Defaults" Type="varbinary(max)" />
+    <Property Name="DatasetSubtype1" Type="int" />
+    <Property Name="DatasetSubtype2" Type="int" />
+    <Property Name="DatasetInfo1" Type="nvarchar" MaxLength="255" />
+    <Property Name="DatasetInfo2" Type="nvarchar" MaxLength="255" />
+    <Property Name="Definition" Type="xml" />
+    <Property Name="Documentation" Type="xml" />
+    <Property Name="ItemInfo" Type="xml" />
+    <Property Name="Shape" Type="geometry" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Melogis.dbo.GDB_ITEMTYPES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="GDB_ITEMTYPES">
+    <Key>
+      <PropertyRef Name="ObjectID" />
+      <PropertyRef Name="UUID" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="ParentTypeID" />
+    </Key>
+    <Property Name="ObjectID" Type="int" Nullable="false" />
+    <Property Name="UUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="226" Nullable="false" />
+    <Property Name="ParentTypeID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Melogis.dbo.GDB_REPLICALOG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="GDB_REPLICALOG">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ReplicaID" />
+      <PropertyRef Name="Event" />
+      <PropertyRef Name="ErrorCode" />
+      <PropertyRef Name="LogDate" />
+      <PropertyRef Name="SourceBeginGen" />
+      <PropertyRef Name="SourceEndGen" />
+      <PropertyRef Name="TargetGen" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ReplicaID" Type="int" Nullable="false" />
+    <Property Name="Event" Type="int" Nullable="false" />
+    <Property Name="ErrorCode" Type="int" Nullable="false" />
+    <Property Name="LogDate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="SourceBeginGen" Type="int" Nullable="false" />
+    <Property Name="SourceEndGen" Type="int" Nullable="false" />
+    <Property Name="TargetGen" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Melogis.dbo.GDB_TABLES_LAST_MODIFIED' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="GDB_TABLES_LAST_MODIFIED">
+    <Key>
+      <PropertyRef Name="table_name" />
+      <PropertyRef Name="last_modified_count" />
+    </Key>
+    <Property Name="table_name" Type="nvarchar" MaxLength="160" Nullable="false" />
+    <Property Name="last_modified_count" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="i2">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i3">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i38">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i39">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i4">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i40">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i41">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i42">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i43">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i44">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i45">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i46">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i47">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i48">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i49">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i5">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i50">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i51">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i52">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i53">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i54">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i55">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i56">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i57">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i58">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i59">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i6">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i60">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i61">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i62">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i63">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i64">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i65">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i66">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i67">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i68">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i69">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="i70">
+    <Key>
+      <PropertyRef Name="id_type" />
+      <PropertyRef Name="base_id" />
+      <PropertyRef Name="num_ids" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="int" Nullable="false" />
+    <Property Name="num_ids" Type="int" Nullable="false" />
+    <Property Name="last_id" Type="int" />
+  </EntityType>
+  <EntityType Name="MELOREGIONS">
+    <Key>
+      <PropertyRef Name="OBJECTID_1" />
+    </Key>
+    <Property Name="OBJECTID_1" Type="int" Nullable="false" />
+    <Property Name="OBJECTID" Type="int" />
+    <Property Name="NAME_AZ" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME_ENG" Type="nvarchar" MaxLength="50" />
+    <Property Name="REGION_ID" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PARENT_ID" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="TYPE_AZ" Type="nvarchar" MaxLength="50" />
+    <Property Name="SHAPE_LENG" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SHAPE" Type="geometry" />
+  </EntityType>
+  <EntityType Name="MUNICIPALITIES">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="REGION_CODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="RAYON_CODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="MUNICIPALITY_CODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="MUNICIPALITY_ID" Type="nvarchar" MaxLength="20" />
+    <Property Name="DATASTATUS" Type="smallint" />
+    <Property Name="CHANGEDATE" Type="datetime2" Precision="7" />
+    <Property Name="USERID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+  </EntityType>
+  <EntityType Name="PUMPSTATION">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="PLACED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="PLACED_SOURCE" Type="nvarchar" MaxLength="50" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PUMP_KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="POWER" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PRODUCTIVITY" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PURPOSEFUL" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="BRAND_OFF_AGGREGATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PIPELINE" Type="nvarchar" MaxLength="50" />
+    <Property Name="AGREGAT_SUM" Type="nvarchar" MaxLength="50" />
+    <Property Name="PIPELINE_LENGHT" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="PIPELINE_DIAMETER" Type="nvarchar" MaxLength="50" />
+    <Property Name="PIPELINE_MATERIAL" Type="nvarchar" MaxLength="50" />
+    <Property Name="ENGINE_BRAND" Type="nvarchar" MaxLength="50" />
+    <Property Name="ENGINE_INSTALL_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="LOCATED_RESID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ENGINE_KIND" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="REGION_TYPE">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="NAME" Type="nvarchar" MaxLength="250" />
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="REGIONS">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="GID" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="F__GID" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NAME_AZ" Type="nvarchar" MaxLength="50" />
+    <Property Name="CODE_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME_ENG" Type="nvarchar" MaxLength="50" />
+    <Property Name="REGION_TYP" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="REGION_ID" Type="smallint" />
+    <Property Name="SHAPE" Type="geometry" />
+  </EntityType>
+  <EntityType Name="RESIDENTIAL_AREA">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="GID" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="F__GID" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="TYPE_AZ" Type="nvarchar" MaxLength="50" />
+    <Property Name="TYPE_CODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME_AZ" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME_ENG" Type="nvarchar" MaxLength="50" />
+    <Property Name="TYPE_ENG" Type="nvarchar" MaxLength="50" />
+    <Property Name="REGION_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="RESID_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="SHAPE" Type="geometry" />
+  </EntityType>
+  <EntityType Name="RESIDENTIALAREA">
+    <Key>
+      <PropertyRef Name="OBJECTID_12" />
+    </Key>
+    <Property Name="OBJECTID_12" Type="int" Nullable="false" />
+    <Property Name="OBJECTID" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="OBJECTID_1" Type="int" />
+    <Property Name="RESID_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME_AZ" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME_ENG" Type="nvarchar" MaxLength="50" />
+    <Property Name="RESID_ID" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="REGION_ID" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="REGION_NAM" Type="nvarchar" MaxLength="50" />
+    <Property Name="TYPE_AZ" Type="nvarchar" MaxLength="50" />
+    <Property Name="SHAPE_LENG" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="RIVERBAND">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="TYPE" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="HEIGHT" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="LENGTH" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="GENERAL_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="SDE_archives">
+    <Key>
+      <PropertyRef Name="archiving_regid" />
+    </Key>
+    <Property Name="archiving_regid" Type="int" Nullable="false" />
+    <Property Name="history_regid" Type="int" Nullable="false" />
+    <Property Name="from_date" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="to_date" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="archive_date" Type="bigint" Nullable="false" />
+    <Property Name="archive_flags" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_column_registry">
+    <Key>
+      <PropertyRef Name="database_name" />
+      <PropertyRef Name="table_name" />
+      <PropertyRef Name="owner" />
+      <PropertyRef Name="column_name" />
+    </Key>
+    <Property Name="database_name" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="table_name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="owner" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="column_name" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="sde_type" Type="int" Nullable="false" />
+    <Property Name="column_size" Type="int" />
+    <Property Name="decimal_digits" Type="int" />
+    <Property Name="description" Type="nvarchar" MaxLength="65" />
+    <Property Name="object_flags" Type="int" Nullable="false" />
+    <Property Name="object_id" Type="int" />
+  </EntityType>
+  <EntityType Name="SDE_dbtune">
+    <Key>
+      <PropertyRef Name="keyword" />
+      <PropertyRef Name="parameter_name" />
+    </Key>
+    <Property Name="keyword" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="parameter_name" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="config_string" Type="nvarchar" MaxLength="2048" />
+  </EntityType>
+  <EntityType Name="SDE_geometry_columns">
+    <Key>
+      <PropertyRef Name="f_table_catalog" />
+      <PropertyRef Name="f_table_schema" />
+      <PropertyRef Name="f_table_name" />
+      <PropertyRef Name="f_geometry_column" />
+    </Key>
+    <Property Name="f_table_catalog" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="f_table_schema" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="f_table_name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="f_geometry_column" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="g_table_catalog" Type="nvarchar" MaxLength="32" />
+    <Property Name="g_table_schema" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="g_table_name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="storage_type" Type="int" />
+    <Property Name="geometry_type" Type="int" />
+    <Property Name="coord_dimension" Type="int" />
+    <Property Name="max_ppr" Type="int" />
+    <Property Name="srid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY1">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY33">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY34">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY35">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY36">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY37">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY38">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY39">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY40">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY41">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY42">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY43">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY44">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY45">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY46">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY47">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY48">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY49">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY50">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY51">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY52">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY53">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY54">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY55">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY56">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY57">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY58">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY59">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_GEOMETRY60">
+    <Key>
+      <PropertyRef Name="GEOMETRY_ID" />
+      <PropertyRef Name="SDE_STATE_ID" />
+    </Key>
+    <Property Name="GEOMETRY_ID" Type="int" Nullable="false" />
+    <Property Name="CAD" Type="varbinary(max)" />
+    <Property Name="SDE_STATE_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_layer_locks">
+    <Key>
+      <PropertyRef Name="sde_id" />
+      <PropertyRef Name="layer_id" />
+      <PropertyRef Name="autolock" />
+      <PropertyRef Name="lock_type" />
+    </Key>
+    <Property Name="sde_id" Type="int" Nullable="false" />
+    <Property Name="layer_id" Type="int" Nullable="false" />
+    <Property Name="autolock" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="lock_type" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="lock_time" Type="datetime" Nullable="false" />
+    <Property Name="minx" Type="bigint" />
+    <Property Name="miny" Type="bigint" />
+    <Property Name="maxx" Type="bigint" />
+    <Property Name="maxy" Type="bigint" />
+  </EntityType>
+  <EntityType Name="SDE_layer_stats">
+    <Key>
+      <PropertyRef Name="oid" />
+    </Key>
+    <Property Name="oid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="layer_id" Type="int" Nullable="false" />
+    <Property Name="version_id" Type="int" />
+    <Property Name="minx" Type="float" Nullable="false" />
+    <Property Name="miny" Type="float" Nullable="false" />
+    <Property Name="maxx" Type="float" Nullable="false" />
+    <Property Name="maxy" Type="float" Nullable="false" />
+    <Property Name="minz" Type="float" />
+    <Property Name="minm" Type="float" />
+    <Property Name="maxz" Type="float" />
+    <Property Name="maxm" Type="float" />
+    <Property Name="total_features" Type="int" Nullable="false" />
+    <Property Name="total_points" Type="int" Nullable="false" />
+    <Property Name="last_analyzed" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_layers">
+    <Key>
+      <PropertyRef Name="database_name" />
+      <PropertyRef Name="table_name" />
+      <PropertyRef Name="owner" />
+      <PropertyRef Name="spatial_column" />
+    </Key>
+    <Property Name="layer_id" Type="int" Nullable="false" />
+    <Property Name="description" Type="nvarchar" MaxLength="65" />
+    <Property Name="database_name" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="table_name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="owner" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="spatial_column" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="eflags" Type="int" Nullable="false" />
+    <Property Name="layer_mask" Type="int" Nullable="false" />
+    <Property Name="gsize1" Type="float" Nullable="false" />
+    <Property Name="gsize2" Type="float" Nullable="false" />
+    <Property Name="gsize3" Type="float" Nullable="false" />
+    <Property Name="minx" Type="float" Nullable="false" />
+    <Property Name="miny" Type="float" Nullable="false" />
+    <Property Name="maxx" Type="float" Nullable="false" />
+    <Property Name="maxy" Type="float" Nullable="false" />
+    <Property Name="minz" Type="float" />
+    <Property Name="maxz" Type="float" />
+    <Property Name="minm" Type="float" />
+    <Property Name="maxm" Type="float" />
+    <Property Name="cdate" Type="int" Nullable="false" />
+    <Property Name="layer_config" Type="nvarchar" MaxLength="32" />
+    <Property Name="optimal_array_size" Type="int" />
+    <Property Name="stats_date" Type="int" />
+    <Property Name="minimum_id" Type="int" />
+    <Property Name="srid" Type="int" Nullable="false" />
+    <Property Name="base_layer_id" Type="int" Nullable="false" />
+    <Property Name="secondary_srid" Type="int" />
+  </EntityType>
+  <EntityType Name="SDE_lineages_modified">
+    <Key>
+      <PropertyRef Name="lineage_name" />
+    </Key>
+    <Property Name="lineage_name" Type="bigint" Nullable="false" />
+    <Property Name="time_last_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_locators">
+    <Key>
+      <PropertyRef Name="locator_id" />
+    </Key>
+    <Property Name="locator_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="owner" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="category" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="type" Type="int" Nullable="false" />
+    <Property Name="description" Type="nvarchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="SDE_logfile_pool">
+    <Key>
+      <PropertyRef Name="table_id" />
+    </Key>
+    <Property Name="table_id" Type="int" Nullable="false" />
+    <Property Name="sde_id" Type="int" />
+  </EntityType>
+  <EntityType Name="SDE_metadata">
+    <Key>
+      <PropertyRef Name="record_id" />
+    </Key>
+    <Property Name="record_id" Type="int" Nullable="false" />
+    <Property Name="object_database" Type="nvarchar" MaxLength="32" />
+    <Property Name="object_name" Type="nvarchar" MaxLength="160" Nullable="false" />
+    <Property Name="object_owner" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="object_type" Type="int" Nullable="false" />
+    <Property Name="class_name" Type="nvarchar" MaxLength="32" />
+    <Property Name="property" Type="nvarchar" MaxLength="32" />
+    <Property Name="prop_value" Type="nvarchar" MaxLength="255" />
+    <Property Name="description" Type="nvarchar" MaxLength="65" />
+    <Property Name="creation_date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_mvtables_modified">
+    <Key>
+      <PropertyRef Name="state_id" />
+      <PropertyRef Name="registration_id" />
+    </Key>
+    <Property Name="state_id" Type="bigint" Nullable="false" />
+    <Property Name="registration_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_object_ids">
+    <Key>
+      <PropertyRef Name="id_type" />
+    </Key>
+    <Property Name="id_type" Type="int" Nullable="false" />
+    <Property Name="base_id" Type="bigint" Nullable="false" />
+    <Property Name="object_type" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_object_locks">
+    <Key>
+      <PropertyRef Name="sde_id" />
+      <PropertyRef Name="object_id" />
+      <PropertyRef Name="object_type" />
+      <PropertyRef Name="application_id" />
+      <PropertyRef Name="autolock" />
+      <PropertyRef Name="lock_type" />
+    </Key>
+    <Property Name="sde_id" Type="int" Nullable="false" />
+    <Property Name="object_id" Type="int" Nullable="false" />
+    <Property Name="object_type" Type="int" Nullable="false" />
+    <Property Name="application_id" Type="int" Nullable="false" />
+    <Property Name="autolock" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="lock_type" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="lock_time" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_process_information">
+    <Key>
+      <PropertyRef Name="sde_id" />
+    </Key>
+    <Property Name="sde_id" Type="int" Nullable="false" />
+    <Property Name="spid" Type="int" Nullable="false" />
+    <Property Name="server_id" Type="int" Nullable="false" />
+    <Property Name="start_time" Type="datetime" Nullable="false" />
+    <Property Name="rcount" Type="int" Nullable="false" />
+    <Property Name="wcount" Type="int" Nullable="false" />
+    <Property Name="opcount" Type="int" Nullable="false" />
+    <Property Name="numlocks" Type="int" Nullable="false" />
+    <Property Name="fb_partial" Type="int" Nullable="false" />
+    <Property Name="fb_count" Type="int" Nullable="false" />
+    <Property Name="fb_fcount" Type="int" Nullable="false" />
+    <Property Name="fb_kbytes" Type="int" Nullable="false" />
+    <Property Name="owner" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="direct_connect" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="sysname" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="nodename" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="xdr_needed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="table_name" Type="nvarchar" MaxLength="95" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_raster_columns">
+    <Key>
+      <PropertyRef Name="database_name" />
+      <PropertyRef Name="owner" />
+      <PropertyRef Name="table_name" />
+      <PropertyRef Name="raster_column" />
+    </Key>
+    <Property Name="rastercolumn_id" Type="int" Nullable="false" />
+    <Property Name="description" Type="nvarchar" MaxLength="65" />
+    <Property Name="database_name" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="owner" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="table_name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="raster_column" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="cdate" Type="int" Nullable="false" />
+    <Property Name="config_keyword" Type="nvarchar" MaxLength="32" />
+    <Property Name="minimum_id" Type="int" />
+    <Property Name="base_rastercolumn_id" Type="int" Nullable="false" />
+    <Property Name="rastercolumn_mask" Type="int" Nullable="false" />
+    <Property Name="srid" Type="int" />
+  </EntityType>
+  <EntityType Name="SDE_server_config">
+    <Key>
+      <PropertyRef Name="prop_name" />
+    </Key>
+    <Property Name="prop_name" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="char_prop_value" Type="nvarchar" MaxLength="512" />
+    <Property Name="num_prop_value" Type="int" />
+  </EntityType>
+  <EntityType Name="SDE_spatial_references">
+    <Key>
+      <PropertyRef Name="srid" />
+    </Key>
+    <Property Name="srid" Type="int" Nullable="false" />
+    <Property Name="description" Type="nvarchar" MaxLength="64" />
+    <Property Name="auth_name" Type="nvarchar" MaxLength="255" />
+    <Property Name="auth_srid" Type="int" />
+    <Property Name="falsex" Type="float" Nullable="false" />
+    <Property Name="falsey" Type="float" Nullable="false" />
+    <Property Name="xyunits" Type="float" Nullable="false" />
+    <Property Name="falsez" Type="float" Nullable="false" />
+    <Property Name="zunits" Type="float" Nullable="false" />
+    <Property Name="falsem" Type="float" Nullable="false" />
+    <Property Name="munits" Type="float" Nullable="false" />
+    <Property Name="xycluster_tol" Type="float" />
+    <Property Name="zcluster_tol" Type="float" />
+    <Property Name="mcluster_tol" Type="float" />
+    <Property Name="object_flags" Type="int" Nullable="false" />
+    <Property Name="srtext" Type="varchar" MaxLength="1024" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_state_lineages">
+    <Key>
+      <PropertyRef Name="lineage_name" />
+      <PropertyRef Name="lineage_id" />
+    </Key>
+    <Property Name="lineage_name" Type="bigint" Nullable="false" />
+    <Property Name="lineage_id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_state_locks">
+    <Key>
+      <PropertyRef Name="sde_id" />
+      <PropertyRef Name="state_id" />
+      <PropertyRef Name="autolock" />
+      <PropertyRef Name="lock_type" />
+    </Key>
+    <Property Name="sde_id" Type="int" Nullable="false" />
+    <Property Name="state_id" Type="bigint" Nullable="false" />
+    <Property Name="autolock" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="lock_type" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="lock_time" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_states">
+    <Key>
+      <PropertyRef Name="state_id" />
+    </Key>
+    <Property Name="state_id" Type="bigint" Nullable="false" />
+    <Property Name="owner" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="creation_time" Type="datetime" Nullable="false" />
+    <Property Name="closing_time" Type="datetime" />
+    <Property Name="parent_state_id" Type="bigint" Nullable="false" />
+    <Property Name="lineage_name" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_table_locks">
+    <Key>
+      <PropertyRef Name="sde_id" />
+      <PropertyRef Name="registration_id" />
+      <PropertyRef Name="lock_type" />
+    </Key>
+    <Property Name="sde_id" Type="int" Nullable="false" />
+    <Property Name="registration_id" Type="int" Nullable="false" />
+    <Property Name="lock_type" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="lock_time" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_table_registry">
+    <Key>
+      <PropertyRef Name="registration_id" />
+    </Key>
+    <Property Name="registration_id" Type="int" Nullable="false" />
+    <Property Name="database_name" Type="nvarchar" MaxLength="32" />
+    <Property Name="table_name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="owner" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="rowid_column" Type="nvarchar" MaxLength="32" />
+    <Property Name="description" Type="nvarchar" MaxLength="65" />
+    <Property Name="object_flags" Type="int" Nullable="false" />
+    <Property Name="registration_date" Type="int" Nullable="false" />
+    <Property Name="config_keyword" Type="nvarchar" MaxLength="32" />
+    <Property Name="minimum_id" Type="int" />
+    <Property Name="imv_view_name" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="SDE_tables_modified">
+    <Key>
+      <PropertyRef Name="table_name" />
+    </Key>
+    <Property Name="table_name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="time_last_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_version">
+    <Key>
+      <PropertyRef Name="MAJOR" />
+    </Key>
+    <Property Name="MAJOR" Type="int" Nullable="false" />
+    <Property Name="MINOR" Type="int" Nullable="false" />
+    <Property Name="BUGFIX" Type="int" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="96" Nullable="false" />
+    <Property Name="RELEASE" Type="int" Nullable="false" />
+    <Property Name="SDESVR_REL_LOW" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_versions">
+    <Key>
+      <PropertyRef Name="version_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="owner" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="version_id" Type="int" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+    <Property Name="state_id" Type="bigint" Nullable="false" />
+    <Property Name="description" Type="nvarchar" MaxLength="64" />
+    <Property Name="parent_name" Type="nvarchar" MaxLength="64" />
+    <Property Name="parent_owner" Type="nvarchar" MaxLength="32" />
+    <Property Name="parent_version_id" Type="int" />
+    <Property Name="creation_time" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_xml_columns">
+    <Key>
+      <PropertyRef Name="column_id" />
+    </Key>
+    <Property Name="column_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="registration_id" Type="int" Nullable="false" />
+    <Property Name="column_name" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="index_id" Type="int" />
+    <Property Name="minimum_id" Type="int" />
+    <Property Name="config_keyword" Type="nvarchar" MaxLength="32" />
+    <Property Name="xflags" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_xml_index_tags">
+    <Key>
+      <PropertyRef Name="index_id" />
+      <PropertyRef Name="tag_id" />
+    </Key>
+    <Property Name="index_id" Type="int" Nullable="false" />
+    <Property Name="tag_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tag_name" Type="nvarchar" MaxLength="1024" Nullable="false" />
+    <Property Name="data_type" Type="int" Nullable="false" />
+    <Property Name="tag_alias" Type="int" />
+    <Property Name="description" Type="nvarchar" MaxLength="64" />
+    <Property Name="is_excluded" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SDE_xml_indexes">
+    <Key>
+      <PropertyRef Name="index_id" />
+    </Key>
+    <Property Name="index_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="index_name" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="owner" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="index_type" Type="int" Nullable="false" />
+    <Property Name="description" Type="nvarchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="250" />
+    <Property Name="ObjectID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USERADMIN">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="PASSWORD" Type="nvarchar" MaxLength="50" />
+    <Property Name="REGION_ID" Type="int" />
+    <Property Name="REGION_TYPE_ID" Type="int" />
+    <Property Name="OBJECTID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USERS">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="USERNAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="PASSWORD" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="WELL">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="255" />
+    <Property Name="LOCATION" Type="nvarchar" MaxLength="50" />
+    <Property Name="WELL_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASSIGMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIB" Type="nvarchar" MaxLength="50" />
+    <Property Name="EXPLONATION_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVITY" Type="smallint" />
+    <Property Name="IRRIGATED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="TECHNICAL_CONDITION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEPTH" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PROPERTY" Type="nvarchar" MaxLength="50" />
+    <Property Name="NUMBER_" Type="nvarchar" MaxLength="50" />
+    <Property Name="PRODUCTIVITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="SECURITY_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="120" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Municipality_ID" Type="int" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="WINTERPASTURES">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVED_AREA" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEVICE_SUM" Type="nvarchar" MaxLength="50" />
+    <Property Name="WATER_PIPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="created_user" Type="nvarchar" MaxLength="255" />
+    <Property Name="created_date" Type="datetime2" Precision="7" />
+    <Property Name="last_edited_user" Type="nvarchar" MaxLength="255" />
+    <Property Name="last_edited_date" Type="datetime2" Precision="7" />
+    <Property Name="SHAPE" Type="geometry" />
+    <Property Name="USER_ADMIN_ID" Type="int" />
+  </EntityType>
+  <Association Name="archives_fk1">
+    <End Role="SDE_table_registry" Type="Self.SDE_table_registry" Multiplicity="1" />
+    <End Role="SDE_archives" Type="Self.SDE_archives" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="SDE_table_registry">
+        <PropertyRef Name="registration_id" />
+      </Principal>
+      <Dependent Role="SDE_archives">
+        <PropertyRef Name="archiving_regid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="archives_fk2">
+    <End Role="SDE_table_registry" Type="Self.SDE_table_registry" Multiplicity="1" />
+    <End Role="SDE_archives" Type="Self.SDE_archives" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SDE_table_registry">
+        <PropertyRef Name="registration_id" />
+      </Principal>
+      <Dependent Role="SDE_archives">
+        <PropertyRef Name="history_regid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'colregistry_fk' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="colregistry_fk" />-->
+  <Association Name="FK_USERADMIN_MELOREGIONS">
+    <End Role="MELOREGIONS" Type="Self.MELOREGIONS" Multiplicity="0..1" />
+    <End Role="USERADMIN" Type="Self.USERADMIN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MELOREGIONS">
+        <PropertyRef Name="OBJECTID_1" />
+      </Principal>
+      <Dependent Role="USERADMIN">
+        <PropertyRef Name="REGION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USERADMIN_REGION_TYPE">
+    <End Role="REGION_TYPE" Type="Self.REGION_TYPE" Multiplicity="0..1" />
+    <End Role="USERADMIN" Type="Self.USERADMIN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REGION_TYPE">
+        <PropertyRef Name="OBJECTID" />
+      </Principal>
+      <Dependent Role="USERADMIN">
+        <PropertyRef Name="REGION_TYPE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="geocol_fk">
+    <End Role="SDE_spatial_references" Type="Self.SDE_spatial_references" Multiplicity="1" />
+    <End Role="SDE_geometry_columns" Type="Self.SDE_geometry_columns" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SDE_spatial_references">
+        <PropertyRef Name="srid" />
+      </Principal>
+      <Dependent Role="SDE_geometry_columns">
+        <PropertyRef Name="srid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="layers_fk">
+    <End Role="SDE_spatial_references" Type="Self.SDE_spatial_references" Multiplicity="1" />
+    <End Role="SDE_layers" Type="Self.SDE_layers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SDE_spatial_references">
+        <PropertyRef Name="srid" />
+      </Principal>
+      <Dependent Role="SDE_layers">
+        <PropertyRef Name="srid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="layers_sfk">
+    <End Role="SDE_spatial_references" Type="Self.SDE_spatial_references" Multiplicity="0..1" />
+    <End Role="SDE_layers" Type="Self.SDE_layers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SDE_spatial_references">
+        <PropertyRef Name="srid" />
+      </Principal>
+      <Dependent Role="SDE_layers">
+        <PropertyRef Name="secondary_srid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="mvtables_modified_fk1">
+    <End Role="SDE_states" Type="Self.SDE_states" Multiplicity="1" />
+    <End Role="SDE_mvtables_modified" Type="Self.SDE_mvtables_modified" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SDE_states">
+        <PropertyRef Name="state_id" />
+      </Principal>
+      <Dependent Role="SDE_mvtables_modified">
+        <PropertyRef Name="state_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="mvtables_modified_fk2">
+    <End Role="SDE_table_registry" Type="Self.SDE_table_registry" Multiplicity="1" />
+    <End Role="SDE_mvtables_modified" Type="Self.SDE_mvtables_modified" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SDE_table_registry">
+        <PropertyRef Name="registration_id" />
+      </Principal>
+      <Dependent Role="SDE_mvtables_modified">
+        <PropertyRef Name="registration_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="rascol_fk">
+    <End Role="SDE_spatial_references" Type="Self.SDE_spatial_references" Multiplicity="0..1" />
+    <End Role="SDE_raster_columns" Type="Self.SDE_raster_columns" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SDE_spatial_references">
+        <PropertyRef Name="srid" />
+      </Principal>
+      <Dependent Role="SDE_raster_columns">
+        <PropertyRef Name="srid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'sdelayer_stats_fk1' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="sdelayer_stats_fk1" />-->
+  <Association Name="sdelayer_stats_fk2">
+    <End Role="SDE_versions" Type="Self.SDE_versions" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SDE_layer_stats" Type="Self.SDE_layer_stats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SDE_versions">
+        <PropertyRef Name="version_id" />
+      </Principal>
+      <Dependent Role="SDE_layer_stats">
+        <PropertyRef Name="version_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="xml_columns_fk1">
+    <End Role="SDE_table_registry" Type="Self.SDE_table_registry" Multiplicity="1" />
+    <End Role="SDE_xml_columns" Type="Self.SDE_xml_columns" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SDE_table_registry">
+        <PropertyRef Name="registration_id" />
+      </Principal>
+      <Dependent Role="SDE_xml_columns">
+        <PropertyRef Name="registration_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="xml_columns_fk2">
+    <End Role="SDE_xml_indexes" Type="Self.SDE_xml_indexes" Multiplicity="0..1" />
+    <End Role="SDE_xml_columns" Type="Self.SDE_xml_columns" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SDE_xml_indexes">
+        <PropertyRef Name="index_id" />
+      </Principal>
+      <Dependent Role="SDE_xml_columns">
+        <PropertyRef Name="index_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="xml_indextags_fk1">
+    <End Role="SDE_xml_indexes" Type="Self.SDE_xml_indexes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SDE_xml_index_tags" Type="Self.SDE_xml_index_tags" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SDE_xml_indexes">
+        <PropertyRef Name="index_id" />
+      </Principal>
+      <Dependent Role="SDE_xml_index_tags">
+        <PropertyRef Name="index_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MelogisModelStoreContainer">
+    <EntitySet Name="a38" EntityType="Self.a38" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a39" EntityType="Self.a39" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a40" EntityType="Self.a40" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a41" EntityType="Self.a41" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a42" EntityType="Self.a42" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a43" EntityType="Self.a43" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a44" EntityType="Self.a44" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a45" EntityType="Self.a45" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a46" EntityType="Self.a46" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a47" EntityType="Self.a47" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a48" EntityType="Self.a48" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a49" EntityType="Self.a49" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a50" EntityType="Self.a50" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a51" EntityType="Self.a51" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a52" EntityType="Self.a52" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a53" EntityType="Self.a53" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a54" EntityType="Self.a54" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a55" EntityType="Self.a55" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a56" EntityType="Self.a56" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a57" EntityType="Self.a57" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a58" EntityType="Self.a58" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a59" EntityType="Self.a59" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a60" EntityType="Self.a60" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a61" EntityType="Self.a61" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a62" EntityType="Self.a62" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a63" EntityType="Self.a63" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a64" EntityType="Self.a64" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a65" EntityType="Self.a65" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a66" EntityType="Self.a66" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a67" EntityType="Self.a67" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a68" EntityType="Self.a68" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a69" EntityType="Self.a69" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a70" EntityType="Self.a70" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ARTEZIAN_WELL" EntityType="Self.ARTEZIAN_WELL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BUILDINGS" EntityType="Self.BUILDINGS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHANNELS" EntityType="Self.CHANNELS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHANNELS_1" EntityType="Self.CHANNELS_1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHANNELS_2" EntityType="Self.CHANNELS_2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHANNELS_3" EntityType="Self.CHANNELS_3" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHANNELS_D" EntityType="Self.CHANNELS_D" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHANNELS_H" EntityType="Self.CHANNELS_H" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHANNELS_M" EntityType="Self.CHANNELS_M" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D38" EntityType="Self.D38" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D39" EntityType="Self.D39" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D40" EntityType="Self.D40" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D41" EntityType="Self.D41" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D42" EntityType="Self.D42" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D43" EntityType="Self.D43" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D44" EntityType="Self.D44" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D45" EntityType="Self.D45" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D46" EntityType="Self.D46" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D47" EntityType="Self.D47" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D48" EntityType="Self.D48" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D49" EntityType="Self.D49" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D50" EntityType="Self.D50" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D51" EntityType="Self.D51" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D52" EntityType="Self.D52" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D53" EntityType="Self.D53" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D54" EntityType="Self.D54" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D55" EntityType="Self.D55" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D56" EntityType="Self.D56" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D57" EntityType="Self.D57" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D58" EntityType="Self.D58" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D59" EntityType="Self.D59" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D60" EntityType="Self.D60" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D61" EntityType="Self.D61" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D62" EntityType="Self.D62" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D63" EntityType="Self.D63" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D64" EntityType="Self.D64" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D65" EntityType="Self.D65" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D66" EntityType="Self.D66" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D67" EntityType="Self.D67" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D68" EntityType="Self.D68" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D69" EntityType="Self.D69" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D70" EntityType="Self.D70" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DEPARTMENTS" EntityType="Self.DEPARTMENTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DEVICE" EntityType="Self.DEVICE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DRENAJ" EntityType="Self.DRENAJ" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DRENAJ_1" EntityType="Self.DRENAJ_1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DRENAJ_2" EntityType="Self.DRENAJ_2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DRENAJ_3" EntityType="Self.DRENAJ_3" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DRENAJ_D" EntityType="Self.DRENAJ_D" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DRENAJ_H" EntityType="Self.DRENAJ_H" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DRENAJ_M" EntityType="Self.DRENAJ_M" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EXPLOITATION_ROAD" EntityType="Self.EXPLOITATION_ROAD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GDB_ITEMRELATIONSHIPS" EntityType="Self.GDB_ITEMRELATIONSHIPS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GDB_ITEMS" EntityType="Self.GDB_ITEMS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i2" EntityType="Self.i2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i3" EntityType="Self.i3" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i38" EntityType="Self.i38" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i39" EntityType="Self.i39" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i4" EntityType="Self.i4" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i40" EntityType="Self.i40" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i41" EntityType="Self.i41" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i42" EntityType="Self.i42" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i43" EntityType="Self.i43" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i44" EntityType="Self.i44" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i45" EntityType="Self.i45" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i46" EntityType="Self.i46" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i47" EntityType="Self.i47" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i48" EntityType="Self.i48" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i49" EntityType="Self.i49" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i5" EntityType="Self.i5" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i50" EntityType="Self.i50" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i51" EntityType="Self.i51" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i52" EntityType="Self.i52" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i53" EntityType="Self.i53" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i54" EntityType="Self.i54" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i55" EntityType="Self.i55" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i56" EntityType="Self.i56" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i57" EntityType="Self.i57" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i58" EntityType="Self.i58" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i59" EntityType="Self.i59" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i6" EntityType="Self.i6" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i60" EntityType="Self.i60" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i61" EntityType="Self.i61" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i62" EntityType="Self.i62" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i63" EntityType="Self.i63" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i64" EntityType="Self.i64" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i65" EntityType="Self.i65" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i66" EntityType="Self.i66" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i67" EntityType="Self.i67" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i68" EntityType="Self.i68" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i69" EntityType="Self.i69" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="i70" EntityType="Self.i70" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MELOREGIONS" EntityType="Self.MELOREGIONS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MUNICIPALITIES" EntityType="Self.MUNICIPALITIES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PUMPSTATION" EntityType="Self.PUMPSTATION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="REGION_TYPE" EntityType="Self.REGION_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="REGIONS" EntityType="Self.REGIONS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RESIDENTIAL_AREA" EntityType="Self.RESIDENTIAL_AREA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RESIDENTIALAREA" EntityType="Self.RESIDENTIALAREA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RIVERBAND" EntityType="Self.RIVERBAND" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_archives" EntityType="Self.SDE_archives" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_column_registry" EntityType="Self.SDE_column_registry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_dbtune" EntityType="Self.SDE_dbtune" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_geometry_columns" EntityType="Self.SDE_geometry_columns" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY1" EntityType="Self.SDE_GEOMETRY1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY33" EntityType="Self.SDE_GEOMETRY33" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY34" EntityType="Self.SDE_GEOMETRY34" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY35" EntityType="Self.SDE_GEOMETRY35" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY36" EntityType="Self.SDE_GEOMETRY36" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY37" EntityType="Self.SDE_GEOMETRY37" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY38" EntityType="Self.SDE_GEOMETRY38" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY39" EntityType="Self.SDE_GEOMETRY39" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY40" EntityType="Self.SDE_GEOMETRY40" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY41" EntityType="Self.SDE_GEOMETRY41" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY42" EntityType="Self.SDE_GEOMETRY42" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY43" EntityType="Self.SDE_GEOMETRY43" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY44" EntityType="Self.SDE_GEOMETRY44" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY45" EntityType="Self.SDE_GEOMETRY45" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY46" EntityType="Self.SDE_GEOMETRY46" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY47" EntityType="Self.SDE_GEOMETRY47" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY48" EntityType="Self.SDE_GEOMETRY48" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY49" EntityType="Self.SDE_GEOMETRY49" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY50" EntityType="Self.SDE_GEOMETRY50" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY51" EntityType="Self.SDE_GEOMETRY51" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY52" EntityType="Self.SDE_GEOMETRY52" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY53" EntityType="Self.SDE_GEOMETRY53" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY54" EntityType="Self.SDE_GEOMETRY54" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY55" EntityType="Self.SDE_GEOMETRY55" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY56" EntityType="Self.SDE_GEOMETRY56" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY57" EntityType="Self.SDE_GEOMETRY57" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY58" EntityType="Self.SDE_GEOMETRY58" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY59" EntityType="Self.SDE_GEOMETRY59" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_GEOMETRY60" EntityType="Self.SDE_GEOMETRY60" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_layer_locks" EntityType="Self.SDE_layer_locks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_layer_stats" EntityType="Self.SDE_layer_stats" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_layers" EntityType="Self.SDE_layers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_lineages_modified" EntityType="Self.SDE_lineages_modified" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_locators" EntityType="Self.SDE_locators" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_logfile_pool" EntityType="Self.SDE_logfile_pool" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_metadata" EntityType="Self.SDE_metadata" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_mvtables_modified" EntityType="Self.SDE_mvtables_modified" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_object_ids" EntityType="Self.SDE_object_ids" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_object_locks" EntityType="Self.SDE_object_locks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_process_information" EntityType="Self.SDE_process_information" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_raster_columns" EntityType="Self.SDE_raster_columns" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_server_config" EntityType="Self.SDE_server_config" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_spatial_references" EntityType="Self.SDE_spatial_references" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_state_lineages" EntityType="Self.SDE_state_lineages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_state_locks" EntityType="Self.SDE_state_locks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_states" EntityType="Self.SDE_states" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_table_locks" EntityType="Self.SDE_table_locks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_table_registry" EntityType="Self.SDE_table_registry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_tables_modified" EntityType="Self.SDE_tables_modified" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_version" EntityType="Self.SDE_version" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_versions" EntityType="Self.SDE_versions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_xml_columns" EntityType="Self.SDE_xml_columns" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_xml_index_tags" EntityType="Self.SDE_xml_index_tags" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDE_xml_indexes" EntityType="Self.SDE_xml_indexes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUser" EntityType="Self.tblUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USERADMIN" EntityType="Self.USERADMIN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WELL" EntityType="Self.WELL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WINTERPASTURES" EntityType="Self.WINTERPASTURES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADMIN" EntityType="Self.ADMIN" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ADMIN].[OBJECTID] AS [OBJECTID], 
+    [ADMIN].[USERNAME] AS [USERNAME], 
+    [ADMIN].[PAASWORD] AS [PAASWORD]
+    FROM [dbo].[ADMIN] AS [ADMIN]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GDB_ITEMRELATIONSHIPTYPES" EntityType="Self.GDB_ITEMRELATIONSHIPTYPES" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GDB_ITEMRELATIONSHIPTYPES].[ObjectID] AS [ObjectID], 
+    [GDB_ITEMRELATIONSHIPTYPES].[UUID] AS [UUID], 
+    [GDB_ITEMRELATIONSHIPTYPES].[Name] AS [Name], 
+    [GDB_ITEMRELATIONSHIPTYPES].[ForwardLabel] AS [ForwardLabel], 
+    [GDB_ITEMRELATIONSHIPTYPES].[BackwardLabel] AS [BackwardLabel], 
+    [GDB_ITEMRELATIONSHIPTYPES].[OrigItemTypeID] AS [OrigItemTypeID], 
+    [GDB_ITEMRELATIONSHIPTYPES].[DestItemTypeID] AS [DestItemTypeID], 
+    [GDB_ITEMRELATIONSHIPTYPES].[IsContainment] AS [IsContainment]
+    FROM [dbo].[GDB_ITEMRELATIONSHIPTYPES] AS [GDB_ITEMRELATIONSHIPTYPES]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GDB_ITEMTYPES" EntityType="Self.GDB_ITEMTYPES" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GDB_ITEMTYPES].[ObjectID] AS [ObjectID], 
+    [GDB_ITEMTYPES].[UUID] AS [UUID], 
+    [GDB_ITEMTYPES].[Name] AS [Name], 
+    [GDB_ITEMTYPES].[ParentTypeID] AS [ParentTypeID]
+    FROM [dbo].[GDB_ITEMTYPES] AS [GDB_ITEMTYPES]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GDB_REPLICALOG" EntityType="Self.GDB_REPLICALOG" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GDB_REPLICALOG].[ID] AS [ID], 
+    [GDB_REPLICALOG].[ReplicaID] AS [ReplicaID], 
+    [GDB_REPLICALOG].[Event] AS [Event], 
+    [GDB_REPLICALOG].[ErrorCode] AS [ErrorCode], 
+    [GDB_REPLICALOG].[LogDate] AS [LogDate], 
+    [GDB_REPLICALOG].[SourceBeginGen] AS [SourceBeginGen], 
+    [GDB_REPLICALOG].[SourceEndGen] AS [SourceEndGen], 
+    [GDB_REPLICALOG].[TargetGen] AS [TargetGen]
+    FROM [dbo].[GDB_REPLICALOG] AS [GDB_REPLICALOG]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GDB_TABLES_LAST_MODIFIED" EntityType="Self.GDB_TABLES_LAST_MODIFIED" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GDB_TABLES_LAST_MODIFIED].[table_name] AS [table_name], 
+    [GDB_TABLES_LAST_MODIFIED].[last_modified_count] AS [last_modified_count]
+    FROM [dbo].[GDB_TABLES_LAST_MODIFIED] AS [GDB_TABLES_LAST_MODIFIED]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="archives_fk1" Association="Self.archives_fk1">
+      <End Role="SDE_table_registry" EntitySet="SDE_table_registry" />
+      <End Role="SDE_archives" EntitySet="SDE_archives" />
+    </AssociationSet>
+    <AssociationSet Name="archives_fk2" Association="Self.archives_fk2">
+      <End Role="SDE_table_registry" EntitySet="SDE_table_registry" />
+      <End Role="SDE_archives" EntitySet="SDE_archives" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USERADMIN_MELOREGIONS" Association="Self.FK_USERADMIN_MELOREGIONS">
+      <End Role="MELOREGIONS" EntitySet="MELOREGIONS" />
+      <End Role="USERADMIN" EntitySet="USERADMIN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USERADMIN_REGION_TYPE" Association="Self.FK_USERADMIN_REGION_TYPE">
+      <End Role="REGION_TYPE" EntitySet="REGION_TYPE" />
+      <End Role="USERADMIN" EntitySet="USERADMIN" />
+    </AssociationSet>
+    <AssociationSet Name="geocol_fk" Association="Self.geocol_fk">
+      <End Role="SDE_spatial_references" EntitySet="SDE_spatial_references" />
+      <End Role="SDE_geometry_columns" EntitySet="SDE_geometry_columns" />
+    </AssociationSet>
+    <AssociationSet Name="layers_fk" Association="Self.layers_fk">
+      <End Role="SDE_spatial_references" EntitySet="SDE_spatial_references" />
+      <End Role="SDE_layers" EntitySet="SDE_layers" />
+    </AssociationSet>
+    <AssociationSet Name="layers_sfk" Association="Self.layers_sfk">
+      <End Role="SDE_spatial_references" EntitySet="SDE_spatial_references" />
+      <End Role="SDE_layers" EntitySet="SDE_layers" />
+    </AssociationSet>
+    <AssociationSet Name="mvtables_modified_fk1" Association="Self.mvtables_modified_fk1">
+      <End Role="SDE_states" EntitySet="SDE_states" />
+      <End Role="SDE_mvtables_modified" EntitySet="SDE_mvtables_modified" />
+    </AssociationSet>
+    <AssociationSet Name="mvtables_modified_fk2" Association="Self.mvtables_modified_fk2">
+      <End Role="SDE_table_registry" EntitySet="SDE_table_registry" />
+      <End Role="SDE_mvtables_modified" EntitySet="SDE_mvtables_modified" />
+    </AssociationSet>
+    <AssociationSet Name="rascol_fk" Association="Self.rascol_fk">
+      <End Role="SDE_spatial_references" EntitySet="SDE_spatial_references" />
+      <End Role="SDE_raster_columns" EntitySet="SDE_raster_columns" />
+    </AssociationSet>
+    <AssociationSet Name="sdelayer_stats_fk2" Association="Self.sdelayer_stats_fk2">
+      <End Role="SDE_versions" EntitySet="SDE_versions" />
+      <End Role="SDE_layer_stats" EntitySet="SDE_layer_stats" />
+    </AssociationSet>
+    <AssociationSet Name="xml_columns_fk1" Association="Self.xml_columns_fk1">
+      <End Role="SDE_table_registry" EntitySet="SDE_table_registry" />
+      <End Role="SDE_xml_columns" EntitySet="SDE_xml_columns" />
+    </AssociationSet>
+    <AssociationSet Name="xml_columns_fk2" Association="Self.xml_columns_fk2">
+      <End Role="SDE_xml_indexes" EntitySet="SDE_xml_indexes" />
+      <End Role="SDE_xml_columns" EntitySet="SDE_xml_columns" />
+    </AssociationSet>
+    <AssociationSet Name="xml_indextags_fk1" Association="Self.xml_indextags_fk1">
+      <End Role="SDE_xml_indexes" EntitySet="SDE_xml_indexes" />
+      <End Role="SDE_xml_index_tags" EntitySet="SDE_xml_index_tags" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

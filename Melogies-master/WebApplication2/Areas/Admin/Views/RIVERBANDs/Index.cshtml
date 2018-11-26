@@ -1,0 +1,201 @@
+﻿@model IEnumerable<WebApplication2.Models.RIVERBAND>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<div class="card mb-3">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" cellspacing="0">
+                <thead>
+                    <tr>
+                        @*<th>
+                            @Html.DisplayNameFor(model => model.TYPE)
+                            <hr style="width:206px" />
+                        </th>*@
+                        <th>
+                            @Html.DisplayNameFor(model => model.NAME)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.HEIGHT)
+                            <hr style="width:206px" />
+                        </th>
+                        @*<th>
+                            @Html.DisplayNameFor(model => model.LENGTH)
+                            <hr style="width:206px" />
+                        </th>*@
+                        <th>
+                            @Html.DisplayNameFor(model => model.EXPLONATION_DATE)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.GENERAL_TYPE)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TECHNICAL_CONDITION)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PROPERTY_TYPE)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PROPERTY)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ASSIGMENT)
+                            <hr style="width:206px" />
+                        </th>
+                        @*<th>
+                            @Html.DisplayNameFor(model => model.NOTE)
+                            <hr style="width:206px" />
+                        </th>*@
+                        @*<th>
+                            @Html.DisplayNameFor(model => model.Region_ID)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Municipality_ID)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.USER_ADMIN_ID)
+                            <hr style="width:206px" />
+                        </th>*@
+                    </tr>
+                </thead>
+            </table>
+            <div style="width:170%; height:400px;overflow:auto;">
+                <table class="table table-bordered" id="dataTable" cellspacing="0">
+                    <tbody>
+                        @using (Html.BeginForm("Index", "RIVERBANDs", FormMethod.Post))
+                        {
+                            int i = 0;
+                            foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td style="display:none">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.OBJECTID" name="rvn[@i].OBJECTID" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="display:none">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.TYPE" name="rvn[@i].TYPE" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.NAME" name="rvn[@i].NAME" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.HEIGHT" name="rvn[@i].HEIGHT" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="display:none">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.LENGTH" name="rvn[@i].LENGTH" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.EXPLONATION_DATE" name="rvn[@i].EXPLONATION_DATE" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.GENERAL_TYPE" name="rvn[@i].GENERAL_TYPE" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.TECHNICAL_CONDITION" name="rvn[@i].TECHNICAL_CONDITION" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.PROPERTY_TYPE" name="rvn[@i].PROPERTY_TYPE" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.PROPERTY" name="rvn[@i].PROPERTY" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.ASSIGMENT" name="rvn[@i].ASSIGMENT" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="display:none">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.NOTE" name="rvn[@i].NOTE" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="display:none">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.Region_ID" name="rvn[@i].Region_ID" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="display:none">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.Municipality_ID" name="rvn[@i].Municipality_ID" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="display:none">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.USER_ADMIN_ID" name="rvn[@i].USER_ADMIN_ID" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                i++;
+                            }
+                            <div class="text-right" style="background-color:white; padding:10px; width:100px; position:fixed; bottom:0px; right:0px; z-index:1;">
+                                <button class="btn btn-primary">Yadda Saxla</button>
+                            </div>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

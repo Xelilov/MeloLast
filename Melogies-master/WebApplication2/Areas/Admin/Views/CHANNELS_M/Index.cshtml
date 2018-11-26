@@ -1,0 +1,354 @@
+﻿@model IEnumerable<WebApplication2.Models.CHANNELS_M>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<div class="card mb-3">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table style="width:296%" class="table table-bordered" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TYPE)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.NAME)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ASSIGMENT)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.WATER_CAPABILITY)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.EXPLONATION_DATE)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.SERVED_AREA)
+                            <hr style="width:206px" />
+                        </th>
+                        @*<th>
+                            @Html.DisplayNameFor(model => model.ACTIVITY)
+                            <hr style="width:206px" />
+                        </th>*@
+                        <th>
+                            @Html.DisplayNameFor(model => model.PROPERTY_TYPE)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PROPERTY)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TECHNICAL_CONDITION)
+                            <hr style="width:206px" />
+                        </th>
+                        @*<th>
+                            @Html.DisplayNameFor(model => model.WATERPROOF_WIDTH)
+                            <hr style="width:206px" />
+                        </th>*@
+                        <th>
+                            @Html.DisplayNameFor(model => model.SERVERD_REGION)
+                            <hr style="width:206px" />
+                        </th>
+                        @*<th>
+                            @Html.DisplayNameFor(model => model.KIND)
+                            <hr style="width:206px" />
+                        </th>*@
+                        <th>
+                            @Html.DisplayNameFor(model => model.DEVICE_SUM)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.SOURCE)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.FACTICAL_LENGTH)
+                            <hr style="width:206px" />
+                        </th>
+                        @*<th>
+                            @Html.DisplayNameFor(model => model.EMPLOYEE)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.COVER_TYPE)
+                            <hr style="width:206px" />
+                        </th>*@
+                        <th>
+                            @Html.DisplayNameFor(model => model.SIBS)
+                            <hr style="width:206px" />
+                        </th>
+                        @*<th>
+                            @Html.DisplayNameFor(model => model.CHANNEL_ID)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ID_CHANNEL)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.RESID_IDS)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.GIS_LENGTH)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.NOTE)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.SERVED_AREAHA)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Region_ID)
+                            <hr style="width:206px" />
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Municipality_ID)
+                            <hr style="width:206px" />
+                        </th>                        
+                        <th>
+                            @Html.DisplayNameFor(model => model.USER_ADMIN_ID)
+                            <hr style="width:206px" />
+                        </th>*@
+                    </tr>
+                </thead>
+            </table>
+            <div style="width:296%; height:400px;overflow:auto;">
+                <table class="table table-bordered" id="dataTable" cellspacing="0">
+                    <tbody>
+                        @using (Html.BeginForm("Index", "CHANNELS_M", FormMethod.Post))
+                        {
+                            int i = 0;
+                            foreach (var item in Model)
+                            {
+                            <tr>
+                                <td style="display:none">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input value="@item.OBJECTID" name="chn[@i].OBJECTID" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.TYPE" name="chn[@i].TYPE" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.NAME" name="chn[@i].NAME" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.ASSIGMENT" name="chn[@i].ASSIGMENT" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.WATER_CAPABILITY" name="chn[@i].WATER_CAPABILITY" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.EXPLONATION_DATE" name="chn[@i].EXPLONATION_DATE" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.SERVED_AREA" name="chn[@i].SERVED_AREA" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="display:none">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.ACTIVITY" name="chn[@i].ACTIVITY" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.PROPERTY_TYPE" name="chn[@i].PROPERTY_TYPE" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.PROPERTY" name="chn[@i].PROPERTY" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.TECHNICAL_CONDITION" name="chn[@i].TECHNICAL_CONDITION" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="display:none">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.WATERPROOF_WIDTH" name="chn[@i].WATERPROOF_WIDTH" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.SERVERD_REGION" name="chn[@i].SERVERD_REGION" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="display:none">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.KIND" name="chn[@i].KIND" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.DEVICE_SUM" name="chn[@i].DEVICE_SUM" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.SOURCE" name="chn[@i].SOURCE" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.FACTICAL_LENGTH" name="chn[@i].FACTICAL_LENGTH" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="display:none">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.EMPLOYEE" name="chn[@i].EMPLOYEE" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="display:none">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.COVER_TYPE" name="chn[@i].COVER_TYPE" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.SIBS" name="chn[@i].SIBS" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="display:none">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.CHANNEL_ID" name="chn[@i].CHANNEL_ID" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="display:none">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.ID_CHANNEL" name="chn[@i].ID_CHANNEL" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="display:none">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.RESID_IDS" name="chn[@i].RESID_IDS" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="display:none">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.GIS_LENGTH" name="chn[@i].GIS_LENGTH" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="display:none">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.NOTE" name="chn[@i].NOTE" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="display:none">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.SERVED_AREAHA" name="chn[@i].SERVED_AREAHA" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="display:none">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.Region_ID" name="chn[@i].Region_ID" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="display:none">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.Municipality_ID" name="chn[@i].Municipality_ID" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="display:none">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input value="@item.USER_ADMIN_ID" name="chn[@i].USER_ADMIN_ID" />
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            i++;
+                            }
+                            <div class="text-right" style="background-color:white; padding:10px; width:100px; position:fixed; bottom:0px; right:0px; z-index:1;">
+                                <button class="btn btn-primary">Yadda Saxla</button>
+                            </div>
+                            }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

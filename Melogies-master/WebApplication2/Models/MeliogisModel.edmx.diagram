@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3c1c6d8229944f69ad921ef2169f9209" Name="Diagram1" ZoomLevel="10">
+        <EntityTypeShape EntityType="MelogisModel.a38" Width="1.5" PointX="10.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a39" Width="1.5" PointX="2.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a40" Width="1.5" PointX="10.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a41" Width="1.5" PointX="12.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a42" Width="1.5" PointX="12.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a43" Width="1.5" PointX="14.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a44" Width="1.5" PointX="14.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a45" Width="1.5" PointX="14.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a46" Width="1.5" PointX="15.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a47" Width="1.5" PointX="0.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a48" Width="1.5" PointX="2.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a49" Width="1.5" PointX="16.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a50" Width="1.5" PointX="16.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a51" Width="1.5" PointX="17.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a52" Width="1.5" PointX="10.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a53" Width="1.5" PointX="16.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a54" Width="1.5" PointX="18.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a55" Width="1.5" PointX="4.75" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a56" Width="1.5" PointX="18.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a57" Width="1.5" PointX="18.75" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a58" Width="1.5" PointX="20.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a59" Width="1.5" PointX="0.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a60" Width="1.5" PointX="20.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a61" Width="1.5" PointX="20.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a62" Width="1.5" PointX="12.75" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a63" Width="1.5" PointX="22.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a64" Width="1.5" PointX="22.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a65" Width="1.5" PointX="22.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a66" Width="1.5" PointX="6.75" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a67" Width="1.5" PointX="14.75" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a68" Width="1.5" PointX="24.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a69" Width="1.5" PointX="24.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.a70" Width="1.5" PointX="24.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.ARTEZIAN_WELL" Width="1.5" PointX="24.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.BUILDING" Width="1.5" PointX="24.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.CHANNEL" Width="1.5" PointX="20.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.CHANNELS_1" Width="1.5" PointX="24.75" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.CHANNELS_2" Width="1.5" PointX="2.75" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.CHANNELS_3" Width="1.5" PointX="8.75" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.CHANNELS_D" Width="1.5" PointX="16.75" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.CHANNELS_H" Width="1.5" PointX="26.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.CHANNELS_M" Width="1.5" PointX="4.75" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D38" Width="1.5" PointX="26.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D39" Width="1.5" PointX="26.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D40" Width="1.5" PointX="26.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D41" Width="1.5" PointX="26.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D42" Width="1.5" PointX="26.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D43" Width="1.5" PointX="26.75" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D44" Width="1.5" PointX="26.75" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D45" Width="1.5" PointX="28.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D46" Width="1.5" PointX="28.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D47" Width="1.5" PointX="28.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D48" Width="1.5" PointX="28.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D49" Width="1.5" PointX="28.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D50" Width="1.5" PointX="28.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D51" Width="1.5" PointX="28.75" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D52" Width="1.5" PointX="28.75" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D53" Width="1.5" PointX="28.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D54" Width="1.5" PointX="28.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D55" Width="1.5" PointX="10.75" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D56" Width="1.5" PointX="12.75" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D57" Width="1.5" PointX="22.75" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D58" Width="1.5" PointX="24.75" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D59" Width="1.5" PointX="30.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D60" Width="1.5" PointX="30.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D61" Width="1.5" PointX="30.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D62" Width="1.5" PointX="30.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D63" Width="1.5" PointX="30.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D64" Width="1.5" PointX="30.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D65" Width="1.5" PointX="30.75" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D66" Width="1.5" PointX="30.75" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D67" Width="1.5" PointX="30.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D68" Width="1.5" PointX="26.75" PointY="32.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D69" Width="1.5" PointX="30.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.D70" Width="1.5" PointX="28.75" PointY="32.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.DEPARTMENT" Width="1.5" PointX="30.75" PointY="32.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.DEVICE" Width="1.5" PointX="32.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.DRENAJ" Width="1.5" PointX="32.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.DRENAJ_1" Width="1.5" PointX="10.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.DRENAJ_2" Width="1.5" PointX="12.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.DRENAJ_3" Width="1.5" PointX="32.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.DRENAJ_D" Width="1.5" PointX="18.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.DRENAJ_H" Width="1.5" PointX="32.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.DRENAJ_M" Width="1.5" PointX="20.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.EXPLOITATION_ROAD" Width="1.5" PointX="22.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.GDB_ITEMRELATIONSHIPS" Width="1.5" PointX="32.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.GDB_ITEMS" Width="1.5" PointX="32.75" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i2" Width="1.5" PointX="0.75" PointY="35.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i3" Width="1.5" PointX="6.75" PointY="35.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i38" Width="1.5" PointX="14.75" PointY="35.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i39" Width="1.5" PointX="24.75" PointY="35.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i4" Width="1.5" PointX="26.75" PointY="35.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i40" Width="1.5" PointX="34.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i41" Width="1.5" PointX="2.75" PointY="36.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i42" Width="1.5" PointX="34.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i43" Width="1.5" PointX="34.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i44" Width="1.5" PointX="34.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i45" Width="1.5" PointX="34.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i46" Width="1.5" PointX="34.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i47" Width="1.5" PointX="34.75" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i48" Width="1.5" PointX="34.75" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i49" Width="1.5" PointX="34.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i5" Width="1.5" PointX="34.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i50" Width="1.5" PointX="28.75" PointY="36.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i51" Width="1.5" PointX="34.75" PointY="32.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i52" Width="1.5" PointX="34.75" PointY="35.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i53" Width="1.5" PointX="36.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i54" Width="1.5" PointX="36.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i55" Width="1.5" PointX="4.75" PointY="38.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i56" Width="1.5" PointX="36.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i57" Width="1.5" PointX="6.75" PointY="38.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i58" Width="1.5" PointX="36.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i59" Width="1.5" PointX="36.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i6" Width="1.5" PointX="14.75" PointY="38.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i60" Width="1.5" PointX="36.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i61" Width="1.5" PointX="36.75" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i62" Width="1.5" PointX="36.75" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i63" Width="1.5" PointX="22.75" PointY="38.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i64" Width="1.5" PointX="36.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i65" Width="1.5" PointX="24.75" PointY="38.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i66" Width="1.5" PointX="36.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i67" Width="1.5" PointX="36.75" PointY="32.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i68" Width="1.5" PointX="36.75" PointY="35.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i69" Width="1.5" PointX="34.75" PointY="38.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.i70" Width="1.5" PointX="36.75" PointY="38.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.MELOREGION" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.MUNICIPALITy" Width="1.5" PointX="0.75" PointY="39.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.PUMPSTATION" Width="1.5" PointX="26.75" PointY="39.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.REGION_TYPE" Width="1.5" PointX="0.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.REGION" Width="1.5" PointX="28.75" PointY="39.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.RESIDENTIAL_AREA" Width="1.5" PointX="30.75" PointY="39.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.RESIDENTIALAREA" Width="1.5" PointX="38.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.RIVERBAND" Width="1.5" PointX="38.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_archives" Width="1.5" PointX="5.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_column_registry" Width="1.5" PointX="38.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_dbtune" Width="1.5" PointX="38.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_geometry_columns" Width="1.5" PointX="8" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY1" Width="1.5" PointX="38.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY33" Width="1.5" PointX="38.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY34" Width="1.5" PointX="38.75" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY35" Width="1.5" PointX="38.75" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY36" Width="1.5" PointX="38.75" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY37" Width="1.5" PointX="38.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY38" Width="1.5" PointX="38.75" PointY="37.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY39" Width="1.5" PointX="38.75" PointY="40.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY40" Width="1.5" PointX="2.75" PointY="41.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY41" Width="1.5" PointX="4.75" PointY="41.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY42" Width="1.5" PointX="6.75" PointY="41.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY43" Width="1.5" PointX="8.75" PointY="41.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY44" Width="1.5" PointX="10.75" PointY="41.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY45" Width="1.5" PointX="12.75" PointY="41.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY46" Width="1.5" PointX="14.75" PointY="41.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY47" Width="1.5" PointX="16.75" PointY="41.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY48" Width="1.5" PointX="18.75" PointY="41.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY49" Width="1.5" PointX="20.75" PointY="41.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY50" Width="1.5" PointX="22.75" PointY="41.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY51" Width="1.5" PointX="32.75" PointY="41.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY52" Width="1.5" PointX="34.75" PointY="41.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY53" Width="1.5" PointX="40.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY54" Width="1.5" PointX="40.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY55" Width="1.5" PointX="40.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY56" Width="1.5" PointX="40.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY57" Width="1.5" PointX="40.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY58" Width="1.5" PointX="40.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY59" Width="1.5" PointX="40.75" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_GEOMETRY60" Width="1.5" PointX="40.75" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_layer_locks" Width="1.5" PointX="40.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_layer_stats" Width="1.5" PointX="13" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_layers" Width="1.5" PointX="8" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_lineages_modified" Width="1.5" PointX="40.75" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_locators" Width="1.5" PointX="40.75" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_logfile_pool" Width="1.5" PointX="40.75" PointY="36.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_metadata" Width="1.5" PointX="40.75" PointY="39.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_object_ids" Width="1.5" PointX="28.75" PointY="43.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_object_locks" Width="1.5" PointX="36.75" PointY="43.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_process_information" Width="1.5" PointX="38.75" PointY="43.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_raster_columns" Width="1.5" PointX="8" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_server_config" Width="1.5" PointX="40.75" PointY="43.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_spatial_references" Width="1.5" PointX="5.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_state_lineages" Width="1.5" PointX="42.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_state_locks" Width="1.5" PointX="0.75" PointY="44.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_states" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_table_locks" Width="1.5" PointX="2.75" PointY="44.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_table_registry" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_tables_modified" Width="1.5" PointX="42.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_version" Width="1.5" PointX="4.75" PointY="44.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_versions" Width="1.5" PointX="10.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_xml_columns" Width="1.5" PointX="8.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_xml_index_tags" Width="1.5" PointX="8.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.SDE_xml_indexes" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.tblUser" Width="1.5" PointX="42.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.USERADMIN" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.USER" Width="1.5" PointX="6.75" PointY="44.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.WELL" Width="1.5" PointX="8.75" PointY="44.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.WINTERPASTURE" Width="1.5" PointX="42.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.ADMIN" Width="1.5" PointX="10.75" PointY="44.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.GDB_ITEMRELATIONSHIPTYPES" Width="1.5" PointX="12.75" PointY="44.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.GDB_ITEMTYPES" Width="1.5" PointX="42.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.GDB_REPLICALOG" Width="1.5" PointX="14.75" PointY="44.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelogisModel.GDB_TABLES_LAST_MODIFIED" Width="1.5" PointX="42.75" PointY="18.5" IsExpanded="true" />
+        <AssociationConnector Association="MelogisModel.FK_USERADMIN_MELOREGIONS" ManuallyRouted="false" />
+        <AssociationConnector Association="MelogisModel.FK_USERADMIN_REGION_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="MelogisModel.archives_fk1" ManuallyRouted="false" />
+        <AssociationConnector Association="MelogisModel.archives_fk2" ManuallyRouted="false" />
+        <AssociationConnector Association="MelogisModel.geocol_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="MelogisModel.sdelayer_stats_fk2" ManuallyRouted="false" />
+        <AssociationConnector Association="MelogisModel.layers_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="MelogisModel.layers_sfk" ManuallyRouted="false" />
+        <AssociationConnector Association="MelogisModel.rascol_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="MelogisModel.xml_columns_fk1" ManuallyRouted="false" />
+        <AssociationConnector Association="MelogisModel.xml_columns_fk2" ManuallyRouted="false" />
+        <AssociationConnector Association="MelogisModel.xml_indextags_fk1" ManuallyRouted="false" />
+        <AssociationConnector Association="MelogisModel.SDE_mvtables_modified" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
