@@ -17,7 +17,7 @@ namespace WebApplication2.Areas.Admin.Controllers
         public ActionResult Index()
         {
             int logUser = (int)Session["UserAdmin"];
-            return View(db.CHANNELS_M.Take(6).ToList());
+            return View(db.CHANNELS_M.Where(s => s.USER_ADMIN_ID == logUser).ToList());
         }
         [HttpPost]
         public ActionResult Index(List<CHANNELS_M> chn)
