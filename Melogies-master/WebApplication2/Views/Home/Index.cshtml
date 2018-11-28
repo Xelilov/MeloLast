@@ -67,6 +67,7 @@
         .arcgisSearch .searchMenu {
             left: -9999px;
         }
+
     </style>
 
     <link rel="stylesheet" href="https://js.arcgis.com/3.26/dijit/themes/claro/claro.css">
@@ -123,8 +124,7 @@
                         showLabels: true,
                         infoWindow: popup
                     });
-
-
+                                        
                     var toggle = new BasemapToggle({
                         map: map,
                         basemap: "topo"
@@ -881,7 +881,8 @@
                         enableInfoWindow: true,
                         enableHighlight: true,
                         showInfoWindowOnSelect: false,
-                        map: map
+                        map: map,
+                        sources: []
                     }, "search-input");
 
                     var sources = search.get("sources");
@@ -937,13 +938,13 @@
                         name: "Magistral Kanallar",
                         maxResults: 6,
                         maxSuggestions: 6,
-
                         infoTemplate: popupTemplateChannel,
+                        highlightSymbol: new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255, 0, 0]), 3.5),
                         enableSuggestions: true,
                         minCharacters: 0
 
                     });
-
+                    
                     sources.push({
                         featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/12"),
                         searchFields: ["Name"],
@@ -955,7 +956,8 @@
                         maxSuggestions: 6,
                         enableSuggestions: true,
                         minCharacters: 0,
-                        infoTemplate: popupTemplateChannel
+                        infoTemplate: popupTemplateChannel,
+                        highlightSymbol: new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255, 0, 0]), 3.5)
                     });
 
                     sources.push({
@@ -969,7 +971,8 @@
                         maxSuggestions: 6,
                         enableSuggestions: true,
                         minCharacters: 0,
-                        infoTemplate: popupTemplateChannel
+                        infoTemplate: popupTemplateChannel,
+                        highlightSymbol: new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255, 0, 0]), 3.5)
                     });
 
                     sources.push({
@@ -983,7 +986,8 @@
                         maxSuggestions: 6,
                         enableSuggestions: true,
                         minCharacters: 0,
-                        infoTemplate: popupTemplateChannel
+                        infoTemplate: popupTemplateChannel,
+                        highlightSymbol: new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255, 0, 0]), 3.5),
                     });
 
                     sources.push({
@@ -997,7 +1001,8 @@
                         maxSuggestions: 6,
                         enableSuggestions: true,
                         minCharacters: 0,
-                        infoTemplate: popupTemplateChannel
+                        infoTemplate: popupTemplateChannel,
+                        highlightSymbol: new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255, 0, 0]), 3.5)
                     });
 
                     sources.push({
@@ -1011,7 +1016,8 @@
                         maxSuggestions: 6,
                         enableSuggestions: true,
                         minCharacters: 0,
-                        infoTemplate: popupTemplateDrenaj
+                        infoTemplate: popupTemplateDrenaj,
+                        highlightSymbol: new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255, 0, 0]), 3.5)
                     });
 
                     sources.push({
@@ -1025,7 +1031,8 @@
                         maxSuggestions: 6,
                         enableSuggestions: true,
                         minCharacters: 0,
-                        infoTemplate: popupTemplateDrenaj
+                        infoTemplate: popupTemplateDrenaj,
+                        highlightSymbol: new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255, 0, 0]), 3.5)
                     });
 
                     sources.push({
@@ -1039,7 +1046,8 @@
                         maxSuggestions: 6,
                         enableSuggestions: true,
                         minCharacters: 0,
-                        infoTemplate: popupTemplateDrenaj
+                        infoTemplate: popupTemplateDrenaj,
+                        highlightSymbol: new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255, 0, 0]), 3.5)
                     });
 
                     sources.push({
@@ -1053,7 +1061,8 @@
                         maxSuggestions: 6,
                         enableSuggestions: true,
                         minCharacters: 0,
-                        infoTemplate: popupTemplateDrenaj
+                        infoTemplate: popupTemplateDrenaj,
+                        highlightSymbol: new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255, 0, 0]), 3.5)
                     });
 
                     sources.push({
@@ -1067,7 +1076,8 @@
                         maxSuggestions: 6,
                         enableSuggestions: true,
                         minCharacters: 0,
-                        infoTemplate: popupTemplateDrenaj
+                        infoTemplate: popupTemplateDrenaj,
+                        highlightSymbol: new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255, 0, 0]), 3.5)
                     });
 
                     sources.push({
@@ -1081,7 +1091,8 @@
                         maxSuggestions: 6,
                         enableSuggestions: true,
                         minCharacters: 0,
-                        infoTemplate: popupTemplateRiverBand
+                        infoTemplate: popupTemplateRiverBand,
+                        highlightSymbol: new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255, 0, 0]), 3.5)
                     });
 
                     sources.push({
@@ -1095,7 +1106,8 @@
                         maxSuggestions: 6,
                         enableSuggestions: true,
                         minCharacters: 0,
-                        infoTemplate: popupTemplateArtesian
+                        infoTemplate: popupTemplateArtesian,
+                        highlightSymbol: new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255, 0, 0]), 3.5)
                     });
 
                     sources.push({
@@ -1109,7 +1121,8 @@
                         maxSuggestions: 6,
                         enableSuggestions: true,
                         minCharacters: 0,
-                        infoTemplate: popupTemplateWell
+                        infoTemplate: popupTemplateWell,
+                        highlightSymbol: new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255, 0, 0]), 3.5)
                     });
 
                     sources.push({
@@ -1123,7 +1136,8 @@
                         maxSuggestions: 6,
                         enableSuggestions: true,
                         minCharacters: 0,
-                        infoTemplate: popupTemplateDevice
+                        infoTemplate: popupTemplateDevice,
+                        highlightSymbol: new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255, 0, 0]), 3.5)
                     });
 
                     sources.push({
@@ -1137,7 +1151,8 @@
                         maxSuggestions: 6,
                         enableSuggestions: true,
                         minCharacters: 0,
-                        infoTemplate: popupTemplateDepartment
+                        infoTemplate: popupTemplateDepartment,
+                        highlightSymbol: new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255, 0, 0]), 3.5)
                     });
 
                     sources.push({
@@ -1151,7 +1166,8 @@
                         maxSuggestions: 6,
                         enableSuggestions: true,
                         minCharacters: 0,
-                        infoTemplate: popupTemplatePump
+                        infoTemplate: popupTemplatePump,
+                        highlightSymbol: new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255, 0, 0]), 3.5)
                     });
 
                     sources.push({
@@ -1165,7 +1181,8 @@
                         maxSuggestions: 6,
                         enableSuggestions: true,
                         minCharacters: 0,
-                        infoTemplate: popupTemplateBuilding
+                        infoTemplate: popupTemplateBuilding,
+                        highlightSymbol: new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255, 0, 0]), 3.5)
                     });
 
                     sources.push({
@@ -1179,7 +1196,8 @@
                         maxSuggestions: 6,
                         enableSuggestions: true,
                         minCharacters: 0,
-                        infoTemplate: popupTemplateRoad
+                        infoTemplate: popupTemplateRoad,
+                        highlightSymbol: new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255, 0, 0]), 3.5)
                     });
 
                     sources.push({
@@ -1193,15 +1211,15 @@
                         maxSuggestions: 6,
                         enableSuggestions: true,
                         minCharacters: 0,
-                        infoTemplate: popupTemplatePastures
+                        infoTemplate: popupTemplatePastures,
+                        highlightSymbol: new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255, 0, 0]), 3.5)
                     });
-
-
+                    
                     //Set the sources above to the search widget
                     search.set("sources", sources);
 
                     search.startup();
-
+                    
                     $("#search-input_input").keyup(function () {
                         var searchitem = this.value;
                         $.ajax({
@@ -1438,7 +1456,9 @@
 
         <form class="search-form relative bg-white float-left tr-3s mr-5">
 
-            <div role="presentation" class="arcgisSearch" id="search" widgetid="search" style="display: block;"></div>
+            <div role="presentation" class="arcgisSearch" id="search" widgetid="search" style="display: block;">
+
+            </div>
 
             <div class="search-filter animated fadeInUp mt-5 bg-white shadow w-100p light scroll" role="dialog" hidden>
 
@@ -1893,43 +1913,20 @@
                 <div class="channels-list scroll o-auto">
                     <strong class="d-block mb-10">Channel</strong>
                     <div class="pl-10 CHannels">
-                        <div class="ckbox">
-                            <input type="radio" name="devices" id="duke">
-                            <label for="duke">Düker</label>
-                        </div>
-                        <div class="ckbox">
-                            <input type="radio" name="devices" id="dukeq">
-                            <label for="dukeq">Düker</label>
-                        </div>
-                         @*<div class="ckbox">
-                            <input type="radio" name="devices" id="duke">
-                            <label for="duke">Düker</label>
-                        </div>*@
-                    </div>
-                    <strong class="d-block mb-10">Qurğular</strong>
-                    <div class="pl-10 DeviceList">
-                         <div class="ckbox">
-                            <input type="radio" name="devices" id="dukeq2">
-                            <label for="dukeq2">Düker</label>
-                        </div>
-                         <div class="ckbox">
-                            <input type="radio" name="devices" id="dukeq3">
-                            <label for="dukeq3">Düker</label>
-                        </div>
                         @*<div class="ckbox">
-                            <input type="radio" name="devices" id="duke">
-                            <label for="duke">Düker</label>
-                        </div>*@
+                                <input type="radio" name="channels" id="channel-name-1">
+                                <label for="channel-name-1">Channel name</label>
+                            </div>*@
                     </div>
                 </div>
                 <div class="devices mt-20">
-                    @*<strong class="d-block mb-10">Qurğular</strong>
+                    <strong class="d-block mb-10">Qurğular</strong>
                     <div class="pl-10 DeviceList">
-                        <div class="ckbox">
-                            <input type="radio" name="devices" id="duke">
-                            <label for="duke">Düker</label>
-                        </div>
-                    </div>*@
+                        @*<div class="ckbox">
+                <input type="radio" name="devices" id="duke">
+                <label for="duke">Düker</label>
+            </div>*@
+                    </div>
                     <div>
                         <input type="search" name="search-test" id="search-channel">
 
@@ -2192,7 +2189,7 @@
                     var Channels = res.data.Channels;
                     $(".CHannels div").remove();
                     for (var i = 0; i < Channels.length; i++) {
-                        $(".CHannels").append("<div class='ckbox'><input type='radio' onclick='ChannelMap(this)'  name='channels' id='" + Channels[i].OBJECTID + "' text='" + Channels[i].NAME + "'><label  data-goe='" + Channels[i].SHAPE + "' text='" + Channels[i].NAME + "' for='" + Channels[i].OBJECTID + "' >" + Channels[i].NAME + "</label></div>")
+                        $(".CHannels").append("<div class='ckbox' ><input type='radio' onclick='ChannelMap(this)' data-id='" + Channels[i].OBJECTID + "' name='channels' text='" + Channels[i].NAME + "'  id='chanel-" + Channels[i].OBJECTID + "'><label id='" + Channels[i].OBJECTID + " data-goe='" + Channels[i].SHAPE + "' data-type='Channel' for='chanel-" + Channels[i].OBJECTID + "'>" + Channels[i].NAME + "</label></div>")
                     }
                 }
             })
@@ -2210,7 +2207,7 @@
         }
         function ChannelMap(e) {
             var text = $(e).attr("text");
-            var id = $(e).attr("id");
+            var id = $(e).attr("data-id");
             var type = $(e).attr("data-type");
             //$("#search-channel_input").val(text);
             //$("#search-channel_input").attr("data-id", id)
@@ -2223,7 +2220,7 @@
 
         function TakeSelected(e) {
             $("#search-input_input").val(e.innerText);
-            $("#search-input_input").attr("id", e.id)
+            $("#search-input_input").attr("data-id", e.id)
             $("#search-input_input").attr("data-type", "Channel")
 
             $(".esri-icon-search").click();

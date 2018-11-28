@@ -9,25 +9,25 @@
 <div class="card mb-3">
     <div class="card-body">
         <div class="table-responsive">
-            <table style="width:365%" class="table table-bordered" cellspacing="0">
+            <table style="width:2000px" class="table table-bordered" cellspacing="0">
                 <thead>
                     <tr>
                         <th>
                             @Html.DisplayNameFor(model => model.NAME)
                             <hr style="width:206px" />
                         </th>
-                        <th>
+                        @*<th>
                             @Html.DisplayNameFor(model => model.EMPLOYEE)
                             <hr style="width:206px" />
-                        </th>
-                        <th>
+                        </th>*@
+                        @*<th>
                             @Html.DisplayNameFor(model => model.CHANNEL_ID)
                             <hr style="width:206px" />
-                        </th>
-                        <th>
+                        </th>*@
+                        @*<th>
                             @Html.DisplayNameFor(model => model.ID_CHANNEL)
                             <hr style="width:206px" />
-                        </th>
+                        </th>*@
                         <th>
                             @Html.DisplayNameFor(model => model.LOCATED_NETWORK)
                             <hr style="width:206px" />
@@ -40,10 +40,10 @@
                             @Html.DisplayNameFor(model => model.NETWORK_TYPE)
                             <hr style="width:206px" />
                         </th>
-                        <th>
+                        @*<th>
                             @Html.DisplayNameFor(model => model.ACTIVITY)
                             <hr style="width:206px" />
-                        </th>
+                        </th>*@
                         <th>
                             @Html.DisplayNameFor(model => model.PROPERTY_TYPE)
                             <hr style="width:206px" />
@@ -64,26 +64,26 @@
                             @Html.DisplayNameFor(model => model.SERVED_AREA)
                             <hr style="width:206px" />
                         </th>
-                        <th>
+                        @*<th>
                             @Html.DisplayNameFor(model => model.NOTE)
                             <hr style="width:206px" />
-                        </th>
-                        <th>
+                        </th>*@
+                        @*<th>
                             @Html.DisplayNameFor(model => model.Region_ID)
                             <hr style="width:206px" />
-                        </th>
-                        <th>
+                        </th>*@
+                        @*<th>
                             @Html.DisplayNameFor(model => model.Municipality_ID)
                             <hr style="width:206px" />
-                        </th>
-                        <th>
+                        </th>*@
+                        @*<th>
                             @Html.DisplayNameFor(model => model.USER_ADMIN_ID)
                             <hr style="width:206px" />
-                        </th>
+                        </th>*@
                     </tr>
                 </thead>
             </table>
-            <div style="width:365%; height:400px;overflow:auto;">
+            <div style="width:2099px; height:400px;overflow:auto;">
                 <table class="table table-bordered" id="dataTable" cellspacing="0">
                     <tbody>
                         @using (Html.BeginForm("Index", "DEVICEs", FormMethod.Post))
@@ -106,21 +106,21 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td style="display:none">
                                         <div class="form-group">
                                             <div class="col-md-10">
                                                 <input value="@item.EMPLOYEE" name="dev[@i].EMPLOYEE" />
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td style="display:none">
                                         <div class="form-group">
                                             <div class="col-md-10">
                                                 <input value="@item.CHANNEL_ID" name="dev[@i].CHANNEL_ID" />
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td style="display:none">
                                         <div class="form-group">
                                             <div class="col-md-10">
                                                 <input value="@item.ID_CHANNEL" name="dev[@i].ID_CHANNEL" />
@@ -148,7 +148,7 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td style="display:none">
                                         <div class="form-group">
                                             <div class="col-md-10">
                                                 <input value="@item.ACTIVITY" name="dev[@i].ACTIVITY" />
@@ -190,28 +190,28 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td style="display:none">
                                         <div class="form-group">
                                             <div class="col-md-10">
                                                 <input value="@item.NOTE" name="dev[@i].NOTE" />
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td style="display:none">
                                         <div class="form-group">
                                             <div class="col-md-10">
                                                 <input value="@item.Region_ID" name="dev[@i].Region_ID" />
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td style="display:none">
                                         <div class="form-group">
                                             <div class="col-md-10">
                                                 <input value="@item.Municipality_ID" name="dev[@i].Municipality_ID" />
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td style="display:none">
                                         <div class="form-group">
                                             <div class="col-md-10">
                                                 <input value="@item.USER_ADMIN_ID" name="dev[@i].USER_ADMIN_ID" />
@@ -221,7 +221,7 @@
                                 </tr>
                                 i++;
                             }
-                            <div class="text-right" style="background-color:white; padding:10px; width:100px; position:fixed; bottom:0px; right:0px; z-index:1;">
+                            <div class="text-right" style="background-color:white; padding:10px; width:100px; position:fixed; bottom:0px; right:40px; z-index:1;">
                                 <button class="btn btn-primary">Yadda Saxla</button>
                             </div>
                         }

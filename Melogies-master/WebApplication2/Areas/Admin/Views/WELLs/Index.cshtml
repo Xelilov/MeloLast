@@ -9,7 +9,7 @@
 <div class="card mb-3">
     <div class="card-body">
         <div class="table-responsive">
-            <table style="width:472%" class="table table-bordered" cellspacing="0">
+            <table style="width:2000px" class="table table-bordered" cellspacing="0">
                 <thead>
                     <tr>
                         <th>
@@ -24,10 +24,10 @@
                             @Html.DisplayNameFor(model => model.WELL_TYPE)
                             <hr style="width:206px" />
                         </th>
-                        <th>
+                        @*<th>
                             @Html.DisplayNameFor(model => model.ASSIGMENT)
                             <hr style="width:206px" />
-                        </th>
+                        </th>*@
                         <th>
                             @Html.DisplayNameFor(model => model.SIB)
                             <hr style="width:206px" />
@@ -36,10 +36,10 @@
                             @Html.DisplayNameFor(model => model.EXPLONATION_DATE)
                             <hr style="width:206px" />
                         </th>
-                        <th>
+                        @*<th>
                             @Html.DisplayNameFor(model => model.ACTIVITY)
                             <hr style="width:206px" />
-                        </th>
+                        </th>*@
                         <th>
                             @Html.DisplayNameFor(model => model.IRRIGATED_AREA)
                             <hr style="width:206px" />
@@ -64,34 +64,34 @@
                             @Html.DisplayNameFor(model => model.NUMBER_)
                             <hr style="width:206px" />
                         </th>
-                        <th>
+                        @*<th>
                             @Html.DisplayNameFor(model => model.PRODUCTIVITY)
                             <hr style="width:206px" />
-                        </th>
-                        <th>
+                        </th>*@
+                        @*<th>
                             @Html.DisplayNameFor(model => model.SECURITY_TYPE)
                             <hr style="width:206px" />
-                        </th>
-                        <th>
+                        </th>*@
+                        @*<th>
                             @Html.DisplayNameFor(model => model.NOTE)
                             <hr style="width:206px" />
-                        </th>
-                        <th>
+                        </th>*@
+                        @*<th>
                             @Html.DisplayNameFor(model => model.Region_ID)
                             <hr style="width:206px" />
-                        </th>
-                        <th>
+                        </th>*@
+                        @*<th>
                             @Html.DisplayNameFor(model => model.Municipality_ID)
                             <hr style="width:206px" />
-                        </th>
-                        <th>
+                        </th>*@
+                        @*<th>
                             @Html.DisplayNameFor(model => model.USER_ADMIN_ID)
                             <hr style="width:206px" />
-                        </th>
+                        </th>*@
                     </tr>
                 </thead>
             </table>
-            <div style="width:472%; height:400px;overflow:auto;">
+            <div style="width:2098px; height:400px;overflow:auto;">
                 <table class="table table-bordered" id="dataTable" cellspacing="0">
                     <tbody>
                         @using (Html.BeginForm("Index", "WELLs", FormMethod.Post))
@@ -128,7 +128,7 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td style="display:none">
                                         <div class="form-group">
                                             <div class="col-md-10">
                                                 <input value="@item.ASSIGMENT" name="wll[@i].ASSIGMENT" />
@@ -149,7 +149,7 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td style="display:none">
                                         <div class="form-group">
                                             <div class="col-md-10">
                                                 <input value="@item.ACTIVITY" name="wll[@i].ACTIVITY" />
@@ -198,42 +198,42 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td style="display:none">
                                         <div class="form-group">
                                             <div class="col-md-10">
                                                 <input value="@item.PRODUCTIVITY" name="wll[@i].PRODUCTIVITY" />
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td style="display:none">
                                         <div class="form-group">
                                             <div class="col-md-10">
                                                 <input value="@item.SECURITY_TYPE" name="wll[@i].SECURITY_TYPE" />
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td style="display:none">
                                         <div class="form-group">
                                             <div class="col-md-10">
                                                 <input value="@item.NOTE" name="wll[@i].NOTE" />
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td style="display:none">
                                         <div class="form-group">
                                             <div class="col-md-10">
                                                 <input value="@item.Region_ID" name="wll[@i].Region_ID" />
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td style="display:none">
                                         <div class="form-group">
                                             <div class="col-md-10">
                                                 <input value="@item.Municipality_ID" name="wll[@i].Municipality_ID" />
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td style="display:none">
                                         <div class="form-group">
                                             <div class="col-md-10">
                                                 <input value="@item.USER_ADMIN_ID" name="wll[@i].USER_ADMIN_ID" />
@@ -243,7 +243,7 @@
                                 </tr>
                                 i++;
                             }
-                            <div class="text-right" style="background-color:white; padding:10px; width:100px; position:fixed; bottom:0px; right:0px; z-index:1;">
+                            <div class="text-right" style="background-color:white; padding:10px; width:100px; position:fixed; bottom:0px; right:40px; z-index:1;">
                                 <button class="btn btn-primary">Yadda Saxla</button>
                             </div>
                         }

@@ -35,5 +35,12 @@ namespace WebApplication2.Areas.Admin.Controllers
 
             return RedirectToAction("Index");
         }
+
+
+        public ActionResult LogOut()
+        {
+            Session["UserAdmin"] = null;
+            return RedirectToAction("Index", "Login");
+        }
     }
 }

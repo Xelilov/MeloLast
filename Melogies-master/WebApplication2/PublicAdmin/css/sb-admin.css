@@ -8,6 +8,10 @@ html {
   position: relative;
   min-height: 100%;
 }
+hr{
+    margin-bottom:2px!important;
+    margin-top:5px!important;
+}
 
 body {
   height: 100%;

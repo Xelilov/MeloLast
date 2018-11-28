@@ -19,17 +19,36 @@ namespace WebApplication2.Models
         [Display(Name = "Adı")]
         public string NAME { get; set; }
 
+        [Display(Name = "Yerləşdiyi Ərazi")]
         public string LOCATION { get; set; }
+
+        [Display(Name = "Tipi")]
         public string WELL_TYPE { get; set; }
         public string ASSIGMENT { get; set; }
+
+        [Display(Name = "SİB-lər")]
         public string SIB { get; set; }
+
+        [Display(Name = "İstismara verildiyi tarix")]
         public string EXPLONATION_DATE { get; set; }
         public Nullable<short> ACTIVITY { get; set; }
+
+        [Display(Name = "Xidmət etdiyi sahə")]
         public string IRRIGATED_AREA { get; set; }
+
+        [Display(Name = "Texniki vəziyyəti")]
         public string TECHNICAL_CONDITION { get; set; }
+
+        [Display(Name = "Dərinliyi")]
         public string DEPTH { get; set; }
+
+        [Display(Name = "Mülkiyyət növü")]
         public string PROPERTY_TYPE { get; set; }
+
+        [Display(Name = "Mülkiyyətçi")]
         public string PROPERTY { get; set; }
+
+        [Display(Name = "Bəndin Növü")]
         public string NUMBER_ { get; set; }
         public string PRODUCTIVITY { get; set; }
         public string SECURITY_TYPE { get; set; }

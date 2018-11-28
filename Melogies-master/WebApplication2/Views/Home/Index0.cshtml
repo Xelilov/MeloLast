@@ -39,12 +39,34 @@
     <link rel="stylesheet" href="~/Public/assets/css/pi.css">
     <link rel="stylesheet" href="~/Public/assets/icons/style.css" />
     <style>
-	
-         .esriPopup{
+
+
+        html, body, #mapDiv {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        #search-input {
+            float: left;
+        }
+
+        #search-channel{
+            visibility: hidden;
+        }
+
+        #search-device {
+            visibility: hidden;
+        }
+
+        .suggestionsMenu {
             display: none;
         }
-		
 
+        .arcgisSearch .searchMenu {
+            left: -9999px;
+        }
     </style>
 
     <link rel="stylesheet" href="https://js.arcgis.com/3.26/dijit/themes/claro/claro.css">
@@ -57,10 +79,11 @@
         var Longitude = 40.437018;
         var zoommap = 8;
         var map;
-		var searchChannel;
+        var searchChannel;
+        var searchDevice;
 
         function MapFunction(e) {
-            
+
             require([
                 "esri/map",
                 "esri/dijit/Search",
@@ -81,7 +104,7 @@
                 "dojo/dom",
                 "dojo/on",
                 "dojo/query",
-                "dojo/domReady!"                
+                "dojo/domReady!"
             ],
                 function (Map, Search, InfoTemplate, ArcGISDynamicMapServiceLayer, BasemapToggle, ImageParameters, FeatureLayer, SimpleFillSymbol,
                     SimpleLineSymbol, IdentifyTask, IdentifyParameters, Popup, PopupTemplate, arrayUtils, Color, domConstruct, dom, on, query) {
@@ -92,16 +115,16 @@
 
                     map = new Map("mapDiv", {
                         basemap: "topo",
-						sliderOrientation : "vertical",
-						sliderPosition: "bottom-left",
-						logo:false,
+                        sliderOrientation: "vertical",
+                        sliderPosition: "bottom-left",
+                        logo: false,
                         zoom: zoommap,          // Sets the initial scale to 1:50,000,000
                         center: [Latitude, Longitude],  // Sets the center point of view with lon/lat
                         showLabels: true,
                         infoWindow: popup
                     });
 
-                    
+
                     var toggle = new BasemapToggle({
                         map: map,
                         basemap: "topo"
@@ -110,9 +133,9 @@
                     var toggle1 = new BasemapToggle({
                         map: map,
                         basemap: "satellite"
-                     }, "satellite");
+                    }, "satellite");
 
-                     toggle2 = new BasemapToggle({
+                    toggle2 = new BasemapToggle({
                         map: map,
                         basemap: "osm"
                     }, "streets");
@@ -120,26 +143,25 @@
                     toggle.startup();
                     toggle1.startup();
                     toggle2.startup();
-                                       
+
                     var popup = new Popup({
                         fillSymbol: new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID,
                             new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID,
                                 new Color([255, 0, 0]), 2), new Color([255, 255, 0, 0.25]))
                     }, domConstruct.create("div"));
-                   
+
                     //Use the ImageParameters to set the visibleLayerIds layers in the map service during ArcGISDynamicMapServiceLayer construction.
                     var imageParameters = new ImageParameters();
                     imageParameters.layerIds = [22];
                     imageParameters.layerOption = ImageParameters.LAYER_OPTION_SHOW;
                     //can also be: LAYER_OPTION_EXCLUDE, LAYER_OPTION_HIDE, LAYER_OPTION_INCLUDE
 
-                                        var popupTemplateChannel = new PopupTemplate({
+                    var popupTemplateChannel = new PopupTemplate({
                         fieldInfos: [
 
                             {
                                 fieldName: "NAME",
                                 visible: true,
-
                                 label: "Adı"
                             },
                             {
@@ -150,7 +172,6 @@
                             {
                                 fieldName: "TYPE",
                                 visible: true,
-
                                 label: "Tipi"
                             },
                             {
@@ -220,9 +241,7 @@
                                 visible: true,
                                 label: "Üzərindəki qurğuların sayı",
                             }
-
-                        ],
-                        showAttachments: true
+                        ]
                     });
 
                     var popupTemplateDrenaj = new PopupTemplate({
@@ -232,7 +251,7 @@
                                 fieldName: "NAME",
                                 visible: true,
                                 label: "Adı"
-                            },                            
+                            },
                             {
                                 fieldName: "PASSING_AREAS",
                                 visible: true,
@@ -267,7 +286,7 @@
                                 fieldName: "FACTICAL_LENGTH",
                                 visible: true,
                                 label: "Uzunluğu",
-                            },                            
+                            },
                             {
                                 fieldName: "GISLENGTH",
                                 visible: true,
@@ -415,55 +434,49 @@
                                 label: "Adı"
                             },
                             {
-
-
-
-
-
-
-
-
-
-
+                                fieldName: "LOCATION",
+                                visible: true,
+                                label: "Yerləşdiyi Ərazi"
+                            },
+                            {
+                                fieldName: "WELL_TYPE",
+                                visible: true,
+                                label: "Tipi"
+                            },
+                            {
                                 fieldName: "EXPLONATION_DATE",
                                 visible: true,
                                 label: "İstismara verildiyi tarix",
                             },
                             {
-
-
-
-
-
-
-                                fieldName: "ASSIGMENT",
+                                fieldName: "IRRIGATED_AREA",
                                 visible: true,
-
-                                label: "Təyinatı",
+                                label: "Xidmət etdiyi sahə"
+                            },
+                            {
+                                fieldName: "SIB",
+                                visible: true,
+                                label: "SİB-lər",
                             },
                             {
                                 fieldName: "TECHNICAL_CONDITION",
                                 visible: true,
-                                label: " Texniki vəziyyəti",
+                                label: "Texniki vəziyyəti",
                             },
                             {
                                 fieldName: "PROPERTY",
                                 visible: true,
-
-                                label: "Bəndin Uzunluğu",
+                                label: "Mülkiyyətçi",
                             },
                             {
-
-                                fieldName: "GENERAL_TYPE",
+                                fieldName: "NUMBER",
                                 visible: true,
                                 label: "Bəndin Növü",
                             },
                             {
-
-                                fieldName: "HEIGHT",
+                                fieldName: "DEPTH",
                                 visible: true,
-
-                                label: "Hündürlüyü",
+                                label: "Dərinliyi",
                             },
                             {
                                 fieldName: "PROPERTY_TYPE",
@@ -476,28 +489,25 @@
 
                     var popupTemplateDevice = new PopupTemplate({
                         fieldInfos: [
-
                             {
                                 fieldName: "NAME",
                                 visible: true,
                                 label: "Adı"
                             },
                             {
-
-
-
-
-
+                                fieldName: "LOCATED_NETWORK",
+                                visible: true,
+                                label: "Yerləşdiyi Ərazi",
+                            },
+                            {
                                 fieldName: "EXPLONATION_DATE",
                                 visible: true,
                                 label: "İstismara verildiyi tarix",
                             },
                             {
-
-                                fieldName: "ASSIGMENT",
+                                fieldName: "NETWORK_TYPE",
                                 visible: true,
-
-                                label: "Təyinatı",
+                                label: "Tipi",
                             },
                             {
                                 fieldName: "TECHNICAL_CONDITION",
@@ -507,33 +517,24 @@
                             {
                                 fieldName: "PROPERTY",
                                 visible: true,
-
-                                label: "Bəndin Uzunluğu",
+                                label: "Mülkiyyətçi",
                             },
                             {
-
-                                fieldName: "GENERAL_TYPE",
-                                visible: true,
-
-                                label: "Bəndin Növü",
-                            },
-                            {
-
-                                fieldName: "HEIGHT",
-                                visible: true,
-
-                                label: "Hündürlüyü",
-                            },
-                            {
-
                                 fieldName: "PROPERTY_TYPE",
                                 visible: true,
-
                                 label: "Mülkiyyət növü",
+                            },
+                            {
+                                fieldName: "WATER_CAPABILITY",
+                                visible: true,
+                                label: "Su buraxma qabiliyyəti",
+                            },
+                            {
+                                fieldName: "SERVED_AREA",
+                                visible: true,
+                                label: "Xidmət etdiyi sahə"
                             }
-
-                        ],
-                        showAttachments: true
+                        ]
                     });
 
                     var popupTemplateDepartment = new PopupTemplate({
@@ -543,45 +544,8 @@
                                 fieldName: "NAME",
                                 visible: true,
                                 label: "Adı"
-                            },
-                            {
-                                fieldName: "EXPLONATION_DATE",
-                                visible: true,
-                                label: "İstismara verildiyi tarix",
-                            },
-                            {
-                                fieldName: "ASSIGMENT",
-                                visible: true,
-                                label: "Təyinatı",
-                            },
-                            {
-                                fieldName: "TECHNICAL_CONDITION",
-                                visible: true,
-                                label: " Texniki vəziyyəti",
-                            },
-                            {
-                                fieldName: "PROPERTY",
-                                visible: true,
-                                label: "Bəndin Uzunluğu",
-                            },
-                            {
-                                fieldName: "GENERAL_TYPE",
-                                visible: true,
-                                label: "Bəndin Növü",
-                            },
-                            {
-                                fieldName: "HEIGHT",
-                                visible: true,
-                                label: "Hündürlüyü",
-                            },
-                            {
-                                fieldName: "PROPERTY_TYPE",
-                                visible: true,
-                                label: "Mülkiyyət növü",
                             }
-
-                        ],
-                        showAttachments: true
+                        ]
                     });
 
                     var popupTemplatePump = new PopupTemplate({
@@ -634,63 +598,52 @@
                     var popupTemplateBuilding = new PopupTemplate({
                         fieldInfos: [
 
-
                             {
                                 fieldName: "NAME",
                                 visible: true,
                                 label: "Adı"
                             },
                             {
-
-                                fieldName: "EXPLONATION_DATE",
+                                fieldName: "EXPLONATIO",
                                 visible: true,
                                 label: "İstismara verildiyi tarix",
                             },
                             {
-
-
-
-
-
+                                fieldName: "REGION",
+                                visible: true,
+                                label: "Yerləşdiyi Ərazi",
+                            },
+                            {
                                 fieldName: "ASSIGMENT",
                                 visible: true,
                                 label: "Təyinatı",
                             },
                             {
-                                fieldName: "TECHNICAL_CONDITION",
+                                fieldName: "TECHNICAL_",
                                 visible: true,
                                 label: " Texniki vəziyyəti",
                             },
                             {
                                 fieldName: "PROPERTY",
                                 visible: true,
-
-                                label: "Bəndin Uzunluğu",
+                                label: "Mülkiyyətçi",
                             },
                             {
-
-                                fieldName: "GENERAL_TYPE",
-                                visible: true,
-
-                                label: "Bəndin Növü",
-                            },
-                            {
-
-                                fieldName: "HEIGHT",
-                                visible: true,
-
-                                label: "Hündürlüyü",
-                            },
-                            {
-
                                 fieldName: "PROPERTY_TYPE",
                                 visible: true,
-
                                 label: "Mülkiyyət növü",
+                            },
+                            {
+                                fieldName: "TOTAL_AREA",
+                                visible: true,
+                                label: "Ümumi sahə"
+                            },
+                            {
+                                fieldName: "SERVICE_AR",
+                                visible: true,
+                                label: "Tikili altı sahə"
                             }
-
-                        ],
-                        showAttachments: true
+                        ]
                     });
 
                     var popupTemplateRoad = new PopupTemplate({
@@ -702,47 +655,16 @@
                                 label: "Adı"
                             },
                             {
-
-                                fieldName: "EXPLONATION_DATE",
+                                fieldName: "TYPE",
                                 visible: true,
-
-                                label: "İstismara verildiyi tarix",
+                                label: "Tipi"
                             },
                             {
-
-                                fieldName: "ASSIGMENT",
+                                fieldName: "LENGTH",
                                 visible: true,
-
-                                label: "Təyinatı",
-                            },
-                            {
-                                fieldName: "TECHNICAL_CONDITION",
-                                visible: true,
-                                label: " Texniki vəziyyəti",
-                            },
-                            {
-                                fieldName: "PROPERTY",
-                                visible: true,
-                                label: "Bəndin Uzunluğu",
-                            },
-                            {
-                                fieldName: "GENERAL_TYPE",
-                                visible: true,
-                                label: "Bəndin Növü",
-                            },
-                            {
-                                fieldName: "HEIGHT",
-                                visible: true,
-                                label: "Hündürlüyü",
-                            },
-                            {
-                                fieldName: "PROPERTY_TYPE",
-                                visible: true,
-                                label: "Mülkiyyət növü",
+                                label: "Uzunluğu",
                             }
-
-                        ],
-                        showAttachments: true
+                        ]
                     });
 
                     var popupTemplatePastures = new PopupTemplate({
@@ -754,56 +676,24 @@
                                 label: "Adı"
                             },
                             {
-
-                                fieldName: "EXPLONATION_DATE",
+                                fieldName: "SERVED_AREA",
                                 visible: true,
-
-                                label: "İstismara verildiyi tarix",
+                                label: "Xidmət etdiyi sahə"
                             },
                             {
-
-                                fieldName: "ASSIGMENT",
+                                fieldName: "DEVICE_SUM",
                                 visible: true,
-
-                                label: "Təyinatı",
-                            },
-                            {
-                                fieldName: "TECHNICAL_CONDITION",
-                                visible: true,
-                                label: " Texniki vəziyyəti",
-                            },
-                            {
-                                fieldName: "PROPERTY",
-                                visible: true,
-                                label: "Bəndin Uzunluğu",
-                            },
-                            {
-                                fieldName: "GENERAL_TYPE",
-                                visible: true,
-                                label: "Bəndin Növü",
-                            },
-                            {
-                                fieldName: "HEIGHT",
-                                visible: true,
-                                label: "Hündürlüyü",
-                            },
-                            {
-                                fieldName: "PROPERTY_TYPE",
-                                visible: true,
-                                label: "Mülkiyyət növü",
+                                label: "Üzərindəki qurğuların sayı",
                             }
-
-                        ],
-                        showAttachments: true
+                        ]
                     });
 
-					
-                    layerRegion = new ArcGISDynamicMapServiceLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/MapServer/",
+                    layerRegion = new ArcGISDynamicMapServiceLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/MapServer/",
                         {
                             "imageParameters": imageParameters
                         });
-                    //layer = new ArcGISDynamicMapServiceLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/MapServer",
-                    layerMagistrChannel = new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/17",
+                    //layer = new ArcGISDynamicMapServiceLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/MapServer",
+                    layerMagistrChannel = new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/17",
                         {
                             "imageParameters": imageParameters,
                             mode: FeatureLayer.MODE_SNAPSHOT,
@@ -811,7 +701,7 @@
                             outFields: ["*"],
                             visible: false
                         });
-                    layerChannel1 = new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/12",
+                    layerChannel1 = new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/12",
                         {
                             "imageParameters": imageParameters,
                             mode: FeatureLayer.MODE_SNAPSHOT,
@@ -819,7 +709,7 @@
                             outFields: ["*"],
                             visible: false
                         });
-                    layerChannel2 = new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/13",
+                    layerChannel2 = new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/13",
                         {
                             "imageParameters": imageParameters,
                             mode: FeatureLayer.MODE_SNAPSHOT,
@@ -827,7 +717,7 @@
                             outFields: ["*"],
                             visible: false
                         });
-                    layerChannel3 = new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/14",
+                    layerChannel3 = new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/14",
                         {
                             "imageParameters": imageParameters,
                             mode: FeatureLayer.MODE_SNAPSHOT,
@@ -835,7 +725,7 @@
                             outFields: ["*"],
                             visible: false
                         });
-                    layerChannelClose = new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/15",
+                    layerChannelClose = new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/15",
                         {
                             "imageParameters": imageParameters,
                             mode: FeatureLayer.MODE_SNAPSHOT,
@@ -844,7 +734,7 @@
                             visible: false
                         });
 
-                    layerMagistrDrenaj = new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/11",
+                    layerMagistrDrenaj = new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/11",
                         {
                             "imageParameters": imageParameters,
                             mode: FeatureLayer.MODE_SNAPSHOT,
@@ -852,7 +742,7 @@
                             outFields: ["*"],
                             visible: false
                         });
-                    layerDrenaj1 = new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/6",
+                    layerDrenaj1 = new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/6",
                         {
                             "imageParameters": imageParameters,
                             mode: FeatureLayer.MODE_SNAPSHOT,
@@ -860,7 +750,7 @@
                             outFields: ["*"],
                             visible: false
                         });
-                    layerDrenaj2 = new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/7",
+                    layerDrenaj2 = new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/7",
                         {
                             "imageParameters": imageParameters,
                             mode: FeatureLayer.MODE_SNAPSHOT,
@@ -868,7 +758,7 @@
                             outFields: ["*"],
                             visible: false
                         });
-                    layerDrenaj3 = new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/8",
+                    layerDrenaj3 = new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/8",
                         {
                             "imageParameters": imageParameters,
                             mode: FeatureLayer.MODE_SNAPSHOT,
@@ -876,7 +766,7 @@
                             outFields: ["*"],
                             visible: false
                         });
-                    layerDrenajClose = new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/9",
+                    layerDrenajClose = new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/9",
                         {
                             "imageParameters": imageParameters,
                             mode: FeatureLayer.MODE_SNAPSHOT,
@@ -885,7 +775,7 @@
                             visible: false
                         });
 
-                    layerRiverBand = new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/20",
+                    layerRiverBand = new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/20",
                         {
                             "imageParameters": imageParameters,
                             mode: FeatureLayer.MODE_SNAPSHOT,
@@ -894,7 +784,7 @@
                             visible: false
                         });
 
-                    layerArtesian = new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/0",
+                    layerArtesian = new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/0",
                         {
                             "imageParameters": imageParameters,
                             mode: FeatureLayer.MODE_SNAPSHOT,
@@ -902,7 +792,7 @@
                             outFields: ["*"],
                             visible: false
                         });
-                    layerWell = new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/4",
+                    layerWell = new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/4",
                         {
                             "imageParameters": imageParameters,
                             mode: FeatureLayer.MODE_SNAPSHOT,
@@ -910,7 +800,7 @@
                             outFields: ["*"],
                             visible: false
                         });
-                    layerDevice = new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/2",
+                    layerDevice = new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/2",
                         {
                             "imageParameters": imageParameters,
                             mode: FeatureLayer.MODE_SNAPSHOT,
@@ -918,7 +808,7 @@
                             outFields: ["*"],
                             visible: false
                         });
-                    layerDepartment = new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/1",
+                    layerDepartment = new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/1",
                         {
                             "imageParameters": imageParameters,
                             mode: FeatureLayer.MODE_SNAPSHOT,
@@ -926,7 +816,7 @@
                             outFields: ["*"],
                             visible: false
                         });
-                    layerPump = new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/3",
+                    layerPump = new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/3",
                         {
                             "imageParameters": imageParameters,
                             mode: FeatureLayer.MODE_SNAPSHOT,
@@ -934,7 +824,7 @@
                             outFields: ["*"],
                             visible: false
                         });
-                    layerBuilding = new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/19",
+                    layerBuilding = new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/19",
                         {
                             "imageParameters": imageParameters,
                             mode: FeatureLayer.MODE_SNAPSHOT,
@@ -942,7 +832,7 @@
                             outFields: ["*"],
                             visible: false
                         });
-                    layerRoad = new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/18",
+                    layerRoad = new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/18",
                         {
                             "imageParameters": imageParameters,
                             mode: FeatureLayer.MODE_SNAPSHOT,
@@ -950,7 +840,7 @@
                             outFields: ["*"],
                             visible: false
                         });
-                    layerPastures = new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/5",
+                    layerPastures = new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/5",
                         {
                             "imageParameters": imageParameters,
                             mode: FeatureLayer.MODE_SNAPSHOT,
@@ -958,8 +848,8 @@
                             outFields: ["*"],
                             visible: false
                         });
-                    //var parcelUrl = "http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/MapServer";
-                    var parcelUrl = "http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer";
+                    //var parcelUrl = "http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/MapServer";
+                    var parcelUrl = "http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer";
                     //Channel map
                     map.addLayer(layerRegion);
                     map.addLayer(layerMagistrChannel);
@@ -989,15 +879,57 @@
                         enableButtonMode: false, //this enables the search widget to display as a single button
                         enableLabel: false,
                         enableInfoWindow: true,
+                        enableHighlight: true,
                         showInfoWindowOnSelect: false,
                         map: map
                     }, "search-input");
 
                     var sources = search.get("sources");
 
-                    
+                    //search find channel
+                    searchChannel = new Search({
+                        sources: [{
+                            featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Device_Channel/MapServer/1", {
+                                outFields: ["*"]
+                            }),
+                            outFields: ["*"],
+                            displayField: "NAME",
+                            suggestionTemplate: popupTemplateChannel,
+                            name: "Channels_1",
+                            enableSuggestions: true,
+                            enableHighlight: true,
+                            infoTemplate: popupTemplateChannel
+                        }],
+                        enableInfoWindow: true,
+                        map: map
+                    }, "search-channel");
+
+
+                    //searchChannel.startup();
+
+                    //search find device
+                    searchDevice = new Search({
+                        sources: [{
+                            featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Device_Channel/MapServer/0", {
+                                outFields: ["*"]
+                            }),
+                            outFields: ["*"],
+                            displayField: "NAME",
+                            suggestionTemplate: popupTemplateDevice,
+                            name: "device",
+                            enableSuggestions: true,
+                            enableHighlight: true,
+                            infoTemplate: popupTemplateDevice
+                        }],
+                        enableInfoWindow: true,
+                        map: map
+                    }, "search-device");
+
+
+                    //searchDevice.startup();
+
                     sources.push({
-                        featureLayer: new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/17"),
+                        featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/17"),
                         searchFields: ["NAME"],
                         displayField: "NAME",
                         exactMatch: false,
@@ -1005,12 +937,15 @@
                         name: "Magistral Kanallar",
                         maxResults: 6,
                         maxSuggestions: 6,
+
+                        infoTemplate: popupTemplateChannel,
                         enableSuggestions: true,
                         minCharacters: 0
+
                     });
 
                     sources.push({
-                        featureLayer: new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/12"),
+                        featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/12"),
                         searchFields: ["Name"],
                         displayField: "Name",
                         exactMatch: false,
@@ -1019,11 +954,12 @@
                         maxResults: 6,
                         maxSuggestions: 6,
                         enableSuggestions: true,
-                        minCharacters: 0
+                        minCharacters: 0,
+                        infoTemplate: popupTemplateChannel
                     });
 
                     sources.push({
-                        featureLayer: new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/13"),
+                        featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/13"),
                         searchFields: ["NAME"],
                         displayField: "NAME",
                         exactMatch: false,
@@ -1032,11 +968,12 @@
                         maxResults: 6,
                         maxSuggestions: 6,
                         enableSuggestions: true,
-                        minCharacters: 0
+                        minCharacters: 0,
+                        infoTemplate: popupTemplateChannel
                     });
 
                     sources.push({
-                        featureLayer: new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/14"),
+                        featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/14"),
                         searchFields: ["Name"],
                         displayField: "Name",
                         exactMatch: false,
@@ -1045,11 +982,12 @@
                         maxResults: 6,
                         maxSuggestions: 6,
                         enableSuggestions: true,
-                        minCharacters: 0
+                        minCharacters: 0,
+                        infoTemplate: popupTemplateChannel
                     });
 
                     sources.push({
-                        featureLayer: new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/15"),
+                        featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/15"),
                         searchFields: ["NAME"],
                         displayField: "NAME",
                         exactMatch: false,
@@ -1058,11 +996,12 @@
                         maxResults: 6,
                         maxSuggestions: 6,
                         enableSuggestions: true,
-                        minCharacters: 0
+                        minCharacters: 0,
+                        infoTemplate: popupTemplateChannel
                     });
 
                     sources.push({
-                        featureLayer: new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/11"),
+                        featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/11"),
                         searchFields: ["Name"],
                         displayField: "Name",
                         exactMatch: false,
@@ -1071,11 +1010,12 @@
                         maxResults: 6,
                         maxSuggestions: 6,
                         enableSuggestions: true,
-                        minCharacters: 0
+                        minCharacters: 0,
+                        infoTemplate: popupTemplateDrenaj
                     });
 
                     sources.push({
-                        featureLayer: new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/6"),
+                        featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/6"),
                         searchFields: ["NAME"],
                         displayField: "NAME",
                         exactMatch: false,
@@ -1084,11 +1024,12 @@
                         maxResults: 6,
                         maxSuggestions: 6,
                         enableSuggestions: true,
-                        minCharacters: 0
+                        minCharacters: 0,
+                        infoTemplate: popupTemplateDrenaj
                     });
 
                     sources.push({
-                        featureLayer: new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/7"),
+                        featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/7"),
                         searchFields: ["Name"],
                         displayField: "Name",
                         exactMatch: false,
@@ -1097,11 +1038,12 @@
                         maxResults: 6,
                         maxSuggestions: 6,
                         enableSuggestions: true,
-                        minCharacters: 0
+                        minCharacters: 0,
+                        infoTemplate: popupTemplateDrenaj
                     });
 
                     sources.push({
-                        featureLayer: new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/8"),
+                        featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/8"),
                         searchFields: ["NAME"],
                         displayField: "NAME",
                         exactMatch: false,
@@ -1110,11 +1052,12 @@
                         maxResults: 6,
                         maxSuggestions: 6,
                         enableSuggestions: true,
-                        minCharacters: 0
+                        minCharacters: 0,
+                        infoTemplate: popupTemplateDrenaj
                     });
 
                     sources.push({
-                        featureLayer: new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/9"),
+                        featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/9"),
                         searchFields: ["Name"],
                         displayField: "Name",
                         exactMatch: false,
@@ -1123,11 +1066,12 @@
                         maxResults: 6,
                         maxSuggestions: 6,
                         enableSuggestions: true,
-                        minCharacters: 0
+                        minCharacters: 0,
+                        infoTemplate: popupTemplateDrenaj
                     });
 
                     sources.push({
-                        featureLayer: new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/20"),
+                        featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/20"),
                         searchFields: ["NAME"],
                         displayField: "NAME",
                         exactMatch: false,
@@ -1136,11 +1080,12 @@
                         maxResults: 6,
                         maxSuggestions: 6,
                         enableSuggestions: true,
-                        minCharacters: 0
+                        minCharacters: 0,
+                        infoTemplate: popupTemplateRiverBand
                     });
 
                     sources.push({
-                        featureLayer: new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/0"),
+                        featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/0"),
                         searchFields: ["Name"],
                         displayField: "Name",
                         exactMatch: false,
@@ -1149,11 +1094,12 @@
                         maxResults: 6,
                         maxSuggestions: 6,
                         enableSuggestions: true,
-                        minCharacters: 0
+                        minCharacters: 0,
+                        infoTemplate: popupTemplateArtesian
                     });
 
                     sources.push({
-                        featureLayer: new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/4"),
+                        featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/4"),
                         searchFields: ["Name"],
                         displayField: "Name",
                         exactMatch: false,
@@ -1162,11 +1108,12 @@
                         maxResults: 6,
                         maxSuggestions: 6,
                         enableSuggestions: true,
-                        minCharacters: 0
+                        minCharacters: 0,
+                        infoTemplate: popupTemplateWell
                     });
 
                     sources.push({
-                        featureLayer: new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/2"),
+                        featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/2"),
                         searchFields: ["Name"],
                         displayField: "Name",
                         exactMatch: false,
@@ -1175,11 +1122,12 @@
                         maxResults: 6,
                         maxSuggestions: 6,
                         enableSuggestions: true,
-                        minCharacters: 0
+                        minCharacters: 0,
+                        infoTemplate: popupTemplateDevice
                     });
 
                     sources.push({
-                        featureLayer: new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/1"),
+                        featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/1"),
                         searchFields: ["Name"],
                         displayField: "Name",
                         exactMatch: false,
@@ -1188,11 +1136,12 @@
                         maxResults: 6,
                         maxSuggestions: 6,
                         enableSuggestions: true,
-                        minCharacters: 0
+                        minCharacters: 0,
+                        infoTemplate: popupTemplateDepartment
                     });
 
                     sources.push({
-                        featureLayer: new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/3"),
+                        featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/3"),
                         searchFields: ["Name"],
                         displayField: "Name",
                         exactMatch: false,
@@ -1201,11 +1150,12 @@
                         maxResults: 6,
                         maxSuggestions: 6,
                         enableSuggestions: true,
-                        minCharacters: 0
+                        minCharacters: 0,
+                        infoTemplate: popupTemplatePump
                     });
 
                     sources.push({
-                        featureLayer: new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/19"),
+                        featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/19"),
                         searchFields: ["Name"],
                         displayField: "Name",
                         exactMatch: false,
@@ -1214,11 +1164,12 @@
                         maxResults: 6,
                         maxSuggestions: 6,
                         enableSuggestions: true,
-                        minCharacters: 0
+                        minCharacters: 0,
+                        infoTemplate: popupTemplateBuilding
                     });
 
                     sources.push({
-                        featureLayer: new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/18"),
+                        featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/18"),
                         searchFields: ["Name"],
                         displayField: "Name",
                         exactMatch: false,
@@ -1227,11 +1178,12 @@
                         maxResults: 6,
                         maxSuggestions: 6,
                         enableSuggestions: true,
-                        minCharacters: 0
+                        minCharacters: 0,
+                        infoTemplate: popupTemplateRoad
                     });
 
                     sources.push({
-                        featureLayer: new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Melo_2310/FeatureServer/5"),
+                        featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/5"),
                         searchFields: ["Name"],
                         displayField: "Name",
                         exactMatch: false,
@@ -1240,10 +1192,11 @@
                         maxResults: 6,
                         maxSuggestions: 6,
                         enableSuggestions: true,
-                        minCharacters: 0
+                        minCharacters: 0,
+                        infoTemplate: popupTemplatePastures
                     });
 
-                    
+
                     //Set the sources above to the search widget
                     search.set("sources", sources);
 
@@ -1257,11 +1210,11 @@
                             method: "post",
                             type: "JSON",
                             success: function (response) {
-                                var itemName = response.data;                                
+                                var itemName = response.data;
                                 $("#searchBottomDropdown ul").remove();
                                 if (itemName.length > 10) {
                                     for (var i = 0; i < 10; i++) {
-                                        
+
                                         $("#searchBottomDropdown").append("<ul class='type-none m-0 p-0' role='listbox' aria-hidden='true'><li role='listitem' class='pt-7 pb-7 pl-15 pr-15 pointer'><span class='line-camp line-1'><i aria-hidden='true' class='icon-map-pin mr-10'></i><span onclick=Takename(this) data-type='" + itemName[i].Type + "' data-id='" + itemName[i].Id + "'>" + itemName[i].Name + "</span></span></li></ul>")
                                     }
                                 }
@@ -1277,27 +1230,11 @@
                             }
                         })
                     })
-                    
-					
-                    //search find layer
-                    searchChannel = new Search({
-                        sources: [{
-                            featureLayer: new FeatureLayer("http://10.10.1.253:6080/arcgis/rest/services/Channel_1011/MapServer/0", {
-                                outFields: ["*"]
-                            }),
-                            outFields: ["NAME"],
-                            displayField: "NAME",
-                            suggestionTemplate: "${NAME}",
-                            name: "Channels_1",                            
-                            enableSuggestions: true
-                        }],
-                        map: map
-                    }, "search-channel");
 
 
-                    searchChannel.startup();					
-					
-					
+                   
+
+
                     on(dom.byId("channel-Magistral"), "change", updateLayerVisibility);
                     on(dom.byId("channel-1"), "change", updateLayerVisibility);
                     on(dom.byId("channel-2"), "change", updateLayerVisibility);
@@ -1317,15 +1254,15 @@
                     on(dom.byId("network-20"), "change", updateLayerVisibility);
                     on(dom.byId("network-21"), "change", updateLayerVisibility);
                     on(dom.byId("network-14"), "change", updateLayerVisibility);
-                    
-                    var selectedLayersOfMap; 
+
+                    var selectedLayersOfMap;
                     function updateLayerVisibility() {
 
                         var inputs = query(".showmap");
                         var inputCount = inputs.length;
                         //in this application layer 22 is always on.
                         visibleLayerIds = [22];
-                        
+
                         //Channels
                         if (inputs[0].checked) {
                             layerMagistrChannel.setVisibility(1);
@@ -1448,7 +1385,7 @@
 
                 });
 
-            
+
         }
 
         function Takename(e) {
@@ -1458,13 +1395,30 @@
             $("#search-input_input").val(text);
             $("#search-input_input").attr("data-id", id)
             $("#search-input_input").attr("data-type", type)
-            
+            console.log(text, id, type);
 
             $(".esri-icon-search").click();
             $("#searchBottomDropdown ul").remove();
 
         }
-        
+
+        function TakenamePause(e) {
+
+            var text = $(e).text();
+            var id = $(e).attr("id");
+            var type = $(e).attr("data-type");
+            $("#search-input_input").val(text);
+            $("#search-input_input").attr("data-id", id);
+            $("#search-input_input").attr("data-type", type)
+
+            console.log(text, id, type);
+            setTimeout($(".esri-icon-search").click(), 2000);
+
+            //$(".esri-icon-search").click();
+            $("#searchBottomDropdown ul").remove();
+
+        }
+
     </script>
 
 </head>
@@ -1528,8 +1482,8 @@
                         {
                             <div class="menu-item">
                                 <div class="ckbox">
-                                    <input type="checkbox" name="rayon" id="rayon-@region.Region_ID_1">
-                                    <label for="rayon-@region.Region_ID_1">@region.NAME_AZ</label>
+                                    <input type="checkbox" name="rayon" id="rayon-@region.Region_ID">
+                                    <label for="rayon-@region.Region_ID">@region.NAME_AZ</label>
                                 </div>
                             </div>
                         }
@@ -1545,12 +1499,12 @@
 
                 <div class="drop-menu static animated fadeInUp mt-5" aria-labelledby="village-menu-search">
                     <div class="menu-body villageSearch">
-					@*<div class="menu-item">
-							<div class="ckbox">
-								<input type="checkbox" name="rayon" id="all-v">
-								<label for="all-v">Hamısı</label>
-							</div>
-						</div>*@
+                        @*<div class="menu-item">
+                                <div class="ckbox">
+                                    <input type="checkbox" name="rayon" id="all-v">
+                                    <label for="all-v">Hamısı</label>
+                                </div>
+                            </div>*@
                     </div>
                 </div>
 
@@ -1620,8 +1574,8 @@
                         </div>
                         <div class="menu-item">
                             <div class="ckbox">
-                                <input type="checkbox" name="rayon" id="tydj-2">
-                                <label for="tydj-2">3-ci dərəcəli ilkin drenlər</label>
+                                <input type="checkbox" name="rayon" id="tydj-3">
+                                <label for="tydj-3">3-ci dərəcəli ilkin drenlər</label>
                             </div>
                         </div>
                         <div class="menu-item">
@@ -1698,13 +1652,13 @@
                 <div class="drop-menu right static animated fadeInUp mt-5" aria-labelledby="water-capasity-search">
                     <div class="menu-body">
                         <div class="menu-item">
-							<span>min</span>
-							<input type="number" id="minvalue" name="name" value="" />
-						</div>
-						<div class="menu-item">
-							<span> max</span>
-							<input type="number" id="maxvalue" name="name" value="" />
-						</div>
+                            <span>min</span>
+                            <input type="number" id="minvalue" name="name" value="" />
+                        </div>
+                        <div class="menu-item">
+                            <span> max</span>
+                            <input type="number" id="maxvalue" name="name" value="" />
+                        </div>
                     </div>
                 </div>
 
@@ -1722,18 +1676,16 @@
 
 
     <div id="mapDiv" style="width:100%; height:100vh"></div>
-	
-	<div class="left-toolbar">
-	
-		<div class="drop map-change">
 
-			<span class="drop-toggle btn" role="button" aria-haspopup="true" aria-expanded="true" id="map-menu">
-				<i aria-hidden="true" class="icon-map"></i>
-			</span>
+    <div class="left-toolbar">
 
-			<div class="drop-menu xs animated fadeInUp" aria-labelledby="map-menu">
-				<div class="menu-body" role="toolbar">
-					<div class="ckbox clear">
+        <div class="drop map-change">
+            <span class="drop-toggle btn" role="button" aria-haspopup="true" aria-expanded="true" id="map-menu">
+                <i aria-hidden="true" class="icon-map"></i>
+            </span>
+            <div class="drop-menu xs animated fadeInUp" aria-labelledby="map-menu">
+                <div class="menu-body" role="toolbar">
+                    <div class="ckbox clear">
                         <input type="radio" name="map-type" id="topo" checked onclick="MapFunction('topo')">
                         <label for="topo">Əsas xəritə</label>
                     </div>
@@ -1745,11 +1697,10 @@
                         <input type="radio" name="map-type" id="satellite" onclick="test(this)">
                         <label for="satellite">Bing</label>
                     </div>
-				</div>
-			</div>
-
-		</div>
-	</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section>
         <!-- Modal -->
@@ -1803,68 +1754,11 @@
         </div>
         <div class="tab-content">
             <div class="tab-panel scroll o-auto p-20 active" role="tabpanel" data-tab="network">
-                @*<div class="group mb-20">
-                        <label for="district-menu">Rayonlar</label>
-
-                        <div class="drop district-menu w-100p">
-
-                            <span role="button" class="drop-toggle input caret" id="district-menu" aria-label="Rayonlar" aria-haspopup="true" aria-expanded="true">
-                                Seç
-                            </span>
-
-                            <div class="drop-menu static animated fadeInUp mt-5" aria-labelledby="district-menu">
-                                <div class="menu-body RegionList">
-                                    <div class="menu-item">
-                                        <div class="ckbox">
-                                            <input type="checkbox" name="rayon" id="0000">
-                                            <label for="0000">Hamısı</label>
-                                        </div>
-                                    </div>
-                                    @foreach (var region in Model.Regions)
-                                    {
-                                        <div class="menu-item">
-                                            <div class="ckbox">
-                                                <input type="checkbox" name="rayon" id="@region.Region_ID_1">
-                                                <label for="@region.Region_ID_1">@region.NAME_AZ</label>
-                                            </div>
-                                        </div>
-                                    }
-
-                                    @*<div class="menu-item">
-                                        <div class="ckbox">
-                                            <input type="checkbox" name="rayon" id="rayon-1">
-                                            <label for="rayon-1">Rayon adı</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>*@
+               
                 <div class="group mb-20">
                     <strong class="d-block mb-10">Açıq suvarma şəbəkəsi</strong>
                     <div class="pl-10 _Channel">
-                        @*@foreach (var item in Model.Channels)
-                            {
-                                if (item.TYPE != null && item.TYPE != " " && item.TYPE != "<Null>")
-                                {
-                                    int channeltype;
-                                    if (Int32.TryParse(item.TYPE, out channeltype))
-                                    {
-                                        <div class="ckbox">
-                                            <input class="showmap" type="checkbox" id="channel-@item.TYPE">
-                                            <label for="channel-@item.TYPE">@channeltype -ci dərəcəli kollektorlar</label>
-                                        </div>
-                                    }
-                                    else
-                                    {
-                                        <div class="ckbox">
-                                            <input class="showmap" type="checkbox" id="channel-@item.TYPE">
-                                            <label for="channel-@item.TYPE">@item.TYPE</label>
-                                        </div>
-                                    }
-                                }
-                            }*@
+                        
                         <div class="ckbox">
                             <input class="showmap" type="checkbox" id="channel-Magistral" value=17>
                             <label for="channel-Magistral">Magistral Kanallar</label>
@@ -1984,7 +1878,7 @@
                             <option>Seç</option>
                             @foreach (var item in Model.Regions)
                             {
-                                <option value="@item.Region_ID_1">@item.NAME_AZ</option>
+                                <option value="@item.Region_ID">@item.NAME_AZ</option>
                             }
                         </select>
                     </div>
@@ -1999,23 +1893,50 @@
                 <div class="channels-list scroll o-auto">
                     <strong class="d-block mb-10">Channel</strong>
                     <div class="pl-10 CHannels">
+                        <div class="ckbox">
+                            <input type="radio" name="devices" id="duke">
+                            <label for="duke">Düker</label>
+                        </div>
+                        <div class="ckbox">
+                            <input type="radio" name="devices" id="dukeq">
+                            <label for="dukeq">Düker</label>
+                        </div>
+                         @*<div class="ckbox">
+                            <input type="radio" name="devices" id="duke">
+                            <label for="duke">Düker</label>
+                        </div>*@
+                    </div>
+                    <strong class="d-block mb-10">Qurğular</strong>
+                    <div class="pl-10 DeviceList">
+                         <div class="ckbox">
+                            <input type="radio" name="devices" id="dukeq2">
+                            <label for="dukeq2">Düker</label>
+                        </div>
+                         <div class="ckbox">
+                            <input type="radio" name="devices" id="dukeq3">
+                            <label for="dukeq3">Düker</label>
+                        </div>
                         @*<div class="ckbox">
-                                <input type="radio" name="channels" id="channel-name-1">
-                                <label for="channel-name-1">Channel name</label>
-                            </div>*@
+                            <input type="radio" name="devices" id="duke">
+                            <label for="duke">Düker</label>
+                        </div>*@
                     </div>
                 </div>
                 <div class="devices mt-20">
-                    <strong class="d-block mb-10">Qurğular</strong>
+                    @*<strong class="d-block mb-10">Qurğular</strong>
                     <div class="pl-10 DeviceList">
-                        @*<div class="ckbox">
-                                <input type="radio" name="devices" id="duke">
-                                <label for="duke">Düker</label>
-                            </div>*@
-                    </div>
-                   <div>
+                        <div class="ckbox">
+                            <input type="radio" name="devices" id="duke">
+                            <label for="duke">Düker</label>
+                        </div>
+                    </div>*@
+                    <div>
                         <input type="search" name="search-test" id="search-channel">
-                        
+
+                    </div>
+                    <div>
+                        <input type="search" name="search-test" id="search-device">
+
                     </div>
                 </div>
             </div>
@@ -2159,13 +2080,46 @@
 
         var attrList = [];
         $("._Attrribut .ckbox input").click(function () {
+            var alltype = document.querySelectorAll("._Attrribut .ckbox input");
+            let all = document.getElementById("type-0");
             let count = $(this).attr("id");
-            if (checkElementInArr(attrList, count)) {
-                var index = attrList.indexOf(count);
-                attrList.splice(index, 1);
-            } else {
-                attrList.push(count);
+
+            if (count == 'type-0') {
+                if ($(all).is(":checked")) {
+                    for (var i = 0; i < alltype.length; i++) {
+                        if (!$(alltype[i]).is(":checked")) {
+                            $(alltype[i]).prop("checked", true);
+                        }
+                    }
+                }
+                else {
+                    for (var i = 0; i < alltype.length; i++) {
+                        if (i != 0) {
+                            $(alltype[i]).prop("checked", false);
+                        }
+                    }
+                }
             }
+            else {
+                if ($(all).is(":checked")) {
+                    $(all).prop("checked", false);
+                }
+            }
+            attrList = [];
+            for (var i = 0; i < alltype.length; i++) {
+
+                if ($(alltype[i]).is(":checked")) {
+                    var typeID = $(alltype[i]).attr("id")
+                    attrList.push(typeID);
+                }
+            }
+
+            //if (checkElementInArr(attrList, count)) {
+            //    var index = attrList.indexOf(count);
+            //    attrList.splice(index, 1);
+            //} else {
+            //    attrList.push(count);
+            //}
         });
 
 
@@ -2201,6 +2155,7 @@
         $("._close-button").on("click", function () {
             document.getElementById("_ModalContent").style.display = "none";
         })
+
         $("#select-district").on("change", function () {
             var regionid = document.querySelector("#select-district").value;
             $(".DeviceList div").remove();
@@ -2231,51 +2186,44 @@
                     var DEvices = res.data.Device;
                     $(".DeviceList div").remove();
                     for (var i = 0; i < DEvices.length; i++) {
-                        $(".DeviceList").append("<div class='ckbox'><input type='radio' onclick='Devicemap(this)'  name='devices' id='" + DEvices[i].OBJECTID + "'><label  data-goe='" + DEvices[i].SHAPE + "' for='" + DEvices[i].OBJECTID + "' >" + DEvices[i].NAME + "</label></div>")
-
+                        $(".DeviceList").append("<div class='ckbox'><input type='radio' onclick='Devicemap(this)'  name='devices' id='" + DEvices[i].OBJECTID + "' text='" + DEvices[i].NAME + "'><label  data-goe='" + DEvices[i].SHAPE + "' text='" + DEvices[i].Name + "' for='" + DEvices[i].OBJECTID + "' >" + DEvices[i].NAME + "</label></div>")
                     }
 
                     var Channels = res.data.Channels;
                     $(".CHannels div").remove();
                     for (var i = 0; i < Channels.length; i++) {
-                         $(".CHannels").append("<div class='ckbox' ><input type='radio' onclick='ChannelMap(this)' data-id='" + Channels[i].OBJECTID + "' name='channels' text='" + Channels[i].NAME + "'  id='chanel-" + Channels[i].OBJECTID + "'><label id='" + Channels[i].OBJECTID + " data-goe='" + Channels[i].SHAPE + "' data-type='Channel' for='chanel-" + Channels[i].OBJECTID + "'>" + Channels[i].NAME + "</label></div>")
-
+                        $(".CHannels").append("<div class='ckbox'><input type='radio' onclick='ChannelMap(this)'  name='channels' id='" + Channels[i].OBJECTID + "' text='" + Channels[i].NAME + "'><label  data-goe='" + Channels[i].SHAPE + "' text='" + Channels[i].NAME + "' for='" + Channels[i].OBJECTID + "' >" + Channels[i].NAME + "</label></div>")
                     }
-
                 }
             })
         })
+
         function Devicemap(e) {
-            var DeviceKord = $(e).next().attr("data-id");
-            StringSplit(DeviceKord);
-            lasttotallat(latarray, lonarray)
+            var text = $(e).attr("text");
+            var id = $(e).attr("id");
+            var type = $(e).attr("name");
+            
+            searchDevice.set('value', text);
 
-            Latitude = lastlat;
-            Longitude = lastlon;
-            zoommap = 12;
-            //MapFunction();
-
-            lastlat = 0;
-            lastlon = 0;
-            latarray = [];
-            lonarray = [];
+            $(".esri-icon-search").click();
+            $("#searchBottomDropdown ul").remove();
         }
         function ChannelMap(e) {
-			var text = $(e).attr("text");
-            var id = $(e).attr("data-id");
+            var text = $(e).attr("text");
+            var id = $(e).attr("id");
             var type = $(e).attr("data-type");
             //$("#search-channel_input").val(text);
             //$("#search-channel_input").attr("data-id", id)
             //$("#search-channel_input").attr("data-type", type)
             searchChannel.set('value', text);
-            
+
             $(".esri-icon-search").click();
             $("#searchBottomDropdown ul").remove();
         }
 
         function TakeSelected(e) {
             $("#search-input_input").val(e.innerText);
-            $("#search-input_input").attr("data-id", e.id)
+            $("#search-input_input").attr("id", e.id)
             $("#search-input_input").attr("data-type", "Channel")
 
             $(".esri-icon-search").click();
@@ -2324,7 +2272,79 @@
                     Listid.push(regionId);
                 }
             }
-          
+            //if (checkElementInArr(Listid, parseInt(count))) {
+            //    var index = Listid.indexOf(parseInt(count));
+            //    Listid.splice(index, 1);
+            //} else {
+            //    Listid.push(parseInt(count));
+            //}
+
+            //if (Listid.length != 0) {
+            //    $.ajax({
+            //        url: "/Home/All",
+            //        data: { id: Listid },
+            //        method: "post",
+            //        type: "JSON",
+            //        success: function (response) {
+            //            var allData = response.data;
+
+            //            //$(".Network div").remove();
+            //            //$(".riverband div").remove();
+            //            //$(".dbwell div").remove();
+            //            //$("._Channel div").remove();
+            //            //for (var c = 0; c < allData.ChannelTypes.length; c++) {
+            //            //    console.log(allData.ChannelTypes[c].TYPE)
+            //            //    if (allData.ChannelTypes[c].TYPE != null && allData.ChannelTypes[c].TYPE != " ") {
+            //            //        var chaneltype
+            //            //        if (parseInt(allData.ChannelTypes[c].TYPE)) {
+            //            //            chaneltype = allData.ChannelTypes[c].TYPE + '-ci dərəcəli kollektorlar';
+            //            //        }
+            //            //        else {
+            //            //            chaneltype = allData.ChannelTypes[c].TYPE
+            //            //        }
+            //            //        $("._Channel").append("<div class='ckbox'><input type='checkbox' onclick='func(this)' id='drej-" + allData.ChannelTypes[c].TYPE + "'><label  for='drej-" + allData.ChannelTypes[c].TYPE + "'>" + chaneltype + "</label></div>");
+
+            //            //    }
+            //            //}
+            //            //for (var k = 0; k < allData.DrenajselectList.length; k++) {
+            //            //    if (allData.DrenajselectList[k].DrejType !=null && allData.DrenajselectList[k].DrejType != " ") {
+            //            //        var type;
+            //            //        if (parseInt(allData.DrenajselectList[k].DrejType)) {
+            //            //            type = allData.DrenajselectList[k].DrejType + '-ci dərəcəli kollektorlar';
+            //            //        }
+            //            //        else {
+            //            //            type = allData.DrenajselectList[k].DrejType
+            //            //        }
+            //            //        $(".Network").append("<div class='ckbox'><input type='checkbox' onclick='func(this)' id='drej-" + allData.DrenajselectList[k].DrejType + "'><label  for='drej-" + allData.DrenajselectList[k].DrejType + "'>" + type + "</label></div>");
+            //            //    }
+            //            //    //$(".Network").append("<div class='ckbox'><input type='checkbox' onclick='func(this)' id='" + allData.DrenajselectList[k].OBJECTID + "'><label data-goe='" + allData.DrenajselectList[k].shape + "' for='" + allData.DrenajselectList[k].OBJECTID + "'>" + allData.DrenajselectList[k].NAME + "</label></div>");
+
+            //            //}
+            //            //for (var j = 0; j < allData.RiverbandselectList.length; j++) {
+            //            //    var rivertype;
+            //            //    if (parseInt(allData.RiverbandselectList[j].Riverbandtype)) {
+            //            //        var converttype = parseInt(allData.RiverbandselectList[j].Riverbandtype);
+            //            //        rivertype = converttype + '-ci dərəcəli kollektorlar';
+            //            //    }
+            //            //    else {
+            //            //        rivertype = allData.RiverbandselectList[j].Riverbandtype
+            //            //    }
+            //            //    $(".riverband").append("<div class='ckbox'><input type='checkbox' onclick='func(this)' id='rver-" + allData.RiverbandselectList[j].Riverbandtype + "'><label for='rver-" + allData.RiverbandselectList[j].Riverbandtype + "'>" + rivertype + "</label></div>");
+            //            //}
+            //            //for (var t = 0; t < allData.WellselectList.length; t++) {
+            //            //    if (allData.WellselectList[t].WellType!=" ") {
+            //            //        $(".dbwell").append("<div class='ckbox'><input type='checkbox' onclick='func(this)' id='well-" + allData.WellselectList[t].WellType + "'><label for='well-" + allData.WellselectList[t].WellType + "'>" + allData.WellselectList[t].WellType + "</label></div>");
+
+            //            //    }
+            //            //}
+            //        }
+            //    })
+            //}
+            //else {
+            //    //$(".Network div").remove();
+            //    //$(".riverband div").remove();
+            //    //$(".dbwell div").remove();
+            //}
         });
 
         var lastlat = 0;
@@ -2461,7 +2481,7 @@
 
 
         function removeOf() {
-            
+            console.log("dada");
             $('.searchMenu ul li').filter('[data-index="0"]').remove();
 
         }
