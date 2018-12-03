@@ -1222,6 +1222,7 @@
                     
                     $("#search-input_input").keyup(function () {
                         var searchitem = this.value;
+                        $('.search-filter').removeAttr('hidden');
                         $.ajax({
                             url: "/Home/Search",
                             data: { name: searchitem },
@@ -1229,20 +1230,21 @@
                             type: "JSON",
                             success: function (response) {
                                 var itemName = response.data;
-                                $("#searchBottomDropdown ul").remove();
+                                $("#searchBottomDropdown li").remove();
                                 if (itemName.length > 10) {
+
                                     for (var i = 0; i < 10; i++) {
 
-                                        $("#searchBottomDropdown").append("<ul class='type-none m-0 p-0' role='listbox' aria-hidden='true'><li role='listitem' class='pt-7 pb-7 pl-15 pr-15 pointer'><span class='line-camp line-1'><i aria-hidden='true' class='icon-map-pin mr-10'></i><span onclick=Takename(this) data-type='" + itemName[i].Type + "' data-id='" + itemName[i].Id + "'>" + itemName[i].Name + "</span></span></li></ul>")
+                                        $("#searchBottomDropdown").append("<li role='listitem' class='pt-7 pb-7 pl-15 pr-15 pointer'><span class='line-camp line-1'><i aria-hidden='true' class='icon-map-pin mr-10'></i><span onclick=Takename(this) data-type='" + itemName[i].Type + "' data-id='" + itemName[i].Id + "'>" + itemName[i].Name + "</span></span></li>")
                                     }
                                 }
                                 else if (itemName.length < 10) {
                                     for (var i = 1; i < itemName.length; i++) {
-                                        $("#searchBottomDropdown").append("<ul class='type-none m-0 p-0' role='listbox' aria-hidden='true'><li role='listitem' class='pt-7 pb-7 pl-15 pr-15 pointer'><span class='line-camp line-1'><i aria-hidden='true' class='icon-map-pin mr-10'></i><span onclick=Takename(this) data-type='" + itemName[i].Type + "' data-id='" + itemName[i].Id + "'>" + itemName[i].Name + "</span></span></li></ul>")
+                                        $("#searchBottomDropdown").append("<li role='listitem' class='pt-7 pb-7 pl-15 pr-15 pointer'><span class='line-camp line-1'><i aria-hidden='true' class='icon-map-pin mr-10'></i><span onclick=Takename(this) data-type='" + itemName[i].Type + "' data-id='" + itemName[i].Id + "'>" + itemName[i].Name + "</span></span></li>")
                                     }
                                 }
                                 else {
-                                    $("#searchBottomDropdown").append("<ul class='type-none m-0 p-0' role='listbox' aria-hidden='true'><li role='listitem' class='pt-7 pb-7 pl-15 pr-15 pointer'><span class='line-camp line-1'><span>Uyğun nəticə tapılmadı</span></span></li></ul>")
+                                    $("#searchBottomDropdown").append("<li role='listitem' class='pt-7 pb-7 pl-15 pr-15 pointer'><span class='line-camp line-1'><span>Uyğun nəticə tapılmadı</span></span></li>")
 
                                 }
                             }
@@ -1451,19 +1453,20 @@
             </strong>
         </a>
 
-        <div id="search-input" style="width:15%"></div>
+        
 
 
         <form class="search-form relative bg-white float-left tr-3s mr-5">
 
+            <div id="search-input" style="width:15%"></div>
             <div role="presentation" class="arcgisSearch" id="search" widgetid="search" style="display: block;">
 
             </div>
 
-            <div class="search-filter animated fadeInUp mt-5 bg-white shadow w-100p light scroll" role="dialog" hidden>
+            <div class="search-filter animated fadeInUp mt-5 bg-white shadow w-100p light scroll" style="top:40px" role="dialog" hidden>
 
                 <div class="filter-list src-result" role="group" aria-hidden="true">
-                    <ul class="type-none m-0 p-0" role="listbox" aria-hidden="true">
+                    <ul id="searchBottomDropdown" class="type-none m-0 p-0" role="listbox" aria-hidden="true">
                         <li role="listitem" class="pt-7 pb-7 pl-15 pr-15 pointer">
                             <span class="line-camp line-1">
                                 <i aria-hidden="true" class="icon-map-pin mr-10"></i>
@@ -1690,7 +1693,7 @@
 
         </div>
 
-        <div id="searchBottomDropdown" style="width:100%;float:left;"></div>
+        @*<div id="searchBottomDropdown" style="width:100%;float:left;"></div>*@
 
     </header>
 
@@ -1911,7 +1914,7 @@
                     </div>
                 </div>
                 <div class="channels-list scroll o-auto">
-                    <strong class="d-block mb-10">Channel</strong>
+                    <strong class="d-block mb-10">Kanallar</strong>
                     <div class="pl-10 CHannels">
                         @*<div class="ckbox">
                                 <input type="radio" name="channels" id="channel-name-1">
@@ -2142,7 +2145,7 @@
                         $("._md-center table tr").remove();
                         $("._md-center table").append("<tr class='_tabel-rows'><th>Tip adı</th><th>Ümumi say</th><th>Ümumi uzunluq</th></tr>");
                         for (var i = 0; i < attributs.length; i++) {
-                            $("._md-center table").append("<tr class='_tabel-rows'><td>" + attributs[i].TypeName + "</td><td>" + attributs[i].TypeCount + "</td><td>" + attributs[i].TypeLength + "</td></tr>");
+                            $("._md-center table").append("<tr class='_tabel-rows'><td>" + attributs[i].TypeName + "</td><td>" + attributs[i].TypeCount + " ədəd</td><td>" + attributs[i].TypeLength + " km </td></tr>");
                         }
                     }
                 })

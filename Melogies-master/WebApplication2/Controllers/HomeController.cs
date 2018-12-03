@@ -91,12 +91,13 @@ namespace WebApplication2.Controllers
 
         public ActionResult Search(string name)
         {
-           List<SearchName> src = this.HttpContext.Application["searchResult"] as List<SearchName>;
-            if (src == null)
+            //List<SearchName> src = this.HttpContext.Application["searchResult"] as List<SearchName>;
+            List<SearchName> src = new List<SearchName>();
+            if (src.Count==0)
             {
                 src = new List<SearchName>();
                 #region Search
-                foreach (var item in ChannelList)
+                foreach (var item in db.CHANNELS_1)
                 {
                     src.Add(new SearchName
                     {
@@ -105,7 +106,43 @@ namespace WebApplication2.Controllers
                         Type = "Channel"
                     });
                 }
-                foreach (var item in DrenajList)
+                foreach (var item in db.CHANNELS_2)
+                {
+                    src.Add(new SearchName
+                    {
+                        Id = item.OBJECTID,
+                        Name = item.NAME,
+                        Type = "Channel"
+                    });
+                }
+                foreach (var item in db.CHANNELS_3)
+                {
+                    src.Add(new SearchName
+                    {
+                        Id = item.OBJECTID,
+                        Name = item.NAME,
+                        Type = "Channel"
+                    });
+                }
+                foreach (var item in db.CHANNELS_M)
+                {
+                    src.Add(new SearchName
+                    {
+                        Id = item.OBJECTID,
+                        Name = item.NAME,
+                        Type = "Channel"
+                    });
+                }
+                //foreach (var item in ChannelList)
+                //{
+                //    src.Add(new SearchName
+                //    {
+                //        Id = item.OBJECTID,
+                //        Name = item.NAME,
+                //        Type = "Channel"
+                //    });
+                //}
+                foreach (var item in db.DRENAJ_1)
                 {
                     src.Add(new SearchName
                     {
@@ -114,6 +151,42 @@ namespace WebApplication2.Controllers
                         Type = "Drenaj"
                     });
                 }
+                foreach (var item in db.DRENAJ_2)
+                {
+                    src.Add(new SearchName
+                    {
+                        Id = item.OBJECTID,
+                        Name = item.NAME,
+                        Type = "Drenaj"
+                    });
+                }
+                foreach (var item in db.DRENAJ_3)
+                {
+                    src.Add(new SearchName
+                    {
+                        Id = item.OBJECTID,
+                        Name = item.NAME,
+                        Type = "Drenaj"
+                    });
+                }
+                foreach (var item in db.DRENAJ_M)
+                {
+                    src.Add(new SearchName
+                    {
+                        Id = item.OBJECTID,
+                        Name = item.NAME,
+                        Type = "Drenaj"
+                    });
+                }
+                //foreach (var item in DrenajList)
+                //{
+                //    src.Add(new SearchName
+                //    {
+                //        Id = item.OBJECTID,
+                //        Name = item.NAME,
+                //        Type = "Drenaj"
+                //    });
+                //}
                 foreach (var item in RiverbandList)
                 {
                     src.Add(new SearchName
@@ -449,7 +522,7 @@ namespace WebApplication2.Controllers
 
                         var pumpstation = PumpstationList;
                         var listpump = AttributList.Where(l => l.TypeName == "Nasos Stansiyaları").First();
-                        listpump.TypeCount += departments.Count;
+                        listpump.TypeCount += pumpstation.Count;
 
                         var buildings = buildinglist;
                         var listbuild = AttributList.Where(l => l.TypeName == "Binalar ve tikintilər").First();

@@ -7,7 +7,7 @@
 
 
 <div class="card mb-3">
-    <div class="card-body">
+    <div class="card-body" style="padding-bottom:0;">
         <div class="table-responsive">
             <table style="width:2000px" class="table table-bordered" cellspacing="0">
                 <thead>
@@ -103,7 +103,7 @@
                     </tr>
                 </thead>
             </table>
-            <div style="width:2000px; height:400px;overflow:auto;">
+            <div style="width:2000px; height:70vh;overflow:auto;">
                 <table class="table table-bordered" id="dataTable" cellspacing="0">
                     <tbody>
                         @using (Html.BeginForm("Index", "DRENAJ_M", FormMethod.Post))
@@ -276,7 +276,7 @@
                                 </tr>
                                 i++;
                             }
-                            <div class="text-right" style="background-color:white; padding:10px; width:100px; position:fixed; bottom:0px; right:40px; z-index:1;">
+                            <div class="text-right" style="padding:10px; width:100px; position:fixed; top:0px; right:85px; z-index:1;">
                                 <button class="btn btn-primary">Yadda Saxla</button>
                             </div>
                         }
