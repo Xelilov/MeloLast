@@ -1232,14 +1232,12 @@
                                 var itemName = response.data;
                                 $("#searchBottomDropdown li").remove();
                                 if (itemName.length > 10) {
-
                                     for (var i = 0; i < 10; i++) {
-
                                         $("#searchBottomDropdown").append("<li role='listitem' class='pt-7 pb-7 pl-15 pr-15 pointer'><span class='line-camp line-1'><i aria-hidden='true' class='icon-map-pin mr-10'></i><span onclick=Takename(this) data-type='" + itemName[i].Type + "' data-id='" + itemName[i].Id + "'>" + itemName[i].Name + "</span></span></li>")
                                     }
                                 }
                                 else if (itemName.length < 10) {
-                                    for (var i = 1; i < itemName.length; i++) {
+                                    for (var i = 0; i < itemName.length; i++) {
                                         $("#searchBottomDropdown").append("<li role='listitem' class='pt-7 pb-7 pl-15 pr-15 pointer'><span class='line-camp line-1'><i aria-hidden='true' class='icon-map-pin mr-10'></i><span onclick=Takename(this) data-type='" + itemName[i].Type + "' data-id='" + itemName[i].Id + "'>" + itemName[i].Name + "</span></span></li>")
                                     }
                                 }
@@ -1449,7 +1447,7 @@
 
         <a href="/" title="Meliogis" class="logo float-left" lang="en">
             <strong>
-                M<span class="hide-xxs">eliogis</span>
+                <span class="hide-xxs">Meliogis</span>
             </strong>
         </a>
 
@@ -1536,7 +1534,7 @@
             <div class="drop district-menu float-left">
 
                 <span role="button" class="drop-toggle btn bg-white no-border caret" id="attribute-menu-search" aria-label="Atributlar" aria-haspopup="true" aria-expanded="true">
-                    Seç
+                    Atribut Seç
                 </span>
 
                 <div class="drop-menu right static animated fadeInUp mt-5" aria-labelledby="attribute-menu-search">
@@ -1669,7 +1667,7 @@
             <div class="drop district-menu float-left">
 
                 <span role="button" class="drop-toggle btn bg-white no-border caret" id="water-capasity-search" aria-label="Watercapasity" aria-haspopup="true" aria-expanded="true">
-                    Seç
+                    Suyun ötürmə qüvvəsi Seç
                 </span>
 
                 <div class="drop-menu right static animated fadeInUp mt-5" aria-labelledby="water-capasity-search">

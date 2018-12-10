@@ -26,7 +26,9 @@ namespace WebApplication2.Controllers
         static List<Buildings> buildinglist = new List<Buildings>();
         static List<Exploitationroad> exploitationroadList = new List<Exploitationroad>();
         static List<WinterPasture> winterpaslist = new List<WinterPasture>();
+        
 
+        static List<SearchName> src = new List<SearchName>();
 
 
         static List<ChannelType> ChTypeList = new List<ChannelType>();
@@ -54,6 +56,9 @@ namespace WebApplication2.Controllers
                 ChTypeList = con.channeltype.QueryStringAsList("select distinct type from CHANNELS").ToList();
                 drejTypeList = con.drenajtype.QueryStringAsList("select distinct type from DRENAJ").ToList();
             }
+
+
+
             return View();
         }
 
@@ -86,17 +91,9 @@ namespace WebApplication2.Controllers
                 IndexVM.Channels = ChTypeList;
                 IndexVM.drejtype = drejTypeList;
             }
-            return View(IndexVM);
-        }
 
-        public ActionResult Search(string name)
-        {
-            //List<SearchName> src = this.HttpContext.Application["searchResult"] as List<SearchName>;
-            List<SearchName> src = new List<SearchName>();
             if (src.Count==0)
             {
-                src = new List<SearchName>();
-                #region Search
                 foreach (var item in db.CHANNELS_1)
                 {
                     src.Add(new SearchName
@@ -133,15 +130,6 @@ namespace WebApplication2.Controllers
                         Type = "Channel"
                     });
                 }
-                //foreach (var item in ChannelList)
-                //{
-                //    src.Add(new SearchName
-                //    {
-                //        Id = item.OBJECTID,
-                //        Name = item.NAME,
-                //        Type = "Channel"
-                //    });
-                //}
                 foreach (var item in db.DRENAJ_1)
                 {
                     src.Add(new SearchName
@@ -178,15 +166,6 @@ namespace WebApplication2.Controllers
                         Type = "Drenaj"
                     });
                 }
-                //foreach (var item in DrenajList)
-                //{
-                //    src.Add(new SearchName
-                //    {
-                //        Id = item.OBJECTID,
-                //        Name = item.NAME,
-                //        Type = "Drenaj"
-                //    });
-                //}
                 foreach (var item in RiverbandList)
                 {
                     src.Add(new SearchName
@@ -250,9 +229,158 @@ namespace WebApplication2.Controllers
                         Type = "ExploitationRoad"
                     });
                 }
-                #endregion
-                this.HttpContext.Application.Add("searchResult", src);
             }
+
+            return View(IndexVM);
+        }
+
+        public ActionResult Search(string name)
+        {
+            //List<SearchName> src = this.HttpContext.Application["searchResult"] as List<SearchName>;
+            
+            if (false)
+            {
+                //src = new List<SearchName>();
+                //#region Search
+                //foreach (var item in db.CHANNELS_1)
+                //{
+                //    src.Add(new SearchName
+                //    {
+                //        Id = item.OBJECTID,
+                //        Name = item.NAME,
+                //        Type = "Channel"
+                //    });
+                //}
+                //foreach (var item in db.CHANNELS_2)
+                //{
+                //    src.Add(new SearchName
+                //    {
+                //        Id = item.OBJECTID,
+                //        Name = item.NAME,
+                //        Type = "Channel"
+                //    });
+                //}
+                //foreach (var item in db.CHANNELS_3)
+                //{
+                //    src.Add(new SearchName
+                //    {
+                //        Id = item.OBJECTID,
+                //        Name = item.NAME,
+                //        Type = "Channel"
+                //    });
+                //}
+                //foreach (var item in db.CHANNELS_M)
+                //{
+                //    src.Add(new SearchName
+                //    {
+                //        Id = item.OBJECTID,
+                //        Name = item.NAME,
+                //        Type = "Channel"
+                //    });
+                //}
+                //foreach (var item in db.DRENAJ_1)
+                //{
+                //    src.Add(new SearchName
+                //    {
+                //        Id = item.OBJECTID,
+                //        Name = item.NAME,
+                //        Type = "Drenaj"
+                //    });
+                //}
+                //foreach (var item in db.DRENAJ_2)
+                //{
+                //    src.Add(new SearchName
+                //    {
+                //        Id = item.OBJECTID,
+                //        Name = item.NAME,
+                //        Type = "Drenaj"
+                //    });
+                //}
+                //foreach (var item in db.DRENAJ_3)
+                //{
+                //    src.Add(new SearchName
+                //    {
+                //        Id = item.OBJECTID,
+                //        Name = item.NAME,
+                //        Type = "Drenaj"
+                //    });
+                //}
+                //foreach (var item in db.DRENAJ_M)
+                //{
+                //    src.Add(new SearchName
+                //    {
+                //        Id = item.OBJECTID,
+                //        Name = item.NAME,
+                //        Type = "Drenaj"
+                //    });
+                //}
+                //foreach (var item in RiverbandList)
+                //{
+                //    src.Add(new SearchName
+                //    {
+                //        Id = item.OBJECTID,
+                //        Name = item.NAME,
+                //        Type = "Riverband"
+                //    });
+                //}
+                //foreach (var item in WellList)
+                //{
+                //    src.Add(new SearchName
+                //    {
+                //        Id = item.OBJECTID,
+                //        Name = item.NAME,
+                //        Type = "well"
+                //    });
+                //}
+                //foreach (var item in buildinglist)
+                //{
+                //    src.Add(new SearchName
+                //    {
+                //        Id = item.OBJECTID,
+                //        Name = item.NAME,
+                //        Type = "Build"
+                //    });
+                //}
+                //foreach (var item in DeviceList)
+                //{
+                //    src.Add(new SearchName
+                //    {
+                //        Id = item.OBJECTID,
+                //        Name = item.NAME,
+                //        Type = "Device"
+                //    });
+                //}
+                //foreach (var item in DepartmentsList)
+                //{
+                //    src.Add(new SearchName
+                //    {
+                //        Id = item.OBJECTID,
+                //        Name = item.AD,
+                //        Type = "Department"
+                //    });
+                //}
+                //foreach (var item in PumpstationList)
+                //{
+                //    src.Add(new SearchName
+                //    {
+                //        Id = item.OBJECTID,
+                //        Name = item.NAME,
+                //        Type = "Pumpstation"
+                //    });
+                //}
+                //foreach (var item in exploitationroadList)
+                //{
+                //    src.Add(new SearchName
+                //    {
+                //        Id = item.OBJECTID,
+                //        Name = item.NAME,
+                //        Type = "ExploitationRoad"
+                //    });
+                //}
+                //#endregion
+                //this.HttpContext.Application.Add("searchResult", src);
+            }
+           
 
             var srcResult= src.Where(x =>x.Name!=null && x.Name.ToLower().StartsWith(name.ToLower()));
             var jsonResult = Json(new { data = srcResult}, JsonRequestBehavior.AllowGet);

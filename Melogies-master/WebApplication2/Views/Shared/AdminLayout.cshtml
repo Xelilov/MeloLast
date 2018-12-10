@@ -32,7 +32,7 @@
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-        <a class="navbar-brand mr-1" href="/Admin/Admin/Index">Əsas Səyifə</a>
+        <a class="navbar-brand mr-1" href="/Admin/Admin/Index">Əsas Səhifə</a>
 
         <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
             <i class="fas fa-bars"></i>
@@ -167,6 +167,55 @@
 
     <!-- Demo scripts for this page-->
     <script src="~/PublicAdmin/js/demo/datatables-demo.js"></script>
+
+    <script>
+        $(".Namefilter").on("keyup", function () {
+            console.log(this.value)
+            var searchkey = this.value;
+            var nese = [];
+            var test = document.querySelectorAll(".Namesearch")
+            //for (var i = 0; i < searchkey.length; i++) {
+
+            //}
+            for (var i = 0; i < test.length; i++) {
+                var values = test[i].value
+                if (searchkey.length==0) {
+                    test[i].parentElement.parentElement.parentElement.parentElement.removeAttribute("hidden")
+                }
+                else if (values.includes(searchkey)) {
+                    test[i].parentElement.parentElement.parentElement.parentElement.removeAttribute("hidden")
+                    console.log(test[i].parentElement.parentElement.parentElement.parentElement)
+                }
+                else {
+                    test[i].parentElement.parentElement.parentElement.parentElement.setAttribute("hidden","hidden")
+                }
+            }
+            
+        })
+        $(".Suburaxma").on("keyup", function () {
+            console.log(this.value)
+            var searchkey = this.value;
+            var nese = [];
+            var test = document.querySelectorAll(".Suburaxmasearch")
+            //for (var i = 0; i < searchkey.length; i++) {
+
+            //}
+            for (var i = 0; i < test.length; i++) {
+                var values = test[i].value
+                if (searchkey.length == 0) {
+                    test[i].parentElement.parentElement.parentElement.parentElement.removeAttribute("hidden")
+                }
+                else if (values.includes(searchkey)) {
+                    test[i].parentElement.parentElement.parentElement.parentElement.removeAttribute("hidden")
+                    console.log(test[i].parentElement.parentElement.parentElement.parentElement)
+                }
+                else {
+                    test[i].parentElement.parentElement.parentElement.parentElement.setAttribute("hidden", "hidden")
+                }
+            }
+
+        })
+    </script>
 </body>
 
 </html>

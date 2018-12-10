@@ -17,6 +17,7 @@
                         <th>
                             @Html.DisplayNameFor(model => model.NAME)
                             <hr style="width:206px" />
+                            <input type="text" class="Namefilter" value="" />
                         </th>
                         <th>
                             @Html.DisplayNameFor(model => model.ASSIGMENT)
@@ -25,6 +26,7 @@
                         <th>
                             @Html.DisplayNameFor(model => model.WATER_CAPABILITY)
                             <hr style="width:206px" />
+                            <input type="text" class="Suburaxma" value="" />
                         </th>
                         <th>
                             @Html.DisplayNameFor(model => model.EXPLONATION_DATE)
@@ -129,7 +131,7 @@
                     </tr>
                 </thead>
             </table>
-            <div style="width:3350px; height:70vh;overflow:auto;">
+            <div style="width:3350px; height:65vh;overflow:auto;">
                 <table style="width:99%;" class="table table-bordered" id="dataTable" cellspacing="0">
                     <tbody>
                         @using (Html.BeginForm("Index", "CHANNELS_2", FormMethod.Post))
@@ -155,7 +157,7 @@
                                     <td>
                                         <div class="form-group">
                                             <div class="col-md-10">
-                                                <input value="@item.NAME" name="chn[@i].NAME" />
+                                                <input class="Namesearch" value="@item.NAME" name="chn[@i].NAME" />
                                             </div>
                                         </div>
                                     </td>
@@ -169,7 +171,7 @@
                                     <td>
                                         <div class="form-group">
                                             <div class="col-md-10">
-                                                <input value="@item.WATER_CAPABILITY" name="chn[@i].WATER_CAPABILITY" />
+                                                <input class="Suburaxmasearch" value="@item.WATER_CAPABILITY" name="chn[@i].WATER_CAPABILITY" />
                                             </div>
                                         </div>
                                     </td>

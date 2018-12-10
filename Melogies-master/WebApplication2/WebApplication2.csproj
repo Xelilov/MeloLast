@@ -2350,6 +2350,7 @@
     <Content Include="Areas\Admin\Views\DEVICEs\Index.cshtml" />
     <Content Include="Areas\Admin\Views\WELLs\Index.cshtml" />
     <Content Include="Areas\Admin\Views\BUILDINGs\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TEST\Index.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="PublicAdmin\vendor\bootstrap\css\bootstrap.css.map" />
     <Content Include="PublicAdmin\vendor\bootstrap\css\bootstrap.min.css.map" />

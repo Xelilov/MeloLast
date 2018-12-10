@@ -18,7 +18,7 @@ namespace WebApplication2.Areas.Admin.Controllers
         public ActionResult Index()
         {
             int logUser = (int)Session["UserAdmin"];
-            return View(db.BUILDINGS.Take(6).ToList());
+            return View(db.BUILDINGS.Where(s => s.USER_ADMIN_ID == logUser).ToList());
         }
 
         [HttpPost]
