@@ -22,10 +22,14 @@ namespace WebApplication2.Areas.Admin.Controllers
             try
             {
                 USERADMIN user = db.USERADMINs.Where(s => s.NAME == username && s.PASSWORD == password).First();
-                if (user!= null)
+                if (user!= null && user.OBJECTID!=92)
                 {
                     Session["UserAdmin"] = user.OBJECTID;
                     return RedirectToAction("Index","Admin");
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Nazirlik");
                 }
             }
             catch

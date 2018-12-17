@@ -33,6 +33,11 @@ namespace WebApplication2.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Drenaj()
+        {
+            return View(db.DRENAJ_1.ToList());
+        }
+
        
         
 

@@ -76,6 +76,9 @@
     <script src="https://js.arcgis.com/3.26/"></script>
 
     <script>
+        var testsearchWord = "ttt";
+
+
         var Latitude = 49.465965;
         var Longitude = 40.437018;
         var zoommap = 8;
@@ -928,7 +931,7 @@
 
 
                     //searchDevice.startup();
-
+                    console.log(testsearchWord)
                     sources.push({
                         featureLayer: new FeatureLayer("http://213.154.5.139:8021/arcgis/rest/services/Melo_1011/FeatureServer/17"),
                         searchFields: ["NAME"],
@@ -1414,7 +1417,7 @@
             $("#search-input_input").attr("data-id", id)
             $("#search-input_input").attr("data-type", type)
             console.log(text, id, type);
-
+            MapFunction()
             $(".esri-icon-search").click();
             $("#searchBottomDropdown ul").remove();
 
@@ -1991,7 +1994,8 @@
     <script src="~/Public/assets/js/jquery.min.js"></script>
     <script src="~/Public/assets/js/pi.js"></script>
     <script>
-        var testList = [];
+
+
         $(document).ready(function () {
             MapFunction();
         });
@@ -2130,7 +2134,7 @@
             }
             //checked max value
             if (isNaN(maxvalue)) {
-                maxvalue = 30;
+                maxvalue = 9999;
             }
             if (ListRegid.length != 0 || ListVilid.length != 0) {
                 $.ajax({

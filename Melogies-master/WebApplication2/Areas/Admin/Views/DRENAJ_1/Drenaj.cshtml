@@ -1,0 +1,77 @@
+﻿@model IEnumerable<WebApplication2.Models.DRENAJ_1>
+@{
+    ViewBag.Title = "Drenaj";
+    Layout = "~/Views/Shared/NazirlikLayout.cshtml";
+}
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Data Table Example
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.KIND)</th>
+                        <th>@Html.DisplayNameFor(model => model.SERVED_AREA)</th>
+                        <th>@Html.DisplayNameFor(model => model.PASSING_AREAS)</th>
+                        <th>@Html.DisplayNameFor(model => model.TECHNICAL_CONDITION)</th>
+                        <th>@Html.DisplayNameFor(model => model.DEVICE_SUM)</th>
+                        <th>@Html.DisplayNameFor(model => model.PROPERTY_TYPE)</th>
+                        <th>@Html.DisplayNameFor(model => model.PROPERTY)</th>
+                        <th>@Html.DisplayNameFor(model => model.FACTICAL_LENGTH)</th>
+                        <th>@Html.DisplayNameFor(model => model.EXPLONATION_DATE)</th>
+                        <th>@Html.DisplayNameFor(model => model.NAME)</th>
+                        <th>@Html.DisplayNameFor(model => model.ASSIGMENT)</th>
+                        <th>@Html.DisplayNameFor(model => model.WATER_CONSUPTION)</th>
+                        <th>@Html.DisplayNameFor(model => model.DRENAJ_RECIEVER)</th>
+                        <th>@Html.DisplayNameFor(model => model.GISLENGTH)</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.KIND)</th>
+                        <th>@Html.DisplayNameFor(model => model.SERVED_AREA)</th>
+                        <th>@Html.DisplayNameFor(model => model.PASSING_AREAS)</th>
+                        <th>@Html.DisplayNameFor(model => model.TECHNICAL_CONDITION)</th>
+                        <th>@Html.DisplayNameFor(model => model.DEVICE_SUM)</th>
+                        <th>@Html.DisplayNameFor(model => model.PROPERTY_TYPE)</th>
+                        <th>@Html.DisplayNameFor(model => model.PROPERTY)</th>
+                        <th>@Html.DisplayNameFor(model => model.FACTICAL_LENGTH)</th>
+                        <th>@Html.DisplayNameFor(model => model.EXPLONATION_DATE)</th>
+                        <th>@Html.DisplayNameFor(model => model.NAME)</th>
+                        <th>@Html.DisplayNameFor(model => model.ASSIGMENT)</th>
+                        <th>@Html.DisplayNameFor(model => model.WATER_CONSUPTION)</th>
+                        <th>@Html.DisplayNameFor(model => model.DRENAJ_RECIEVER)</th>
+                        <th>@Html.DisplayNameFor(model => model.GISLENGTH)</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.KIND</td>
+                            <td>@item.SERVED_AREA</td>
+                            <td>@item.PASSING_AREAS</td>
+                            <td>@item.TECHNICAL_CONDITION</td>
+                            <td>@item.DEVICE_SUM</td>
+                            <td>@item.PROPERTY_TYPE</td>
+                            <td>@item.PROPERTY</td>
+                            <td>@item.FACTICAL_LENGTH</td>
+                            <td>@item.EXPLONATION_DATE</td>
+                            <td>@item.NAME</td>
+                            <td>@item.ASSIGMENT</td>
+                            <td>@item.WATER_CONSUPTION</td>
+                            <td>@item.DRENAJ_RECIEVER</td>
+                            <td>@item.GISLENGTH</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+</div>
+

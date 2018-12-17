@@ -1,0 +1,62 @@
+﻿@model IEnumerable<WebApplication2.Models.BUILDING>
+@{
+    ViewBag.Title = "Builds";
+    Layout = "~/Views/Shared/NazirlikLayout.cshtml";
+}
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Data Table Example
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.NAME)</th>
+                        <th>@Html.DisplayNameFor(model => model.EXPLONATIO)</th>
+                        <th>@Html.DisplayNameFor(model => model.REGION)</th>
+                        <th>@Html.DisplayNameFor(model => model.ASSIGMENT)</th>
+                        <th>@Html.DisplayNameFor(model => model.TOTAL_AREA)</th>
+                        <th>@Html.DisplayNameFor(model => model.TECHNICAL_)</th>
+                        <th>@Html.DisplayNameFor(model => model.PROPERTY_T)</th>
+                        <th>@Html.DisplayNameFor(model => model.PROPERTY)</th>
+                        <th>@Html.DisplayNameFor(model => model.SERVICE_AR)</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.NAME)</th>
+                        <th>@Html.DisplayNameFor(model => model.EXPLONATIO)</th>
+                        <th>@Html.DisplayNameFor(model => model.REGION)</th>
+                        <th>@Html.DisplayNameFor(model => model.ASSIGMENT)</th>
+                        <th>@Html.DisplayNameFor(model => model.TOTAL_AREA)</th>
+                        <th>@Html.DisplayNameFor(model => model.TECHNICAL_)</th>
+                        <th>@Html.DisplayNameFor(model => model.PROPERTY_T)</th>
+                        <th>@Html.DisplayNameFor(model => model.PROPERTY)</th>
+                        <th>@Html.DisplayNameFor(model => model.SERVICE_AR)</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>@item.NAME</td>
+                        <td>@item.EXPLONATIO</td>
+                        <td>@item.REGION</td>
+                        <td>@item.ASSIGMENT</td>
+                        <td>@item.TOTAL_AREA</td>
+                        <td>@item.TECHNICAL_</td>
+                        <td>@item.PROPERTY_T</td>
+                        <td>@item.PROPERTY</td>
+                        <td>@item.SERVICE_AR</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+</div>
+

@@ -33,6 +33,14 @@ namespace WebApplication2.Areas.Admin.Controllers
             }
             return RedirectToAction("Index");
         }
+
+
+
+
+        public ActionResult Channels()
+        {
+            return View(db.CHANNELS_1.ToList());
+        }
         
         
 

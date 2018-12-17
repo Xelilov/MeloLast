@@ -33,6 +33,12 @@ namespace WebApplication2.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
+
+        public ActionResult Drenaj()
+        {
+            return View(db.DRENAJ_M.ToList());
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

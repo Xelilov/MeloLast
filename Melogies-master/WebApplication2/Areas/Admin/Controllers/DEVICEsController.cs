@@ -36,6 +36,12 @@ namespace WebApplication2.Areas.Admin.Controllers
         }
 
 
+        public ActionResult Device()
+        {
+            return View(db.DEVICEs.ToList());
+        }
+
+
 
 
 

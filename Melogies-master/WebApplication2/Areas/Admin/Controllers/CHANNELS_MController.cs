@@ -31,9 +31,14 @@ namespace WebApplication2.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
-        
+        public ActionResult Channels()
+        {
+            return View(db.CHANNELS_M.ToList());
+        }
 
-        
+
+
+
 
         protected override void Dispose(bool disposing)
         {

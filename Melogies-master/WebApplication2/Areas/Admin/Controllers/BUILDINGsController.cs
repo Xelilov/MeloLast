@@ -33,6 +33,11 @@ namespace WebApplication2.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Builds()
+        {
+            return View(db.BUILDINGS.ToList());
+        }
+
 
         protected override void Dispose(bool disposing)
         {

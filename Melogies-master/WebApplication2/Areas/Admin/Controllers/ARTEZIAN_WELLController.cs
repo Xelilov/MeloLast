@@ -33,6 +33,11 @@ namespace WebApplication2.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult ArtizianWEll()
+        {
+            return View(db.ARTEZIAN_WELL.ToList());
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

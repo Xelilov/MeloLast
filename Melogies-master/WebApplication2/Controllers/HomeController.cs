@@ -25,14 +25,30 @@ namespace WebApplication2.Controllers
         static List<Pumpstation> PumpstationList = new List<Pumpstation>();
         static List<Buildings> buildinglist = new List<Buildings>();
         static List<Exploitationroad> exploitationroadList = new List<Exploitationroad>();
-        static List<WinterPasture> winterpaslist = new List<WinterPasture>();
-        
+        static List<WinterPasture> winterpaslist = new List<WinterPasture>(); 
+        static List<ChannelType> ChTypeList = new List<ChannelType>();
+        static List<DrenajType> drejTypeList = new List<DrenajType>();
+
+
+
+
+
 
         static List<SearchName> src = new List<SearchName>();
 
 
-        static List<ChannelType> ChTypeList = new List<ChannelType>();
-        static List<DrenajType> drejTypeList = new List<DrenajType>();
+
+
+        static List<CHANNELS_1> kanal1 = new List<CHANNELS_1>();
+        static List<CHANNELS_2> kanal2 = new List<CHANNELS_2>();
+        static List<CHANNELS_3> kanal3 = new List<CHANNELS_3>();
+        static List<CHANNELS_M> kanalm = new List<CHANNELS_M>();
+        static List<CHANNELS_D> kanald = new List<CHANNELS_D>();
+        static List<DRENAJ_1> drenaj1 = new List<DRENAJ_1>();
+        static List<DRENAJ_2> drenaj2 = new List<DRENAJ_2>();
+        static List<DRENAJ_3> drenaj3 = new List<DRENAJ_3>();
+        static List<DRENAJ_M> drenajm = new List<DRENAJ_M>();
+        static List<DRENAJ_D> drenajd = new List<DRENAJ_D>();
 
         public ActionResult Login()
         {
@@ -92,6 +108,19 @@ namespace WebApplication2.Controllers
                 IndexVM.drejtype = drejTypeList;
             }
 
+
+            kanal1 = db.CHANNELS_1.ToList();
+            kanal2 = db.CHANNELS_2.ToList();
+            kanal3 = db.CHANNELS_3.ToList();
+            kanalm = db.CHANNELS_M.ToList();
+            kanald = db.CHANNELS_D.ToList();
+            drenaj1 = db.DRENAJ_1.ToList();
+            drenaj2 = db.DRENAJ_2.ToList();
+            drenaj3 = db.DRENAJ_3.ToList();
+            drenajm = db.DRENAJ_M.ToList();
+            drenajd = db.DRENAJ_D.ToList();
+
+
             if (src.Count==0)
             {
                 foreach (var item in db.CHANNELS_1)
@@ -100,7 +129,7 @@ namespace WebApplication2.Controllers
                     {
                         Id = item.OBJECTID,
                         Name = item.NAME,
-                        Type = "Channel"
+                        Type = "CHANNELS_1"
                     });
                 }
                 foreach (var item in db.CHANNELS_2)
@@ -109,7 +138,7 @@ namespace WebApplication2.Controllers
                     {
                         Id = item.OBJECTID,
                         Name = item.NAME,
-                        Type = "Channel"
+                        Type = "CHANNELS_2"
                     });
                 }
                 foreach (var item in db.CHANNELS_3)
@@ -118,7 +147,7 @@ namespace WebApplication2.Controllers
                     {
                         Id = item.OBJECTID,
                         Name = item.NAME,
-                        Type = "Channel"
+                        Type = "CHANNELS_3"
                     });
                 }
                 foreach (var item in db.CHANNELS_M)
@@ -127,7 +156,7 @@ namespace WebApplication2.Controllers
                     {
                         Id = item.OBJECTID,
                         Name = item.NAME,
-                        Type = "Channel"
+                        Type = "CHANNELS_M"
                     });
                 }
                 foreach (var item in db.DRENAJ_1)
@@ -136,7 +165,7 @@ namespace WebApplication2.Controllers
                     {
                         Id = item.OBJECTID,
                         Name = item.NAME,
-                        Type = "Drenaj"
+                        Type = "DRENAJ_1"
                     });
                 }
                 foreach (var item in db.DRENAJ_2)
@@ -145,7 +174,7 @@ namespace WebApplication2.Controllers
                     {
                         Id = item.OBJECTID,
                         Name = item.NAME,
-                        Type = "Drenaj"
+                        Type = "DRENAJ_2"
                     });
                 }
                 foreach (var item in db.DRENAJ_3)
@@ -154,7 +183,7 @@ namespace WebApplication2.Controllers
                     {
                         Id = item.OBJECTID,
                         Name = item.NAME,
-                        Type = "Drenaj"
+                        Type = "DRENAJ_3"
                     });
                 }
                 foreach (var item in db.DRENAJ_M)
@@ -163,43 +192,52 @@ namespace WebApplication2.Controllers
                     {
                         Id = item.OBJECTID,
                         Name = item.NAME,
-                        Type = "Drenaj"
+                        Type = "DRENAJ_M"
                     });
                 }
-                foreach (var item in RiverbandList)
+                foreach (var item in db.ARTEZIAN_WELL)
+                {
+                    src.Add(new SearchName
+                    {
+                        Id = item.OBJECTID,
+                        Name = item.REPER_NO,
+                        Type = "ARTEZIAN_WELL"
+                    });
+                }
+                foreach (var item in db.RIVERBANDs)
                 {
                     src.Add(new SearchName
                     {
                         Id = item.OBJECTID,
                         Name = item.NAME,
-                        Type = "Riverband"
+                        Type = "RIVERBANDs"
                     });
                 }
-                foreach (var item in WellList)
+                foreach (var item in db.WELLs)
                 {
                     src.Add(new SearchName
                     {
                         Id = item.OBJECTID,
                         Name = item.NAME,
-                        Type = "well"
+                        Type = "WELLs"
                     });
                 }
-                foreach (var item in buildinglist)
+                foreach (var item in db.BUILDINGS)
                 {
                     src.Add(new SearchName
                     {
                         Id = item.OBJECTID,
                         Name = item.NAME,
-                        Type = "Build"
+                        Type = "BUILDINGS"
                     });
                 }
-                foreach (var item in DeviceList)
+                foreach (var item in db.DEVICEs)
                 {
                     src.Add(new SearchName
                     {
                         Id = item.OBJECTID,
                         Name = item.NAME,
-                        Type = "Device"
+                        Type = "DEVICEs"
                     });
                 }
                 foreach (var item in DepartmentsList)
@@ -208,7 +246,7 @@ namespace WebApplication2.Controllers
                     {
                         Id = item.OBJECTID,
                         Name = item.AD,
-                        Type = "Department"
+                        Type = "DEPARTMENTS"
                     });
                 }
                 foreach (var item in PumpstationList)
@@ -217,7 +255,7 @@ namespace WebApplication2.Controllers
                     {
                         Id = item.OBJECTID,
                         Name = item.NAME,
-                        Type = "Pumpstation"
+                        Type = "PUMPSTATIONs"
                     });
                 }
                 foreach (var item in exploitationroadList)
@@ -226,7 +264,7 @@ namespace WebApplication2.Controllers
                     {
                         Id = item.OBJECTID,
                         Name = item.NAME,
-                        Type = "ExploitationRoad"
+                        Type = "EXPLOITATION_ROAD"
                     });
                 }
             }
@@ -537,14 +575,14 @@ namespace WebApplication2.Controllers
                 {
                     if (id[i]==0)
                     {
-                        var chnls = ChannelList.Where(c =>c.TYPE == "Magistral" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
+                        var chnls = db.CHANNELS_M.Where(c =>c.TYPE == "Magistral" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
                         var test = AttributList.Where(s => s.TypeName == "Magistral Kanallar").First();
                         test.TypeCount += chnls.Count;
                         for (int c = 0; c < chnls.Count; c++)
                         {
                             if (chnls[c].TYPE == "Magistral")
                             {
-                                test.TypeLength += chnls[c].FACTICAL_LENGTH;
+                                test.TypeLength += (decimal)chnls[c].FACTICAL_LENGTH;
                             }
                         }
                         test.TypeLength= System.Math.Round(test.TypeLength, 2);
@@ -553,7 +591,7 @@ namespace WebApplication2.Controllers
                         test1.TypeCount += chnls1.Count;
                         for (int c = 0; c < chnls1.Count; c++)
                         {
-                            test1.TypeLength += chnls1[c].FACTICAL_LENGTH;
+                            test1.TypeLength += (decimal)chnls1[c].FACTICAL_LENGTH;
                         }
                         test1.TypeLength = System.Math.Round(test1.TypeLength, 2);
                         var chnls2 = ChannelList.Where(c =>c.TYPE == "2" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
@@ -670,80 +708,81 @@ namespace WebApplication2.Controllers
                     }
                     else
                     {
-                        var chnls = ChannelList.Where(c => c.Region_ID == id[i]&& c.TYPE== "Magistral" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
+                        int rayonid = id[i];
+                        var chnls = kanalm.Where(c => c.Region_ID == rayonid && c.TYPE== "Magistral" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
                         var test = AttributList.Where(s => s.TypeName == "Magistral Kanallar").First();
                         test.TypeCount += chnls.Count;
                         for (int c = 0; c < chnls.Count; c++)
                         {
                             if (chnls[c].TYPE== "Magistral")
                             {                                
-                                test.TypeLength += chnls[c].FACTICAL_LENGTH;
+                                test.TypeLength += (decimal)chnls[c].FACTICAL_LENGTH;
                             }
                         }
-                        var chnls1 = ChannelList.Where(c => c.Region_ID == id[i] && c.TYPE == "1" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
+                        var chnls1 = kanal1.Where(c => c.Region_ID == rayonid && c.TYPE == "1" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
                         var test1 = AttributList.Where(s => s.TypeName == "1-ci dərəcəli Kanallar").First();
                         test1.TypeCount += chnls1.Count;
                         for (int c = 0; c < chnls1.Count; c++)
                         {
-                                test1.TypeLength += chnls1[c].FACTICAL_LENGTH;
+                                test1.TypeLength += (decimal)chnls1[c].FACTICAL_LENGTH;
                         }
-                        var chnls2 = ChannelList.Where(c => c.Region_ID == id[i] && c.TYPE == "2" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
+                        var chnls2 = kanal2.Where(c => c.Region_ID == rayonid && c.TYPE == "2" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
                         var test2 = AttributList.Where(s => s.TypeName == "2-ci dərəcəli Kanallar").First();
                         test2.TypeCount += chnls2.Count;
                         for (int c = 0; c < chnls2.Count; c++)
                         {
-                            test2.TypeLength += chnls2[c].FACTICAL_LENGTH;
+                            test2.TypeLength += (decimal)chnls2[c].FACTICAL_LENGTH;
                         }
-                        var chnls3 = ChannelList.Where(c => c.Region_ID == id[i] && c.TYPE == "3" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
+                        var chnls3 = kanal3.Where(c => c.Region_ID == rayonid && c.TYPE == "3" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
                         var test3 = AttributList.Where(s => s.TypeName == "3-ci dərəcəli Kanallar").First();
                         test3.TypeCount += chnls3.Count;
                         for (int c = 0; c < chnls3.Count; c++)
                         {
-                            test3.TypeLength += chnls3[c].FACTICAL_LENGTH;
+                            test3.TypeLength += (decimal)chnls3[c].FACTICAL_LENGTH;
                         }
-                        var chnls4 = ChannelList.Where(c => c.Region_ID == id[i] && c.TYPE == "Qapali" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
+                        var chnls4 = kanald.Where(c => c.Region_ID == rayonid && c.TYPE == "Qapali" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
                         var test4 = AttributList.Where(s => s.TypeName == "Qapalı Kanallar").First();
                         test4.TypeCount += chnls4.Count;
                         for (int c = 0; c < chnls4.Count; c++)
                         {
-                            test4.TypeLength += chnls4[c].FACTICAL_LENGTH;
+                            test4.TypeLength += (decimal)chnls4[c].FACTICAL_LENGTH;
                         }
 
-                        var drejmagistral = DrenajList.Where(d => d.Region_ID == id[i] && d.TYPE == "Magistral" && d.WATER_CAPABILITY >= min && d.WATER_CAPABILITY <= max).ToList();
+                        var drejmagistral = drenajm.Where(d => d.Region_ID == rayonid && d.TYPE == "Magistral" && d.WATER_CAPABILITY >= min && d.WATER_CAPABILITY <= max).ToList();
                         var listdrejmagis = AttributList.Where(s => s.TypeName == "Magistral kollektorlar").First();
                         listdrejmagis.TypeCount += drejmagistral.Count;
                         for (int d = 0; d < drejmagistral.Count; d++)
                         {
-                            listdrejmagis.TypeLength += drejmagistral[d].FACTICAL_LENGTH;
+                            listdrejmagis.TypeLength += (decimal)drejmagistral[d].FACTICAL_LENGTH;
                         }
-                        var drej1 = DrenajList.Where(d => d.Region_ID == id[i] && d.TYPE == "1" && d.WATER_CAPABILITY >= min && d.WATER_CAPABILITY <= max).ToList();
+                        var drej1 = drenaj1.Where(d => d.Region_ID == rayonid && d.TYPE == "1" && d.WATER_CAPABILITY >= min && d.WATER_CAPABILITY <= max).ToList();
                         var listdrej1= AttributList.Where(s => s.TypeName == "1-ci dərəcəli kollektorlar").First();
                         listdrej1.TypeCount += drej1.Count;
                         for (int d = 0; d < drej1.Count; d++)
                         {
-                            listdrej1.TypeLength += drej1[d].FACTICAL_LENGTH;
+                            listdrej1.TypeLength += (decimal)drej1[d].FACTICAL_LENGTH;
                         }
-                        var drej2 = DrenajList.Where(d => d.Region_ID == id[i] && d.TYPE == "2" && d.WATER_CAPABILITY >= min && d.WATER_CAPABILITY <= max).ToList();
+                        var drej2 = drenaj2.Where(d => d.Region_ID == rayonid && d.TYPE == "2" && d.WATER_CAPABILITY >= min && d.WATER_CAPABILITY <= max).ToList();
                         var listdrej2 = AttributList.Where(s => s.TypeName == "2-ci dərəcəli yığıcı kollektorlar").First();
                         listdrej2.TypeCount += drej2.Count;
                         for (int d = 0; d < drej2.Count; d++)
                         {
-                            listdrej2.TypeLength += drej2[d].FACTICAL_LENGTH;
+                            listdrej2.TypeLength += (decimal)drej2[d].FACTICAL_LENGTH;
                         }
-                        var drej3 = DrenajList.Where(d => d.Region_ID == id[i] && d.TYPE == "3" && d.WATER_CAPABILITY >= min && d.WATER_CAPABILITY <= max).ToList();
+                        var drej3 = drenaj3.Where(d => d.Region_ID == rayonid && d.TYPE == "3" && d.WATER_CAPABILITY >= min && d.WATER_CAPABILITY <= max).ToList();
                         var listdrej3 = AttributList.Where(s => s.TypeName == "3-ci dərəcəli ilkin drenlər").First();
                         listdrej3.TypeCount += drej3.Count;
                         for (int d = 0; d < drej3.Count; d++)
                         {
-                            listdrej3.TypeLength += drej3[d].FACTICAL_LENGTH;
+                            listdrej3.TypeLength += (decimal)drej3[d].FACTICAL_LENGTH;
                         }
 
-                        var drej4 = DrenajList.Where(d => d.Region_ID == id[i] && d.TYPE == "qapalidren" && d.WATER_CAPABILITY >= min && d.WATER_CAPABILITY <= max).ToList();
+                        var drej4 = drenajd.Where(d => d.Region_ID == rayonid && d.TYPE == "qapalidren" && d.WATER_CAPABILITY >= min && d.WATER_CAPABILITY <= max).ToList();
                         var listdrej4 = AttributList.Where(s => s.TypeName == "Qapalı drenlər").First();
                         listdrej4.TypeCount += drej4.Count;
                         for (int d = 0; d < drej4.Count; d++)
                         {
-                            listdrej4.TypeLength += drej4[d].FACTICAL_LENGTH;
+                            listdrej4.TypeLength += (decimal)drej4[d].FACTICAL_LENGTH;
                         }
                         var riverband = RiverbandList.Where(r => r.Region_ID == id[i]).ToList();
                         var listriver = AttributList.Where(l => l.TypeName == "Mühafizə Bəndləri").First();
@@ -778,7 +817,7 @@ namespace WebApplication2.Controllers
 
                         var pumpstation = PumpstationList.Where(r => r.Region_ID == id[i]).ToList();
                         var listpump = AttributList.Where(l => l.TypeName == "Nasos Stansiyaları").First();
-                        listpump.TypeCount += departments.Count;
+                        listpump.TypeCount += pumpstation.Count;
 
                         var buildings = buildinglist.Where(r => r.Region_ID == id[i]).ToList();
                         var listbuild = AttributList.Where(l => l.TypeName == "Binalar ve tikintilər").First();
@@ -802,78 +841,79 @@ namespace WebApplication2.Controllers
             {
                 for (int i = 0; i < idVil.Length; i++)
                 {
-                    var chnls = ChannelList.Where(c => c.Municipality_id == idVil[i] && c.TYPE == "Magistral" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
+                    int kendid = idVil[i];
+                    var chnls = db.CHANNELS_M.Where(c => c.Municipality_ID == kendid && c.TYPE == "Magistral" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
                     var test = AttributList.Where(s => s.TypeName == "Magistral Kanallar").First();
                     test.TypeCount += chnls.Count;
                     for (int c = 0; c < chnls.Count; c++)
                     {
                         if (chnls[c].TYPE == "Magistral")
                         {
-                            test.TypeLength += chnls[c].FACTICAL_LENGTH;
+                            test.TypeLength += (decimal)chnls[c].FACTICAL_LENGTH;
                         }
                     }
-                    var chnls1 = ChannelList.Where(c => c.Municipality_id == idVil[i] && c.TYPE == "1" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
+                    var chnls1 = kanal1.Where(c => c.Municipality_ID == kendid && c.TYPE == "1" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
                     var test1 = AttributList.Where(s => s.TypeName == "1-ci dərəcəli Kanallar").First();
                     test1.TypeCount += chnls1.Count;
                     for (int c = 0; c < chnls1.Count; c++)
                     {
-                        test1.TypeLength += chnls1[c].FACTICAL_LENGTH;
+                        test1.TypeLength += (decimal)chnls1[c].FACTICAL_LENGTH;
                     }
-                    var chnls2 = ChannelList.Where(c => c.Municipality_id == idVil[i] && c.TYPE == "2" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
+                    var chnls2 = db.CHANNELS_2.Where(c => c.Municipality_ID == kendid && c.TYPE == "2" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
                     var test2 = AttributList.Where(s => s.TypeName == "2-ci dərəcəli Kanallar").First();
                     test2.TypeCount += chnls2.Count;
                     for (int c = 0; c < chnls2.Count; c++)
                     {
-                        test2.TypeLength += chnls2[c].FACTICAL_LENGTH;
+                        test2.TypeLength += (decimal)chnls2[c].FACTICAL_LENGTH;
                     }
-                    var chnls3 = ChannelList.Where(c => c.Municipality_id == idVil[i] && c.TYPE == "3" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
+                    var chnls3 = db.CHANNELS_3.Where(c => c.Municipality_ID == kendid && c.TYPE == "3" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
                     var test3 = AttributList.Where(s => s.TypeName == "3-ci dərəcəli Kanallar").First();
                     test3.TypeCount += chnls3.Count;
                     for (int c = 0; c < chnls3.Count; c++)
                     {
-                        test3.TypeLength += chnls3[c].FACTICAL_LENGTH;
+                        test3.TypeLength += (decimal)chnls3[c].FACTICAL_LENGTH;
                     }
-                    var chnls4 = ChannelList.Where(c => c.Municipality_id == idVil[i] && c.TYPE == "qapali" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
+                    var chnls4 = db.CHANNELS_D.Where(c => c.Municipality_ID == kendid && c.TYPE == "qapali" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
                     var test4 = AttributList.Where(s => s.TypeName == "Qapalı Kanallar").First();
                     test4.TypeCount += chnls4.Count;
                     for (int c = 0; c < chnls4.Count; c++)
                     {
-                        test4.TypeLength += chnls4[c].FACTICAL_LENGTH;
+                        test4.TypeLength += (decimal)chnls4[c].FACTICAL_LENGTH;
                     }
-                    var drejmagistral = DrenajList.Where(d => d.TYPE == "Magistral" && d.Municipality_id == idVil[i] && d.WATER_CAPABILITY >= min && d.WATER_CAPABILITY <= max).ToList();
+                    var drejmagistral = db.DRENAJ_M.Where(d => d.TYPE == "Magistral" && d.Municipality_ID == kendid && d.WATER_CAPABILITY >= min && d.WATER_CAPABILITY <= max).ToList();
                     var listdrejmagis = AttributList.Where(s => s.TypeName == "Magistral kollektorlar").First();
                     listdrejmagis.TypeCount += drejmagistral.Count;
                     for (int d = 0; d < drejmagistral.Count; d++)
                     {
-                        listdrejmagis.TypeLength += drejmagistral[d].FACTICAL_LENGTH;
+                        listdrejmagis.TypeLength += (decimal)drejmagistral[d].FACTICAL_LENGTH;
                     }
-                    var drej1 = DrenajList.Where(d => d.Municipality_id == idVil[i] && d.TYPE == "1" && d.WATER_CAPABILITY >= min && d.WATER_CAPABILITY <= max).ToList();
+                    var drej1 = db.DRENAJ_1.Where(d => d.Municipality_ID == kendid && d.TYPE == "1" && d.WATER_CAPABILITY >= min && d.WATER_CAPABILITY <= max).ToList();
                     var listdrej1 = AttributList.Where(s => s.TypeName == "1-ci dərəcəli kollektorlar").First();
                     listdrej1.TypeCount += drej1.Count;
                     for (int d = 0; d < drej1.Count; d++)
                     {
-                        listdrej1.TypeLength += drej1[d].FACTICAL_LENGTH;
+                        listdrej1.TypeLength += (decimal)drej1[d].FACTICAL_LENGTH;
                     }
-                    var drej2 = DrenajList.Where(d => d.Municipality_id == idVil[i] && d.TYPE == "2" && d.WATER_CAPABILITY >= min && d.WATER_CAPABILITY <= max).ToList();
+                    var drej2 = db.DRENAJ_2.Where(d => d.Municipality_ID == kendid && d.TYPE == "2" && d.WATER_CAPABILITY >= min && d.WATER_CAPABILITY <= max).ToList();
                     var listdrej2 = AttributList.Where(s => s.TypeName == "2-ci dərəcəli yığıcı kollektorlar").First();
                     listdrej2.TypeCount += drej2.Count;
                     for (int d = 0; d < drej2.Count; d++)
                     {
-                        listdrej2.TypeLength += drej2[d].FACTICAL_LENGTH;
+                        listdrej2.TypeLength += (decimal)drej2[d].FACTICAL_LENGTH;
                     }
-                    var drej3 = DrenajList.Where(d => d.Municipality_id == idVil[i] && d.TYPE == "3" && d.WATER_CAPABILITY >= min && d.WATER_CAPABILITY <= max).ToList();
+                    var drej3 = db.DRENAJ_3.Where(d => d.Municipality_ID == kendid && d.TYPE == "3" && d.WATER_CAPABILITY >= min && d.WATER_CAPABILITY <= max).ToList();
                     var listdrej3 = AttributList.Where(s => s.TypeName == "3-ci dərəcəli ilkin drenlər").First();
                     listdrej3.TypeCount += drej3.Count;
                     for (int d = 0; d < drej3.Count; d++)
                     {
-                        listdrej3.TypeLength += drej3[d].FACTICAL_LENGTH;
+                        listdrej3.TypeLength += (decimal)drej3[d].FACTICAL_LENGTH;
                     }
-                    var drej4 = DrenajList.Where(d => d.Municipality_id == idVil[i] && d.TYPE == "qapalidren" && d.WATER_CAPABILITY >= min && d.WATER_CAPABILITY <= max).ToList();
+                    var drej4 = db.DRENAJ_D.Where(d => d.Municipality_ID == kendid && d.TYPE == "qapalidren" && d.WATER_CAPABILITY >= min && d.WATER_CAPABILITY <= max).ToList();
                     var listdrej4 = AttributList.Where(s => s.TypeName == "Qapalı drenlər").First();
                     listdrej4.TypeCount += drej4.Count;
                     for (int d = 0; d < drej4.Count; d++)
                     {
-                        listdrej4.TypeLength += drej4[d].FACTICAL_LENGTH;
+                        listdrej4.TypeLength += (decimal)drej4[d].FACTICAL_LENGTH;
                     }
 
                     var riverband = RiverbandList.Where(r => r.Municipality_id == idVil[i]).ToList();

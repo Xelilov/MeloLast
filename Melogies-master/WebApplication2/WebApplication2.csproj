@@ -171,6 +171,7 @@
     <Compile Include="Areas\Admin\Controllers\DRENAJ_3Controller.cs" />
     <Compile Include="Areas\Admin\Controllers\DRENAJ_MController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Admin\Controllers\NazirlikController.cs" />
     <Compile Include="Areas\Admin\Controllers\RIVERBANDsController.cs" />
     <Compile Include="Areas\Admin\Controllers\WELLsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -2351,6 +2352,20 @@
     <Content Include="Areas\Admin\Views\WELLs\Index.cshtml" />
     <Content Include="Areas\Admin\Views\BUILDINGs\Index.cshtml" />
     <Content Include="Areas\Admin\Views\TEST\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Nazirlik\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\CHANNELS_1\Channels.cshtml" />
+    <Content Include="Areas\Admin\Views\CHANNELS_2\Channels.cshtml" />
+    <Content Include="Areas\Admin\Views\CHANNELS_3\Channels.cshtml" />
+    <Content Include="Areas\Admin\Views\CHANNELS_M\Channels.cshtml" />
+    <Content Include="Areas\Admin\Views\DRENAJ_1\Drenaj.cshtml" />
+    <Content Include="Areas\Admin\Views\DRENAJ_2\Drenaj.cshtml" />
+    <Content Include="Areas\Admin\Views\DRENAJ_3\Drenaj.cshtml" />
+    <Content Include="Areas\Admin\Views\DRENAJ_M\Drenaj.cshtml" />
+    <Content Include="Areas\Admin\Views\RIVERBANDs\Riverband.cshtml" />
+    <Content Include="Areas\Admin\Views\ARTEZIAN_WELL\ArtizianWEll.cshtml" />
+    <Content Include="Areas\Admin\Views\DEVICEs\Device.cshtml" />
+    <Content Include="Areas\Admin\Views\WELLs\WeLL.cshtml" />
+    <Content Include="Areas\Admin\Views\BUILDINGs\Builds.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="PublicAdmin\vendor\bootstrap\css\bootstrap.css.map" />
     <Content Include="PublicAdmin\vendor\bootstrap\css\bootstrap.min.css.map" />
@@ -2450,6 +2465,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Shared\AdminLayout.cshtml" />
+    <Content Include="Views\Shared\NazirlikLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

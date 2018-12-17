@@ -33,7 +33,10 @@ namespace WebApplication2.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
         
-        
+        public ActionResult Riverband()
+        {
+            return View(db.RIVERBANDs.ToList());
+        }
 
 
         protected override void Dispose(bool disposing)

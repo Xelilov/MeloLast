@@ -1,0 +1,62 @@
+﻿@model IEnumerable<WebApplication2.Models.DEVICE>
+@{
+    ViewBag.Title = "Device";
+    Layout = "~/Views/Shared/NazirlikLayout.cshtml";
+}
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Data Table Example
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.NAME)</th>
+                        <th>@Html.DisplayNameFor(model => model.LOCATED_NETWORK)</th>
+                        <th>@Html.DisplayNameFor(model => model.EXPLONATION_DATE)</th>
+                        <th>@Html.DisplayNameFor(model => model.NETWORK_TYPE)</th>
+                        <th>@Html.DisplayNameFor(model => model.PROPERTY_TYPE)</th>
+                        <th>@Html.DisplayNameFor(model => model.PROPERTY)</th>
+                        <th>@Html.DisplayNameFor(model => model.TECHNICAL_CONDITION)</th>
+                        <th>@Html.DisplayNameFor(model => model.WATER_CAPABILITY)</th>
+                        <th>@Html.DisplayNameFor(model => model.SERVED_AREA)</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.NAME)</th>
+                        <th>@Html.DisplayNameFor(model => model.LOCATED_NETWORK)</th>
+                        <th>@Html.DisplayNameFor(model => model.EXPLONATION_DATE)</th>
+                        <th>@Html.DisplayNameFor(model => model.NETWORK_TYPE)</th>
+                        <th>@Html.DisplayNameFor(model => model.PROPERTY_TYPE)</th>
+                        <th>@Html.DisplayNameFor(model => model.PROPERTY)</th>
+                        <th>@Html.DisplayNameFor(model => model.TECHNICAL_CONDITION)</th>
+                        <th>@Html.DisplayNameFor(model => model.WATER_CAPABILITY)</th>
+                        <th>@Html.DisplayNameFor(model => model.SERVED_AREA)</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>@item.NAME</td>
+                        <td>@item.LOCATED_NETWORK</td>
+                        <td>@item.EXPLONATION_DATE</td>
+                        <td>@item.NETWORK_TYPE</td>
+                        <td>@item.PROPERTY_TYPE</td>
+                        <td>@item.PROPERTY</td>
+                        <td>@item.TECHNICAL_CONDITION</td>
+                        <td>@item.WATER_CAPABILITY</td>
+                        <td>@item.SERVED_AREA</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+</div>
+
